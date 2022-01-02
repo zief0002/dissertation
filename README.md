@@ -1,6 +1,6 @@
 # My PhD Thesis
 
-This is my PhD thesis. I am adding it here to show how to do certain things using RMarkdown and the `{gopherdown}` package.
+This is my PhD thesis. I am adding it here to show how to do certain things using RMarkdown and the `{gopherdown}` package. Note that the original data was deleted (as per IRB) and I simulated some data to show how to create figures/tables in Chapter 4, but did not do this for every aspect of the thesis. This also allowed me to show some LaTeX code for creating tables. I also took the liberty of producing some new tables and used `{ggplot2}` (rather than base R) for plotting, so this is not a perfect re-creation of my thesis. (A PDF version of the original thesis can be found [here](https://iase-web.org/Publications.php?p=Dissertations).)
 
 
 The PDF version of the thesis is in the `_book/` directory.
