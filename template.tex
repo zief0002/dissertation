@@ -1,0 +1,288 @@
+%% ------------------------------------------------------------------- %%
+%% Preamble
+%% ------------------------------------------------------------------- %%
+
+\documentclass[11pt]{umnthesis}
+
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}      % Select font encoding
+\usepackage[utf8]{inputenc}   % Accept different input encodings
+\usepackage{csquotes}         % Advanced facilities for inline and display quotations
+\usepackage{caption}          % Captioning options
+
+%% ------------------------------------------------------------------- %%
+%% Better tables
+%% ------------------------------------------------------------------- %%
+
+\usepackage{longtable}  % Allow tables that break across pages
+\usepackage{booktabs}   % Better formatted tables
+\usepackage{multirow}   % Allow for row spans
+\usepackage{pdflscape}  % Landscape page orientation
+\usepackage{tabu}       % Flexible tables
+
+%% --------------- Define \thead{} --------------- %%
+
+\usepackage{makecell}          % Allow breaks in table cells; header alignment
+\renewcommand{\theadalign}{bc} % Set table header alignment: bottom, center
+
+
+%% ------------------------------------------------------------------- %%
+%% Define TOC counters
+%% ------------------------------------------------------------------- %%
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+%% ------------------------------------------------------------------- %%
+%% Define captioning for tables and figures (default = APA)
+%% ------------------------------------------------------------------- %%
+
+\captionsetup[table]{textfont={it}, labelfont={}, justification=raggedright, skip=0pt, singlelinecheck=false, labelsep=newline}
+\captionsetup[figure]{textfont={}, labelfont={it}, justification=raggedright, singlelinecheck=false, labelsep=period}
+
+
+%% ------------------------------------------------------------------- %%
+%% Figure/table floating
+%% ------------------------------------------------------------------- %%
+
+%% Do not float figures/tables
+\usepackage{float} 
+\floatplacement{figure}{H}
+
+
+%% ------------------------------------------------------------------- %%
+%% Support for hyperreferences/links 
+%% ------------------------------------------------------------------- %%
+
+\usepackage{xurl}   % Allow URL breaks
+
+
+%% --------------- Define link colors --------------- %%
+
+$if(linkcolor-hex)$
+\definecolor{mylinkcolor}{HTML}{$linkcolor-hex$}
+$endif$
+$if(urlcolor-hex)$
+\definecolor{myurlcolor}{HTML}{$urlcolor-hex$}
+$endif$
+$if(citecolor-hex)$
+\definecolor{mycitecolor}{HTML}{$citecolor-hex$}
+$endif$
+
+
+%% --------------- Bordered links --------------- %%
+
+$if(colored-not-bordered-links)$
+\hypersetup{
+  hidelinks,
+  colorlinks,
+  linktocpage=$if(toc-link-page-numbers)$$toc-link-page-numbers$$else$false$endif$,
+  linkcolor=$if(linkcolor-hex)$mylinkcolor$else$.$endif$,
+  urlcolor=$if(urlcolor-hex)$myurlcolor$else$.$endif$,
+  citecolor=$if(citecolor-hex)$mycitecolor$else$.$endif$
+}
+
+
+%% --------------- No colored links --------------- %%
+
+$else$
+\hypersetup{
+  colorlinks=false,
+  linktocpage=$if(link-toc-page)$$link-toc-page$$else$true$endif$,
+  linkbordercolor=$if(linkcolor-hex)$mylinkcolor$else$.$endif$,
+  urlbordercolor=$if(urlcolor-hex)$myurlcolor$else$.$endif$,
+  citebordercolor=$if(citecolor-hex)$mycitecolor$else$.$endif$
+}
+$endif$
+
+
+%% ------------------------------------------------------------------- %%
+%% Subfigures 
+%% ------------------------------------------------------------------- %%
+
+\makeatletter
+
+
+\@ifundefined{showcaptionsetup}{}{%
+  \PassOptionsToPackage{caption=false}{subfig}}
+%\usepackage{subfig}
+\makeatother
+
+
+% %% ------------------------------------------------------------------- %%
+% %% These additions are from {rticles} to make the references play nice with pandoc
+% %% ------------------------------------------------------------------- %%
+
+$if(csl-refs)$
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+
+% for Pandoc 2.8 to 2.10.1
+\newenvironment{cslreferences}%
+  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+  {\par}
+
+% For Pandoc 2.11+
+% As noted by @mirh [2] is needed instead of [3] for 2.12
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc} % for calculating minipage widths
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+$endif$
+
+
+%% ------------------------------------------------------------------- %%
+%% Include additional LaTeX packages/commands 
+%% ------------------------------------------------------------------- %%
+
+% \usepackage{dcolumn}    % Used to align decimal point in table columns
+% \usepackage{latexsym}   % Add LaTeX symbols
+% \usepackage{lmodern}    % Latin modern fonts
+
+%% --------------- Centered table columns --------------- %%
+
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+
+
+%% ------------------------------------------------------------------- %%
+%% Define things from the YAML in the index.RMD file
+%% ------------------------------------------------------------------- %%
+
+\title{$title$}
+\author{$author$}
+\month{$month$}
+\year{$year$}
+\advisor{$advisor$}
+
+$if(coadvisor)$
+  \coadvisor{$coadvisor$}
+$endif$
+
+
+
+%% ------------------------------------------------------------------- %%
+%% Document body
+%% ------------------------------------------------------------------- %%
+
+\begin{document}
+
+\frenchspacing % one space after sentences
+
+
+%% --------------- Signature, title, and copyright pages --------------- %%
+
+$if(phd)$
+\makesignaturepage % required by UMN
+\maketitlepage % required by UMN
+\makecopyrightpage % recommended, required if registering copyright
+$elseif(plan_b)$
+\makeplanbtitlepage % required
+\makecopyrightpage % recommended, required if registering copyright
+$else$
+\makethesistitlepage % required
+\makecopyrightpage % recommended, required if registering copyright
+$endif$
+
+
+%% --------------- Frontmatter --------------- %%
+
+\frontmatter
+\pagestyle{empty} % this removes page numbers from the frontmatter
+
+
+%% --------------- Acknowledgements --------------- %%
+
+$if(acknowledgements)$
+  \begin{acknowledgements}
+    $acknowledgements$
+  \end{acknowledgements}
+$endif$
+
+
+%% --------------- Dedication --------------- %%
+
+$if(dedication)$
+  \begin{dedication}
+    $dedication$
+  \end{dedication}
+$endif$
+
+
+%% --------------- Abstract --------------- %%
+
+$if(abstract)$
+  \begin{abstract}
+    $abstract$
+  \end{abstract}
+$endif$
+
+
+%% --------------- Table of contents --------------- %%
+
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\renewcommand{\contentsname}{Table of Contents}
+
+\setlength{\parskip}{0pt}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\tableofcontents{}
+
+
+%% --------------- List of tables --------------- %%
+
+$if(lot)$
+  \cleardoublepage
+  \addcontentsline{toc}{chapter}{List of Tables}
+  \listoftables
+$endif$
+
+
+%% --------------- List of figures --------------- %%
+
+$if(lof)$
+  \cleardoublepage
+  \addcontentsline{toc}{chapter}{List of Figures} 
+  \listoffigures
+$endif$
+
+
+%% --------------- Mainmatter --------------- %%
+
+% Here the regular arabic numbering starts
+
+\mainmatter 
+\pagestyle{fancyplain} % turns page numbering back on
+
+$body$
+
+
+\end{document}

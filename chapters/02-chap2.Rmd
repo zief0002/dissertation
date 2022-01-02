@@ -1,0 +1,444 @@
+# Review of the Literature {#litreview}
+
+The purpose of this chapter is to present a selected review of research on covariational reasoning that is relevant to understanding how students in an introductory statistics course reason about bivariate data. First, a discussion of why researchers in several different fields have studied people's reasoning about covariation is presented. Next, examples are provided of how covariational reasoning is defined by researchers in those fields. Then, the literature and research on covariational reasoning is examined in the general areas of psychology, science and mathematics education, and statistics education.
+
+After reviewing the literature on covariational reasoning, research is examined on how teachers use textbooks because of the role of textbook use in teaching and learning statistical topics. In particular, the topic of bivariate data is shown to appear in different places in introductory statistics textbooks, and teachers' fidelity to textbooks (and order of topics) is therefore examined. This section begins with a general overview of textbook usage by teachers, and then considers, more specifically, how mathematics teachers use textbooks. This chapter ends with a section on how statistics textbooks are sequenced, and an overall summary of the research literature.
+
+## What is Covariational Reasoning?
+
+In its simplest form, covariational reasoning refers to how people think about, or reason about the relationship between two or more variables. A more multifaceted and subject specific definition of covariational reasoning is given by Moritz, a statistics education researcher, who defines covariational reasoning as follows, "[r]easoning about covariation commonly involves translation processes among raw numerical data, graphical representations, and verbal statements about statistical covariation and causal association" [-@moritz:2004, p. 165]. Covariational reasoning skills are important, especially when studying statistics, because students typically encounter problems in a statistics course that deal with bivariate data such as determining if a relationship exists between two variables. Problems that require students to reason about covariation appear throughout the introductory statistics curriculum. These often include examining the relationship between two quantitative variables (e.g., correlation, regression) or two categorical variables (e.g., two-way tables, chi-square tests). Statistics educators, therefore, tend to be interested in how students reason about reading scatterplots, interpreting correlations and other skills that are used when analyzing bivariate data and interpreting corresponding output.
+
+Besides statistics education, covariational reasoning has also been the focus of research in psychology, science, and mathematics education. Each of these fields defines and examines covariational reasoning in a slightly different manner. Some of the definitions used from these disciplines and major research questions are described below.
+
+Psychologists have tended to look at and define covariation as an informal expression for correlation [@yates:2000]. When studying covariational reasoning, researchers in the field of psychology have primarily examined people's covariational judgment, or their detection and assessment of the degree of association between two or more variables. Researchers have examined subjects' covariational judgment using a variety of formats including contingency tables, and graphs.
+
+Science educators have also examined the same type of covariational judgment as psychologists, albeit in a different setting, namely as students would use it when conducting a science experiment. Covariational reasoning as defined by science educators tends to have many similar components as the definition supplied by psychologists. One study defined it as follows, "[t]he reasoning processes one uses in determining the strength of mutual or reciprocal relationship between variables" [@adi:1978, p.675].
+
+Mathematics educators have taken a slightly different view of covariational reasoning. They have tended to define and examine covariational reasoning as it relates to functions. For instance, one prominent study from the field of mathematics education defined covariational reasoning as, "[t]he cognitive activities involved in coordinating two varying quantities while attending to the ways in which they change in relation to each other" [@carlson:2002, p.354].
+
+While researchers from several disciplines have studied covariational reasoning, much of the research remains disconnected, as researchers tend to not look outside literature published in their own discipline. Until recently, there were no journals in which to report research on teaching and learning statistics, so studies on covariational reasoning were published only in the disciplines of psychology, mathematics education, or science education.
+
+Researchers who have studied students' or adults' covariational reasoning have used different research questions and methods, different types of subjects (e.g., college students, adults, secondary students, etc.), often using different operational definitions of covariational reasoning and different types of assessment. Before the research in each of these disciplines is reviewed, it is important to examine the importance of covariational reasoning across disciplines.
+
+## The Importance of Covariational Reasoning
+
+Covariational reasoning is an essential part of several fundamental human behaviors. It has been shown to play a prominent role in behaviors such as general learning [@hilgard:1975], categorization [@smith:1981], and determining causation [@cheng:1997; @cheng:1990; @cheng:1992; @einhorn:1986]. McKenzie and Mikkelsen [-@mckenzie:inpress], two cognitive psychologists, have expressed the opinion that covariational reasoning is one of the most important cognitive activities that humans perform.
+
+Psychology is not the only field where covariational reasoning plays a major part. In both statistics and mathematics education covariation is an important topic occurring in the secondary mathematics curriculum as well as in almost all introductory level college courses. The concept of covariation appears in the National Council of Teachers of Mathematics (NCTM) mathematics curriculum standards [@nctm:2000], as well as in curriculum guidelines in several countries, including: Australia [@australian-education-council:1994], England [@department-for-education-and-employment:1999], and New Zealand [@ministry-of-education:1992]. In the United States, the NCTM guidelines recommend introducing the topic of bivariate data in elementary school. The Grade 3--5 Standards recommend that students learn to represent bivariate data using line plots, and these concepts are further developed in both the 6th--8th Grade Standards (i.e., select, create and use scatterplots) and in the Grades 9--12 Standards (i.e., understand the meaning of bivariate data, display a scatterplot, describe its shape, and determine regression coefficients, regression equations, and correlation coefficients using technological tools; identify trends in bivariate data and find functions that model the data or transform the data so that they can be modeled).
+
+By including topics of covariation at all levels of the mathematics curricula, including the Advanced Placement statistics curriculum [@college-board:2003], covariational reasoning appears to be an important goal for students to learn before college level instruction. It is an essential topic in the introductory statistics course, no matter what form this course takes (e.g., basic statistical literacy, mathematical statistics, etc.).
+
+
+## Studies by Researchers in Psychology
+
+How people judge relationships is central to many areas of research in psychology (e.g., attribution theory, stereotyping). Knowing whether events are related, and how strongly they are related allows for explanation of the past, control of the present and prediction of the future [@crocker:1981]. To this end, psychologists have primarily been interested in the overarching question of how well people can judge the relationship between two (or more) events. They have undertaken a goodly amount of research to try and provide answers for research questions such as: Is there an age trend in covariational reasoning skills; what evidence do subjects feel is relevant in making their decision; and what are the sources of the variation for the results found in previous studies? Since the seminal study by Inhelder and Piaget [-@inhelder:1958], psychologists have produced several robust findings spanning five decades of research in this area.
+
+
+### Methodologies Used in Psychological Studies of Covariational Reasoning
+
+Almost all of the research conducted by psychologists use cross-sectional studies, utilizing one sample at one time point (e.g., introductory psychology students assessed on a one-time only exam). The only exception to this was a study by @neimark:1975, who followed students for a three-year period. The psychological research has been conducted at several different age levels (from primary students to university students and even adults). The tasks used in these studies have varied slightly, but in most studies data was pre-presented to the subjects in either a two-way table or a graph. There were few exceptions to this [e.g., @inhelder:1958; @lovell:1961; @neimark:1975] in which subjects had to sort the data into a table for themselves. Most of these studies utilized dichotomous variables. In most studies, subjects were first asked to determine if a relationship exists between the two variables that were presented, and later asked to justify their decision. \@ref(tab:tab-2-1) summarizes several of the characteristics of the studies that were examined.
+
+After answering an initial research question regarding whether people can determine if a relationship exists between pairs of variables, several of the psychological researchers used a qualitative Piagetian coding scheme to categorize subjects according to the evidence they used to justify their decision. In a majority of these studies the coding scheme that was used was usually pre-conceived by the researcher(s) and generally encompassed four or five categories. The names of these categories and the criteria for membership varied between the studies, but would often look something like the following:
+
+- Minimal Covariation --- Subjects used data/information based on a single cell
+- Inadequate Covariation --- Subjects used data/information based on 2 cells
+- Adequate Covariation --- Subjects used confirming/disconfirming cases across all 4 cells
+- Advanced Covariation --- Subjects based their judgment on calculations across all 4 cells
+
+The research studies by psychologists have tended to utilize traditional methodology from that field. They generally employ larger sample sizes (e.g. $n \geq 100$) and often have a treatment that has been randomly assigned to voluntary participants (usually from the researchers' classes). Many of the statistical analyses conducted were also traditional. For example, several of the studies used analyses of variance to examine differences between treatment conditions. The field of psychology also has shown the most replication of results in the study of covariational reasoning. This replication and consistent use of methodologies has produced some very robust findings over the five decades of covariation research in the field. The findings from the psychological researchers will now be examined.
+
+
+### Summary of Findings from the Field of Psychology
+
+Regardless of the importance that covariational reasoning seems to play in the day-to-day lives of people (e.g., learning, categorization, and judging causation), much of the research from the field of psychology has generally concluded that people are surprisingly poor at assessing covariation. Over the last five decades, several robust findings have emerged. One is that peoples' prior beliefs about the relationship between two variables have a great deal of influence on their judgments of the covariation between those variables [e.g., @alloy:1984; @crocker:1982; @jennings:1982; @kuhn:1988; @kuhn:1995; @nisbett:1980; @peterson:1980; @smedslund:1963; @snyder:1981; @snyder:1978; @trolier:1986; @ward:1965; @wason:1972].
+
+This finding is related to another major finding from the field of psychology, that of illusory correlation. An illusory correlation exists when a subject believes there is a correlation between two uncorrelated events. This, for example, could encompass relying more on memory rather than examining the data/cases presented (e.g., subjects would suggest a positive relationship exists between price and quality even though the data would suggest otherwise), and viewing data/cases that confirm their expectations as more relevant than disconfirming cases (e.g., seeing a case that has both a high value for price and quality as being more important than a case that has a high value for price and a low value for quality). @chapman:1967 more specifically defined illusory correlation as a perceived correlation between two events that "(a) are not correlated, or (b) are correlated to a lesser extent than reported, or (c) are correlated in the opposite direction from that which is reported" (p. 151). The finding of illusory correlation has been very consistent in the psychological literature [e.g., @chapman:1967a; @chapman:1969; @crocker:1981; @fiedler:1991; @hamilton:1976; @hamilton:1980; @haslam:1994; @mcgahan:1997; @mcgahan:2000; @mcgarty:1993; @mullen:1990; @yates:2000].
+
+A second robust finding from the psychological research has suggested that people tend to not treat the four cells of a two-by-two contingency table as equally important. In fact, the findings suggest peoples' judgments seem to be most influenced by the joint presence of variables and least influenced by the joint absence of variables [e.g., @kao:1993; @levin:1993; @lipe:1990; @schustack:1981; @wasserman:1990].
+
+Other findings that tend to be consistent throughout this body of literature are that subjects have difficulty when the relationship is negative [e.g., @beyth-marom:1982; @erlick:1966; @erlick:1967; @gray:1968], and that peoples' covariational judgment of the relationship between two variables tends to be less than optimum, that is, smaller than the actual correlation presented in the data or graph [e.g., @bobko:1979; @cleveland:1982; @jennings:1982; @konarski:2005; @kuhn:1989; @lane:1985; @meyer:1997; @shaklee:1981; @shaklee:1983]. Still another consistent finding in these studies is that subjects have a tendency to form causal relationships based on a covariational analysis [e.g., @crocker:1981; @heider:1958; @inhelder:1958; @kelley:1967; @ross:1993; @smedslund:1963; @shaklee:1980].
+
+There is also a fair amount of research from this field that has examined the conditions and accommodations under which people tend to make better covariational judgments. For instance, researchers have found that subjects tend to make more accurate judgments when the variables to be examined are continuous rather than dichotomous [e.g., @beach:1966; @erlick:1967; @jennings:1982], and other studies from this field have suggested that certain accommodations such as detailed instructions [@alloy:1979], easy to process formats [@ward:1965], subjects being told non-contingency is possible [@peterson:1980], and low frequency of data/cases [@inhelder:1958] might help subjects more accurately judge covariation. Subjects have also been shown to make more accurate judgments when data are presented simultaneously rather than when it is presented one case at a time [@seggie:1972; @smedslund:1963].
+
+The studies from the field of psychology provide much of the seminal work in covariational reasoning research. Their large sample sizes and use of the more traditional randomized treatment designs and analyses have produced several robust findings. While many psychologists have not looked at covariational reasoning with the lens of improving students' learning, many of these findings have direct links to the same misconceptions and incorrect schemas that statistics education researchers are finding in their research on covariational reasoning. Two fields that have examined covariational reasoning with an eye toward students' learning are science and mathematic education. It is to that research that we turn next.
+
+
+## Literature from the Fields of Science and Mathematics Education
+
+Mathematics and science educators have tended to examine covariational reasoning as it relates to student learning. In some ways, the methodology used by these two disciplines is very different from the methodology used by psychological researchers in this area. Most of the studies done in mathematics and science education used small sample sizes $(n \leq 20)$ and one study, in fact, used a sample size of $n = 1$. They have also tended to focus on high school and college students. None of the studies from these fields used a traditional experimental design with randomization.
+
+While the tasks given to subjects in science education research are very similar to those already described from psychology, the tasks that mathematics education researchers have asked subjects to perform are very different. Many of the tasks used in mathematics education research to study covariational reasoning were open-ended mathematical problems. Researchers attempted to get students to elicit their reasoning by solving these problems. Much of this research has involved qualitative methodology, such as coding and categorization of student responses (similar to some of the work from psychology), and in-depth interviews of students, to try and gain a deeper understanding of the learning and thought processes that were taking place.
+
+
+### Studies by Researchers in Science Education
+
+Although science educators view covariational reasoning in a similar manner as psychologists, researchers in science education appear more interested in how students use that reasoning in a specific educational context, namely to solve science problems. For instance, research questions from studies in science education have examined whether competence in experimental reasoning is related to success in correlational thinking, or how science and mathematics students approach tasks that require correlational reasoning for successful solution?
+
+The methodologies employed in the studies from science education were similar to those used in psychology. These studies typically had subjects determining if there was a relationship present in the data they were given. The studies also tended to utilize two dichotomous variables like the studies from psychology, but these variables tended to have a specific educational context.
+
+The tasks employed in studies and the categorizing of students by science education researchers is also very similar to the tasks and categorization used by psychologists. For instance, students in one study [@adi:1978] were asked to determine whether there was a relationship between whether a rat took a certain pill (yes/no) and the body size of the given rat (small/large). Subjects were given a set of 20 cards, each having one of the four possible combinations and then asked to make and justify their judgment decision.
+
+Science education researchers have extended the psychology research by not always pre-presenting the data to their subjects. While some psychologists [e.g., @lovell:1961] had subjects sort the data into a table for themselves, some science education researchers have had subjects go further and graph the data themselves [e.g., @curtis:1986; @wavering:1989]. Their findings have generally paralleled the findings from psychology. Two findings from science education research that mirror those from psychology are that students tended to use sub-optimal solution strategies to determine if a relationship existed in the data and students also tended to infer a causal relationship from correlational data [e.g., @adi:1978]. Science education researchers have determined that covariational reasoning is a fundamental aspect in the development of scientific reasoning, and that the development of covariational reasoning parallels both the development of proportional and probabilistic reasoning [@adi:1978].
+
+Science education researchers have also suggested that covariational reasoning, as demonstrated in students' abilities to create graphs, is related to the development of logical reasoning. @wavering:1989 suggested that students did "poorly" when asked to do a variety of tasks such as scaling the axes on a graph, and that deficiencies in their logical reasoning were an explanation for these failures to complete the tasks correctly. By examining students at several grade levels and employing a Piagetian framework to categorize these students, Wavering also found that the successful completion of different tasks corresponded to different levels of reasoning within that hierarchy.
+
+
+### Studies by Researchers in Mathematics Education
+
+Covariational reasoning in the context of mathematics education is seen differently than in either psychology or science education. The way in which mathematics education researchers view covariation is the most abstract of the four disciplines reviewed. While it is viewed in an abstract sense, mathematics educators see covariation as a very important concept. Covariation appears in the mathematics curriculum and standards at almost every grade level [e.g., @nctm:2000]. It has been shown to be important for the development of many concepts in Calculus, especially the concept of derivative, and is also used extensively in Algebra.
+
+Mathematics education researchers have tended to examine covariational reasoning from a graphical and functional sense especially as it might be used in algebra and calculus. For example, one prominent study from the field of mathematics education [@carlson:2002] examined what the mental actions are that students apply when reasoning about covariation. This study, like most studies in mathematic education, concentrated on college students and is described below.
+
+Twenty subjects, all of whom received an A in their second semester of calculus, completed a 5-item written instrument that included items such as "[i]magine this bottle filling with water. Sketch a graph of the height as a function of the amount of water that is in the bottle" (p. 360). These students were then interviewed and asked to justify the responses they provided. The subjects were subsequently classified into one of five groups "according to the overall image that appeared to support the various mental actions that he or she exhibited in the context of a problem or task" (p. 357). Carlson et al.'s use of the word "image" is considered to be consistent with the definition provided by Thompson [-@thompson:1994], which, "focuses on the dynamics of mental operations" (p. 231). It is also similar to the idea of concept image proposed by Vinner and Dreyfus [-@vinner:1989]. These images of covariation are developmental in a Piagetian sense, in that as the image develops, students become capable of more sophisticated covariational reasoning [@carlson:2002; @saldanha:1998]. The five mental actions of covariational reasoning that were used by @carlson:2002 to classify students were as follows:
+
+- *Mental Action One (MA1):* The coordination of the value of one variable with changes in the other.
+- *Mental Action Two (MA2):* The coordination of the direction of change of one variable with changes in the other.
+- *Mental Action Three (MA3):* The coordination of the amount of change of one variable with the amount of change in the other.
+- *Mental Action Four (MA4):* The coordination of the average rate of change of the function with uniform increments of change in the input variable.
+- *Mental Action Five (MA5):* The coordination of the instantaneous rate of change of the function with continuous change in the independent variable for the entire domain of the function.
+
+The study just described showed that most students could determine the direction of change (MA2) but that many had difficulties constructing images of continuous rate of change, even after completion of a second course in calculus. They also found that students have particular problems representing and interpreting graphical displays. In some cases, mathematics education researchers have found that kinesthetic or physical enactment of certain problems appeared to aid the students in their ability to reason correctly about covariation [e.g., @carlson:2001; @carlson:1998; @carlson:2002a; @carlson:2002]. These studies have suggested the need for teachers to have students think about covariation as it occurs in functions in terms of real-life dynamic events.
+
+
+Mathematics education researchers have suggested that covariational reasoning is fundamentally important for the modeling of functional relationships. Researchers have suggested that because of this, covariational reasoning is used extensively in both algebra [@nemirovsky:1996] and calculus [@thompson:1994]. In particular the research suggests that this type of reasoning plays a major role in students’ understanding of the derivative, or rate of change [e.g., @carlson:2002; @kaput:1992], and that this interpretation of covariation is slow to develop among students [e.g., @monk:1992; @monk:1994; @nemirovsky:1996]. Studies from mathematics education have also shown that not only is students' ability to interpret graphical and functional information is slow to develop, but that students tend not to see the graph of a function as depicting covariation [@kaput:1992; @thompson:1994].
+
+
+### Methodology Used in Research Studies in Mathematics and Science Education
+
+
+Both mathematics education researchers, as well as science education researchers have examined covariational reasoning as it relates to students' learning within the context of their respective fields. The methodology used to study covariational reasoning by these two disciplines, especially in mathematics education, is often different from the methodology used in psychological research. While the sample sizes tend to be smaller, and the age-levels studied are more restricted, the qualitative methodologies that these disciplines tend to employ offers a deeper examination into the thought processes that guide students’ understanding. However, even though the methodologies differ, the results tend to be consistent with those from the field of psychology. Statistics education researchers often use many of the same qualitative methodologies as their colleagues in mathematics education. It is this research that is examined next.
+
+
+## Studies by Researchers in Statistics Education
+
+Apart from the field of psychology, the field that has contributed the most to the literature of covariational reasoning is that of statistics education. Statistics education is a fairly young area of research that has been influenced by several other fields of study such as psychology and mathematics education [@garfield:1995]. Due to its recent emergence as a unique discipline, statistics education has not yet been recognized as a discipline and many researchers working in this area are situated in other departments (i.e., Educational Psychology, Mathematics Education). Statistics education research has generally focused on how to improve the instruction of statistics, especially in introductory college courses.
+
+
+### Methodologies Used by Researchers in Statistics Education
+
+Statistics education researchers have examined many different research questions in covariational reasoning including: how does technology impact a student's ability to judge the degree of covariation between two variables; do students respond differently to tasks when they have prior beliefs about the covariation they expect to see; and in what ways does instruction help build covariational reasoning in students? The studies on covariational reasoning from this field have been generally focused on the instruction of bivariate data in the context of students learning statistics at the secondary or college level.
+
+The methodologies used to study students' covariational reasoning by statistics education researchers are most similar to those used by mathematics education researchers. Much of the research from this field is qualitative in nature. In-depth interviewing, coding and analysis of students' responses, and design experiments (see [Section 2.6](#design-exp)) are common methodologies in statistics education research. Many of the studies on covariational reasoning in statistics education have followed their predecessors in psychology and used a qualitative coding scheme to help categorize their data [e.g., @batanero:1997; @batanero:1998; @moritz:2004; @stockburger:1982]. Also, similar to the subjects used in psychology research, the participants in statistics education research tend to be students enrolled in the researchers own introductory statistics courses. However, contrary to the research from psychology, statistics education studies generally employ small sample sizes and no random assignment. Some of the more influential studies in statistics education are summarized in the next section.
+
+
+### Studies from the Field of Statistics Education
+
+One of the earliest studies in statistics education was by @stockburger:1982, who studied university students enrolled in an introductory statistics course. He asked them to complete four computer exercises many times. One of the computer exercises was called *Scattest* and it:
+
+> "presented a 20-point scatterplot on the CRT. The students were required to estimate the size of the resulting correlation coefficient $(-1.0 < r < +1.0)$. An answer was scored correct if it was within a range of .1 of the actual correlation coefficient and made in less than 10 sec" (p. 366).
+
+Stockburger found that students in general did very poorly on the *Scattest* exercises. And, while he did find that student's ability to estimate correlation improved after using *Scattest*, it "still left much to be desired in this ability" (p. 369).
+
+Many of the more current studies from statistics education on covariational reasoning have also incorporated technology to see if there would be an improvement in students' reasoning. @batanero:1997 examined whether or not a computer-based teaching experiment would improve 17 and 18 year old secondary student's strategies of judging statistical association. @batanero:1998 essentially examined the same thing, but using 20 year old university students. Both studies asked students to assess the existence of correlation between two variables given to them in a two-by-two contingency table. Students were classified based on their responses to questions regarding statistical association. The researchers then identified incorrect covariational strategies employed by the students that were outlined by Inhelder and Piaget [-@inhelder:1958]. The researchers used an initial study as a baseline for comparison to examine the effects and impact of their computer-based teaching experiment.
+
+Both studies [@batanero:1997; @batanero:1998] found an overall general improvement in student strategies. They also both revealed the persistence of what they refer to as a unidirectional misconception. That is, students only perceive a relationship among the variables in the positive direction. Both studies also showed that students maintained their causal misconception throughout the duration of the experiments. The researchers found that student's understanding of nine key intentional elements of institutional meaning of association "seemed to develop at specific moments in time throughout the understanding process" [@batanero:1998, p. 45]. The last five of these nine key features are instrumental in developing solid reasoning about covariation, namely:
+
+5.  The decision about what size of differences should be considered to admit the existence of association is, to some extent, subjective. The problem of association should be set in terms of intensity instead of in terms of existence.
+6. When studying association both variables play a symmetric role. However, when studying regression, the role played by the variables is not symmetrical.
+7. A positive correlation points to a direct association between the variables.
+8. A negative correlation points to an inverse association between the variables.
+9. The absolute value of the correlation coefficient shows the intensity of association [@batanero:1998, pp. 45--47].
+
+Both studies also showed that students falter with several of these features. They have trouble distinguishing between the role of the independent and dependent variables in regression (Step 6). Students also had problems when the relationship between the variables was negative (Step 8). The researchers suggested that the student's "knowledge of the properties of negative number ordering might have acted as an obstacle in dealing with negative association" [@batanero:1998, p. 46]. Finally, students in these studies realized that the absolute value of the correlation coefficient was related to the magnitude of the relationship (Step 9), but did not relate that idea to the spread of scatter around the regression line.
+
+@konold:2002 presents a different view of whether or not people can make accurate covariational judgments. He suggests that people are not poor at making these judgments, but rather they have trouble decoding the ways in which these relationships are displayed (e.g., scatterplots or two-by-two contingency tables). His research has been on middle school students using *TinkerPlots* software. *TinkerPlots* are data analytic tools that have students progressively organize data using a small set of intuitive operators. Konold found that students were better able to make covariational judgments using a super-imposed color gradient function in *TinkerPlots*. He is not exactly sure why that is the case, but suspects that it is because the task is broken up into two smaller parts. First, that students will anticipate what will be seen, and second, that they will then examine the new display.
+
+@moritz:2004 examined students in grades three, five, seven, and nine. He specifically looked at three skills. Speculative data generation involved having the students translate verbal statements to graphs. Verbal graph interpretation had students translate a scatterplot into a verbal statement, and numerical graph interpretation involved tasks such as reading values and interpolation. The students were given a written survey that included six or seven open-ended tasks. The contexts of the tasks were chosen such that the students were familiar with the variables used. The variables were also chosen so that students would expect a positive covariation, but the data given in the task represented a negative covariation. Based on their responses, the students were classified on the three skills into one of four categories: Level 0---Non-statistical, Level 1---Single Aspect, Level 2---Inadequate Covariation, or Level 3---Appropriate Covariation. These categories were "informed by the frameworks used by others" (p. 15).
+
+On speculative data generation, @moritz:2004 found that most of the younger subjects were in the category of Inadequate Covariation, while many of the older students were in the third category. On the skill of verbal graph interpretation, he found that older students again tended to respond at the higher levels. In fact all of the students in the 7th and 9th grade were at least at level one. Numerical graph interpretation showed similar results. While there were no 5th graders at level three, there were also no 7th or 9th graders below level one.
+
+In general, @moritz:2004 found that most students, even those in 3rd grade, gave responses that identified at least a single aspect of the data. Many of the students also demonstrated negative covariation by speculative data generation. Moritz theorizes that this could be due to the above-average capabilities of the students. Moritz found many of the same student difficulties as his contemporaries. He found that students often focused on isolated data points rather than on the global data set. He also found that students would often focus on a single variable rather than the bivariate data. Lastly, he found that several students had trouble handling negative covariations when they are contradictory to their prior beliefs.
+
+
+### Summary of the Studies from the Field of Statistics Education
+
+Many of the studies from statistics education on covariational reasoning have incorporated technology to see if there would be an improvement in students’ reasoning. This research has suggested that technology seems to improve subjects' strategies to evaluate and judge covariation [e.g., @batanero:1997; @batanero:1998; @morris:1997; @stockburger:1982]. It has also re-confirmed many of the findings that have been identified in studies from other disciplines: subjects have trouble with negative relationships [e.g., @batanero:1997; @batanero:1998; @morris:1997] and this is especially true when they run contrary to their prior beliefs [@moritz:2004], subjects only perceive a relationship in the positive direction [e.g., @batanero:1997; @batanero:1998], and subjects tend to form causal relationships from correlational data [e.g., @batanero:1997; @batanero:1998].
+
+Statistics educators have also found other misconceptions specifically related to the skills and concepts that students develop when encountering covariation in an introductory statistics course. These include students' inability to distinguish the asymmetric role of the variables in regression [@batanero:1997; @batanero:1998], and students' propensity to focus on either an isolated data point or single variable rather than on the relationship between two variables [@moritz:2004]. Other studies have examined students' covariational reasoning as they study regression and reported some of the difficulties associated with this topic including problems with interpretation [e.g., @sanchez:1999], and problems with the coefficient of determination, or $R^2$ [@truran:1997].
+
+Some of the findings from statistics education research have actually run counter to the outcomes suggested from studies about covariational reasoning performed in other disciplines. For instance, @moritz:2004 suggests that students become better at covariational reasoning as they mature. He also suggests that students can demonstrate negative covariation (at least under certain circumstances). This was also shown in Truran's [-@truran:1997] study where students were able to identify negative correlation. @konold:2002 goes so far as to speculate that people in general are not poor at making covariational judgments, but rather the problem is that people are poor at reading graphs and contingency tables. These findings contradict some of the findings from other fields, especially those from psychology.
+
+Two of the major research studies on covariation in statistics education are design experiments. These studies use an intensive methodology to examine the learning process that students go through when studying covariation. The design experiment methodology and how statistics education researchers have used them to study covariational reasoning are described in the next section.
+
+
+## Design Experiments in Statistics Education {#design-exp}
+
+One of the important contributors to research in statistics education is Paul Cobb and his colleagues at Vanderbilt University. Their research studies are in the form of design experiments, and are quite different from the other studies described above. This section introduces the design experiment methodology and then summarizes the work of Cobb and his colleagues regarding the development of covariational reasoning.
+
+Design experiments, or teaching experiments, were originally used in pedagogical research in the Soviet Union, but emerged in the United States in mathematics education research in the 1970s [@steffe:2000; @thompson:1979]. Design experiments are different from the traditional experiments proposed by Campbell and Stanley [-@campbell:1966] in both the goal of the experiment, and the methodology employed. The goal of a design experiment is to integrate the teacher's instructional goals and direction for learning with the trajectory of students' thinking and learning. This can often result in "greater understanding of a learning ecology---a complex, interacting system involving multiple elements of different types and levels---by designing its elements and anticipating how those elements function together to support learning" [@cobb:2003, p.9].
+
+The teaching experiment methodology generally involves "hypothesizing what the [learner] might learn and finding ways of fostering this learning" [@steffe:1991, p.177]. This type of research is usually high intensity (14--16 weeks) and very invasive, each lesson in a particular design experiment is observed, videotaped and analyzed. @cobb:2003 suggest that this methodology is highly interventionist, using "prior research to both specify a design and justify the differentiation of central and ancillary conditions" (p. 10). Design experiments also use an iterative design of prospective and reflective practice. Prospectively, design experiments are implemented with a hypothesized learning process or trajectory, and the means to support that in the classroom. This hypothesized process is always shifting as new potential trajectories emerge as the design unfolds. Reflectively, all design experiments generate and test conjectures about the means of supporting student learning at several levels of analysis. The design experiment methodology encompasses three major stages: preparation for the experiment, actual experimentation, and a retrospective analysis. Each of these stages is further described below.
+
+
+### Preparing for the Design Experiment
+
+The first stage in a design experiment is preparation for the actual experimentation. It is during this stage that the research team envisions how dialogue and mathematical activity will occur as a result of planned classroom activity. As a product of how the research team imagines the classroom activity and dialogue interacting, the researchers propose a hypothetical learning trajectory [@simon:1995]. This comes as a result of the researchers' consideration of the learning goal, the learning activities, and the thinking and learning in which students might engage.
+
+
+### Actual Experimentation
+
+During the design experiment, the researchers test and modify their conjectures of the classroom learning trajectory. These new hypotheses about the learning trajectory are conceived during the teaching episodes themselves, as well as between and after teaching episodes [@steffe:2000]. This occurs as a result of the communication, interaction, and observation of students. The learning environment also evolves as a result of the interactions between the teacher and students as they engage in the content. Modification of the experiment is ongoing as the instructor better reflects his/her enhanced knowledge. The research team ideally meets after every classroom session to modify the learning trajectory, and plan new lessons. These meetings are generally audio-taped for future reference. Because of the constant modification, classroom lessons cannot be planned too far in advance.
+
+
+### Retrospective Analysis
+
+The research team performs the retrospective analysis after an entire design experiment has been completed. It is during this stage that they develop domain specific instructional theory to help guide future instruction. They also develop new hypothetical learning trajectories to be tested during future design experiments.
+
+
+### Design Experiments used to Study Covariational Reasoning
+
+There have been two major design experiments related to covariation in statistics education. @gravemeijer:2000 investigated how a dependent variable co-varies with an independent variable. He investigated how students could utilize technology to differentiate between the local and global variation that occurs. As a result of the design experiment, Gravemeijer theorized that students need an idea of the global trend (prior expectation) and that students have a hard time distinguishing between arbitrary and structural covariation. He suggests that students examine and compare several univariate data sets (time series) as an introduction to examining bivariate data.
+
+@cobb:2003a performed another prominent design experiment from the statistics education literature. The goal of this design experiment was to get students to view bivariate data as distributed in 2-dimensional space, to see scatterplots as situational texts, and to track the distribution of one variable across the other (scan vertically rather than diagonally). The results of the design experiment suggested that the shape of a distribution is a better place to start than is variability. To this end, the researchers also suggested a continued focus on relative density and on the shape of the data within vertical slices. They further hypothesized that an emphasis on shape could lead to a discussion of strength and direction in a bivariate plot. They also hypothesized that the focus on vertical distribution could lead to a more intuitive idea of the line of best fit.
+
+
+## Summary of the Literature Reviewed on Covariational Reasoning
+
+The research literature in statistics education has suggested that many students taking an introductory statistics course may not actually understand much of what they are studying [e.g., @garfield:1988]. One topic in introductory statistics that students struggle with is bivariate data. Studies from several different disciplines (i.e., psychology, statistics education) have documented many of these struggles and have tried to understand the reasons why people have difficulty reasoning about covariation. The research by psychologists documented that students have trouble understanding or interpreting negative relationships. Studies from this field also reveal that students tend to want to interpret a causal relationship. People have been shown to be more likely to detect a bivariate relationship if it is consistent with their prior beliefs (i.e. they already believe that such a relationship is likely or plausible). Finally, studies have shown that people tend to make more accurate judgments of covariation when the variables are continuous in nature.
+
+The research literature that has been reviewed provides limited information and leaves room for many new studies and research questions . For instance, most of the studies, especially the more recent studies, seem to be qualitative in nature. This is not to demean qualitative studies (in fact, many of these qualitative studies have been a necessary precursor to help direct quantitative research), but to point out that there is a lack of quantitative evidence in this field of study. Questions such as where is the ideal location for a unit on bivariate data in the introductory statistics curriculum could perhaps better be answered by a quantitative study.
+
+Almost all of the quantitative studies reviewed have been conducted in the field of psychology. These studies have also been the most rigorous methodologically from a more traditional experimental design point of view. They have employed larger sample sizes and have used the conventional randomization to either a control or experimental group. On the other hand, the samples employed are usually convenience samples. Also, these studies have generally only examined dichotomous variables. These are not the type of variables that students normally see in a unit on bivariate data in an introductory statistics course. They have also, for the most part, just examined whether or not people can determine if a relationship exists. While this is one question that introductory statistics students are asked about data, it is not the only one. Students are asked to attend to a wide variety of other characteristics about the data in question (e.g., variation, trend).
+
+Science education research on covariation has in some ways been very parallel to research from psychology. The research questions and the methodology itself (randomized experiment) are often quite similar. And, just like the research in psychology, this research has many of the same gaps and suffers from many of the same flaws (e.g., convenience sample, only examining dichotomous variables). The studies from mathematics education have several methodological flaws. First and foremost is, in general, the use of a voluntary convenience sample. They also look at covariation in a very different manner than any of the other disciplines. So, while it is necessary to examine this literature in order to have a complete examination of the literature, the manner in which mathematics educators refer to covariation and the research questions they attach to that reasoning is very detached from the covariational reasoning in which statistics educators are interested.
+
+Many of the studies from the field of statistics education have generally employed a more qualitatively based research design. They also have examined, for the most part, only younger students (i.e. middle school students). The exception to that were the Batanero et al. [-@batanero:1997; -@batanero:1998] studies, and the @stockburger:1982 study in which the sample consisted of college aged students. Two of the major studies from this field employed the Design Experiment methodology. Both of these were very strong methodologically. These teaching experiments have been used in statistics education to study the nature and development of reasoning in students. They also suggest hypotheses for future experiments, although many of these hypotheses have yet to be tested in a pragmatic fashion. Many statistics educators who have employed the teaching experiment methodology [e.g., @cobb:2003a; @gravemeijer:2000] have also suggested either pedagogical or content oriented hypotheses based on their research on covariational reasoning. Unfortunately, many of these have not yet been examined or tested empirically. Both of the teaching experiments also used middle school students in their sample. With many students having an introductory statistics course for the first time at the collegiate level, there needs to be more research done with these students. While they are in some sense still introductory statistics students, I am not convinced that college students are the same as middle school students from a developmental stance.
+
+There are still many unanswered research questions that would be of interests to statistics educators. Besides content oriented questions, educators are also interested in research about assessment, pedagogy, student understanding and misconceptions, as well as research that might suggest how to reconcile these misconceptions and improve student understanding. These unanswered research questions include how does reasoning about bivariate data develop in students in an introductory statistics course; and is there an optimal sequencing of the topics within a unit on bivariate data in order to enhance student learning? Still another unanswered question is what the nature of students’ development of covariational reasoning looks like throughout an introductory statistics course. Researchers have examined how learning in general changes as a process of time, and it is this literature that is examined next.
+
+
+## Learning Theories Related to the Development of Students' Reasoning
+
+Several theories of learning have been developed and described that inform educational research and curriculum development. Some of the most established theories about how students learn include theories of behaviorism, theories of cognition, constructivist theories, and socio-cultural theories. Each of these theories has a different perspective about how learning occurs [@ertmer:1993]. These theories also differ in other aspects such as beliefs about the factors that influence learning, the role of memory and forgetting in learning, and how transfer of learning occurs to name a few.
+
+While these theories of learning provide a framework for how students learn, they do not provide mathematical models to describe what student learning looks like. Much of the research in this type of modeling comes out of the literature on memory [@murre:2006]. Some researchers have used functions such as the logistic curve [e.g., @pearl:1925], the hyperbolic curve [e.g., thurston:1919], or the S-shaped curve [e.g., @atkinson:1965] to profile cognitive growth. More recently, @wozniak:1990 has used simulation to suggest a model of learning that is essentially linear except during the initial stages of learning, which show a quicker, almost exponential rate of change. While these models attempt to capture how learning progresses, they all fail to capture how that learning is diminished by memory loss (i.e., forgetting).
+
+There is a good deal of research on models that concentrate on how learning is impoverished by forgetting [e.g., @anderson:1991; @estes:1950; @mensink:1988; @nadel:2000; @raaijmakers:1981; @wickens:1998; @wixted:2004]. Much of this work is based on the classic work of @ebbinghaus:1885 who suggested that forgetting occurs at the fastest rate shortly after new material is learned and over time that rate decreases in an approximate logarithmic function. This line of research has suggested models that follow an upside down U-shaped, or negative quadratic, curve [e.g., @min:2000; @murre:2006; @wozniak:1990]. These models exhibit students' development of learning and also account for loss of that learning due to forgetting.
+
+The research from learning theory provides a glimpse of the nature, or pattern, of students' learning as a process of time. As a general model however, it doesn't account for variation in development between students. Can variation in students' rates of development in covariational reasoning be predicted or explained by other factors? One factor that statistics education researchers have speculated may explain students' reasoning about bivariate data is their ability to reason about univariate data.
+
+
+## Univariate Distribution as the Foundation for Covariational Reasoning
+
+Recent research has pointed to the importance of building up a foundation for covariation upon the building blocks of distribution, especially the concept of shape, and variation [e.g., @cobb:1998; @cobb:2003a; @gravemeijer:2000; @konold:2002; @konold:2002a]. @cobb:2003a have suggested that students' understanding of the characteristics of univariate data sets is crucial to their understanding of bivariate data. Likewise, @gravemeijer:2000 also suggests that characteristics of distribution are important foundational knowledge in a complete understanding of bivariate data. Building on the ideas of distribution is also congruent with Ben-Zvi and Garfield's [-@ben-zvi:2004] recommendation of focusing on big ideas to provide a foundation for course content and develop the underpinnings of statistical reasoning.
+
+@cobb:2003a have hypothesized that a focus on graphs and shape is an important piece of statistics students' development. They suggest that a focus on shape will make it easier for students to transition to reading a bivariate plot (scatterplot) because students will be able find it reasonable to talk about and compare the distribution within different vertical slices of the bivariate distribution. This, in turn, will "provide a basis for a subsequent focus on trends and patterns in an entire data set" (p. 84). @gravemeijer:2000 also suggests that students begin by comparing univariate data sets, but instead of the focus on shape in the vertical slices, he posits that the median might be a better comparison. He purports that students can then focus on a global trend by examining the median of the vertical distribution across measures of the horizontal (*x*) variable. Still other statistics educators [e.g., @moritz:2004] have suggested that variation might be the piece of pre-requisite knowledge that mandates the most attention, since covariation concerns the correspondence of variation between two or more variables.
+
+The perspectives described above focus on using the building blocks of distribution and students' reasoning about distribution to help develop their covariational reasoning. If students' reasoning about distribution does indeed help explain their development of reasoning about bivariate data, one important facet could be how this foundational type of reasoning is developed before the introduction of bivariate data. Since not all introductory statistics textbooks use the same sequencing of topics, and since statistics educators have different beliefs about the placement of bivariate data in the curriculum, it seems appropriate to examine the literature both on how teachers use textbooks (especially related to sequencing topics in a course), and on how statistics textbooks are sequenced. These topics are addressed in the following sections.
+
+
+## Research on how Teachers use Textbooks
+
+While it has been suggested that textbooks play a major role in most American classrooms [e.g., @freeman:1989; @valverde:2002] there has been surprisingly little research that has focused on how teachers utilize them. As @mccutcheon:1982 claims, "[w]e have statistics pointing to an extensive use of texts, and some indication that this has been the case for at least 50 years, but we know little about the nature, character, and qualities of teachers' and students' use of textbooks" (p. 3). While there isn't a lot of research in this area, the research that does exist suggests that teachers do use textbooks as aids in planning lessons [e.g., @freeman:1989; @mccutcheon:1981].
+
+The methodology used in textbook studies tends to be qualitative in nature. Intensive case studies and interviews appear to be the method most preferred by researchers studying textbook usage. Although the sample sizes in these studies are generally small due to the limitations imposed by the time consuming methodology, the data usually provides rich detailed descriptions of the subjects' textbook practices. This research has mainly focused on elementary and middle school teachers in several subject areas.
+
+The research has suggested that there are inconsistencies in the manner in which teachers use textbooks, and that this often depends upon their prior experience and beliefs [e.g., @kon:1993; @sosniak:1993; @stodolsky:1989]. These inconsistencies include for example, the amount of instructional time spent with textbook materials, and how the materials were used. While the research has shown inconsistencies in the teachers' use of textbooks in the classroom, it has demonstrated that textbooks, however, do provide teachers guidance when it comes to making decisions about content. The research suggests that textbooks may influence teachers' decisions about which topics to teach, the amount of time to allocate to each topic, and the sequence in which topics are presented [e.g., @alvermann:1987; @alvermann:1989; @freeman:1989; @stodolsky:1989]. Using the textbook to plan instruction has also been examined in specific subject areas. One subject area that has been examined closely is mathematics. The next section examines the literature on how mathematics teachers use textbooks.
+
+
+### Research on how Mathematics Teachers use Textbooks
+
+The research on how mathematics teachers use textbooks has received increasing attention [e.g., @barr:1988; @bush:1986; @fan:2000; @krammer:1985]. Early studies in this area suggested mathematics teachers relied on the textbook to make many of their instructional decisions [e.g., @kuhs:1979; @mccutcheon:1981; @mccutcheon:1982]. In fact, @mccutcheon:1981 concluded that almost all of the teachers in her study $(n=12)$ relied on textbooks as the major source for planning activities, and this was especially true for both mathematics and reading teachers.
+
+In their study of textbook usage by elementary school mathematics teachers, Freeman and Porter [-@freeman:1989] examined the relationship between the sequencing of topics as presented in the textbook, and the sequencing of topics actually used in the classroom. They computed Kendall's Tau for each of the six teachers in their study (The lowest reported was 0.79 and four of the six had a Tau coefficient above 0.9.) and found that there was evidence to suggest that, "teachers' sequence of instruction generally parallels that of the textbook" (p. 418). Although there were only six subjects used in that study, other studies [e.g., @alvermann:1987; @alvermann:1989; @mccutcheon:1981] have produced similar findings regarding mathematics teachers' sequencing of instruction.
+
+More recently, researchers have begun to make claims that this reliance on textbooks to make curricular decisions is not quite as dominant as once suggested [@sosniak:1993]. In fact, @valverde:2002 reported that mathematics teachers recently have more heavily relied on educational standards to guide their curriculum choices. However, while the educational standards may have influenced the content that mathematics teachers tend to include, the research still suggests that textbooks are a major source for deciding how and when that content is presented [@beaton:1996]. This finding was further substantiated in a major study on curriculum that used data from the Third International Mathematics and Science Study (TIMSS). In this study, statistically significant relationships were found between textbooks and classroom instruction that held true for almost all of the countries in the study, including the United States [@schmidt:2001].
+
+@valverde:2002 wrote that mathematics textbooks are written to influence how instructional time is used, and that there were substantial differences in the structuring and content in those books. They concluded by arguing that those differences "could influence how effectively students will learn that content" (p. 53). If the structuring of textbooks does indeed influence learning in mathematics, it might also be influential in the development of students' reasoning about statistics. Next, we look at the structure and sequencing of statistics textbooks.
+
+
+### Research on how Statistics Topics are Sequenced
+
+Like mathematics textbooks, introductory statistics textbooks also vary in terms of content and structure. One major difference between different introductory statistics textbooks is the sequencing of topics. These differing sequences often include the placement of bivariate data. In regard to the placement of bivariate data, there are typically two sequences found in introductory statistics textbooks [@chance:2001]. One sequence generally places bivariate data immediately after the chapter(s) on univariate statistics. The other sequence tends to place bivariate data at the end of the course. However, even if the textbook includes the bivariate data unit immediately after descriptive statistics, statistics educators themselves often change the placement of the bivariate data unit to suit their needs as an educator [e.g., @zieffler:2004].
+
+The literature from statistics education has also weighed in on the placement of a unit on bivariate data. Chance and Rossman [-@chance:2001] have presented arguments for both placing bivariate statistics immediately after univariate statistics and for placing it after inference. While they didn't resolve the issue, they offered arguments for both sequencing choices. On one side of the argument they have suggested that, "[p]roceeding directly to descriptive bivariate analyses from univariate ones\ldots highlights the parallel structure of descriptive analyses in both settings" (p. 3). They also rebutted that argument with another one by stating, "[p]erhaps the largest benefit of delaying bivariate analyses is that treatment of inference comes earlier in the course\ldots [c]oncepts that require complex reasoning should be addressed early in the course to have the best chance of being resolved in students' minds by the end" (p. 4). While they offered well thought out arguments for both sides, they didn't offer any empirical evidence on the choice.
+
+The placement of the bivariate data unit seems quite arbitrary with no research basis as to whether the placement in the course makes a difference. For instance, Gelman and Nolan [-@gelman:2002], in their book *Teaching Statistics: A Bag of Tricks*, offer two detailed schedules to help a beginning statistics instructor structure his/her course. In both of these schedules, the unit on bivariate data is sequenced immediately after descriptive statistics so as to come before inference. @borovcnik:1984 also places bivariate data before inference. In neither reference does it give a reason for the placement of the unit on bivariate data.
+
+
+### Summary of the Research on how Teachers use Textbooks
+
+The research on how teachers use textbooks is not as ample as one would expect given the dominance of textbooks within the American classroom. The time consuming, detailed methodology employed by many of the researchers in this area, has also generally constrained the sample sizes used in these studies to be relatively small. However, two studies [@schmidt:2001; @valverde:2002], replicated many of the same findings, using very large sample sizes.
+
+Textbook research seems to suggest that while teachers engage in a certain amount of autonomy in their usage of textbooks within instructional sessions, they do rely on textbooks to make decisions about the curriculum [e.g., @valverde:2002]. In particular, textbooks are used to guide decisions on how to teach certain concepts or topics, and the sequencing of content and topics within a course [e.g., @beaton:1996]. This has been shown to be especially true for mathematics instructors [e.g., @mccutcheon:1981].
+
+
+## Summary of the Literature Related to Developing Covariational Reasoning of College Students
+
+The research on covariational reasoning has spanned several disciplines and methodologies. Researchers have used both in-depth qualitative methods such as interviewing and content analysis, as well as more traditional randomized experiments to examine covariational reasoning. These studies have used participants at all age levels including elementary school students, middle-school students, high-school students, college students, and adults.
+
+Some of the findings have been quite robust across both studies and disciplines. These include:
+
+- that peoples' prior beliefs about the relationship between two variables have a great deal of influence on their judgments of the covariation between those variables;
+- that people often believe there is a correlation between two uncorrelated events (illusory correlation);
+- that peoples’ covariational judgments seem to be most influenced by the joint presence of variables and least influenced by the joint absence of variables;
+- that subjects have difficulty reasoning about covariation when the relationship is negative;
+- that peoples’ covariational judgment of the relationship between two variables tends to be less than optimum (i.e. smaller than the actual correlation presented in the data or graph); and
+- that subjects have a tendency to form causal relationships based on a covariational analysis.
+
+These findings have been seen in studies from psychology, science education, mathematics education, and statistics education. Taken as a whole, the research on covariational reasoning has answered many research questions about misconceptions and difficulties that people have in reasoning about covariation. But, there are many research questions yet unanswered.
+
+While researchers have examined peoples' covariational reasoning on both dichotomous and continuous variables, there have been few studies that have examined peoples' reasoning about covariation as it relates to concepts that appear in an introductory statistics course. Other than reading a scatterplot, many other concepts that get taught in a unit on bivariate data in an introductory statistics course have not been extensively examined. There are a few studies by statistics education researchers [e.g., @batanero:1997; @batanero:1998; @truran:1997] that have looked at students' understanding of concepts related to regression and correlation, but these have been either cross-sectional [@truran:1997] or been a pre-post design over the duration of one unit [@batanero:1998].
+
+Statistics textbooks vary on the sequencing of the bivariate data chapter(s). Some place it early in the book, generally after descriptive statistics, and some place it much later in the book, generally after inference [@chance:2001]. Because it has been suggested that the structure of textbooks has been influential in student learning [e.g., @valverde:2002], differences in sequencing could effect the development of student'’ reasoning about covariation in an introductory statistics course. With the textbook generally playing an instrumental role in how teachers sequence courses, the appropriate placement of a unit on bivariate data becomes an important pedagogical question.
+
+With enrollment in our statistics courses increasing [@college-board:2003] it is imperative that we as educators do what we can to understand and improve student’s ability to reason with and understand covariation. The literature reviewed has suggested that students’ reasoning about covariation could be influenced by several factors, including the placement of the unit within an introductory statistics course, and the students’ own reasoning about univariate distribution. However, much of the research on both of these hypotheses has only been speculative.
+
+This study's goals will be threefold. First, it will attempt to examine the development, or change, in students' reasoning about bivariate data over the span of an entire introductory statistics course. This might give educators an idea of when that development occurs so that we can provide opportunities for even more growth. Secondly, this study will examine whether students' development of reasoning about bivariate data can be explained by their development in univariate reasoning. This could influence both pedagogical and curricular choices, especially during early units on descriptive statistics. Finally, this study will examine if the sequencing of the unit on bivariate data is influential in explaining students' covariational reasoning. This could also influence curricular decisions in an introductory statistics course. In the next chapter, the methodology for the study is presented.
+
+
+<!-- The syntax will get the initial formatting for the LaTeX longtable -->
+<!-- Then I added \midrule and \multicolumn manually to make things look good -->
+
+
+```{r tab-2-1, echo=FALSE, eval=FALSE}
+# Import table data
+tab_02 = read.csv("data/tab-01.csv", colClasses = "character", na.strings = "")
+
+# Create skeleton of LaTeX code
+tab_02 %>%
+  kable(
+    format = "latex",
+    col.names = c("Authors", "N", "Grade-Level", "Method", "Number", "Type"),
+    align = c("l", rep("c", 5)),
+    longtable = TRUE,
+    booktabs = TRUE,
+    escape = FALSE,
+    label = "tab-2-1",
+    caption = "Empirical and simulation studies reporting on covariational reasoning and judgment from the fields of psychology, science education, mathematics education and statistics education. For each study, the sample sizes, grade-levels studied, and methodologies employed are reported, as well as the number of variables covaried and whether those variables were dichotomous or continuous."
+  ) %>%
+  kable_styling(
+    font_size = 9,
+    latex_options = c("HOLD_position", "repeat_header")
+    ) %>%
+  row_spec(0, align = "c") %>%
+  column_spec(1, width = "2.5in") %>%
+  column_spec(2, width = "1.25in") %>%
+  column_spec(3, width = "1.25in") %>%
+  column_spec(4, width = "0.75in") %>%
+  column_spec(5, width = "0.5in") %>%
+  column_spec(6, width = "0.75in") %>%
+  footnote(symbol = "Footnote Symbol 1", footnote_as_chunk = TRUE) %>%
+  landscape()
+
+```
+
+
+
+
+\begin{landscape}\begingroup\fontsize{9}{11}\selectfont
+\setlength{\LTleft}{0pt}
+\setlength\LTcapwidth{\linewidth}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{2.5in}>{\centering\arraybackslash}p{1.25in}>{\centering\arraybackslash}p{1.25in}>{\centering\arraybackslash}p{0.75in}>{\centering\arraybackslash}p{0.5in}>{\centering\arraybackslash}p{0.75in}}
+\caption{\label{tab:tab-2-1}Empirical and simulation studies reporting on covariational reasoning and judgment from the fields of psychology, science education, mathematics education and statistics education. For each study, the sample sizes, grade-levels studied, and methodologies employed are reported, as well as the number of variables covaried and whether those variables were dichotomous or continuous.}\\
+\toprule
+\thead{Authors} & \thead{N} & \thead{Grade\mbox{-}Level} & \thead{Method} & \thead{Number} & \thead{Type}\\
+\midrule
+\endfirsthead
+\caption[]{Empirical and simulation studies reporting on covariational reasoning and judgment from the fields of psychology, science education, mathematics education and statistics education. For each study, the sample sizes, grade-levels studied, and methodologies employed are reported, as well as the number of variables covaried and whether those variables were dichotomous or continuous. \textit{(continued)}}\\
+\toprule
+\thead{Authors} & \thead{N} & \thead{Grade\mbox{-}Level} & \thead{Method} & \thead{Number} & \thead{Type}\\
+\midrule
+\endhead
+\bottomrule
+\multicolumn{6}{r}{\textit{(Table continues on next page)}}
+\endfoot
+\bottomrule
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Grade\mbox{-}Level:} P=Primary (grades K--6), S=Secondary (grades 7--12), UG=Undergraduates, G=Graduate students}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Method:} CR=Constructed response, DE=Design Experiment, FC=Forced choice, I=Interview, RS=Rating scale}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}$^*$Students were followed for 3 years; at the end of the study they were in Grades 7--9.}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}$^{**}$OAC (Ontario Academic Credit) is a college preparation year taken after grade 12.}
+\endlastfoot
+\multicolumn{6}{c}{Studies from Psychology}\\[2em]
+\protect\hyperlink{ref-anderson:2005}{Anderson et al. (2005)} & \multicolumn{5}{l}{\makecell[l]{Simulation study to compare the correlation obtained from a sample (n = 5, 7, 10, 15, or\\ 30) drawn at random to the actual correlation from a simulated population (N = 10,000).}}\\
+\midrule
+\protect\hyperlink{ref-arkes:1983}{Arkes \& Harkness (1983)} & 80, 65, 66, 47, 38, 48 & UG & CR, RS & 2 & Dichotomous\\
+\protect\hyperlink{ref-bettman:1986}{Bettman et al. (1986)} & 104 & UG & CR & 4 & Continuous\\
+\protect\hyperlink{ref-beyth-marom:1982}{Beyth-Marom (1982)} & 273 & \textit{Not reported} & CR & 4 & Dichotomous\\
+\protect\hyperlink{ref-bobko:1979}{Bobko \& Karren (1979)} & 89 & Adults & CR & 2 & Continuous\\
+\midrule
+\protect\hyperlink{ref-cleveland:1982}{Cleveland et al. (1982)} & 74, 109 & \textit{Not reported} & RS & 2 & Continuous\\
+\protect\hyperlink{ref-crocker:1982}{Crocker (1982)} & 60 & UG & FC & 2 & Dichotomous\\
+\protect\hyperlink{ref-curtis:1986}{Curtis (1986)} & 108, 31, 16 & UG, G, Adults & CR & 2 & Continuous\\
+\protect\hyperlink{ref-haslam:1994}{Haslam \& McGarty (1994)} & 256 & UG & CR & 2 & Dichotomous\\
+\midrule
+\protect\hyperlink{ref-inhelder:1958}{Inhelder \& Piaget (1958)} & \textit{Not reported} & \textit{Not reported} & I & 2 & Dichotomous\\
+\protect\hyperlink{ref-kao:1993}{Kao \& Wasserman (1993)} & 90, 200 & UG & RS & 2 & Dichotomous\\
+\protect\hyperlink{ref-konarski:2005}{Konarski (2005)} & 41, 31 & UG & RS & 2 & Continuous\\
+\protect\hyperlink{ref-kuhn:1977}{Kuhn \& Brannock (1977)} & 80 & P, UG & I & 4 & Dichotomous\\
+\addlinespace
+\protect\hyperlink{ref-kuhn:1977a}{Kuhn \& Ho (1977)} & 100 & P, S, UG & I & 4 & Both\\
+\protect\hyperlink{ref-lane:1985}{Lane et al. (1985)} & 39, 40 & UG & RS & 2 & Continuous\\
+\protect\hyperlink{ref-lawson:2003}{Lawson et al. (2003)} & 138 & UG & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-lewandowsky:1989}{Lewandowsky \& Spence (1989)} & 42 & UG, G & CR & 2 & Continuous\\
+\midrule
+\protect\hyperlink{ref-lovell:1961}{Lovell (1961)} & 68 & P, S & I & 2 & Dichotomous\\
+\protect\hyperlink{ref-mcgahan:2000}{McGahan et al. (2000)} & 576 & UG & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-mcgarty:1993}{McGarty et al. (1993)} & 83, 112 & UG & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-mckenzie:inpress}{McKenzie \& Mickkelson (in press) } & 160, 306 & UG & RS & 2 & Dichotomous\\
+\midrule
+\protect\hyperlink{ref-meyer:1997}{Meyer et al. (1997)} & 43, 36, 82 & UG & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-murphy:1994}{Murphy (1994)} & 79, 149 & UG & RS & 2 & Dichotomous\\
+\protect\hyperlink{ref-neimark:1975}{Neimark (1975)} & 66 & P$^{*}$ & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-pryor:2000}{Pryor et al. (2000)} & 55 & UG & RS & 2 & Dichotomous\\
+\midrule
+\protect\hyperlink{ref-ross:1993}{Ross \& Cousins (1993)} & 100, 278 & P, S, OAC$^{**}$ & CR & 3 & Both\\
+\protect\hyperlink{ref-ross:1981}{Ross \& Maynes (1981)} & 1680 & S & FC & 2 & Continuous\\
+\protect\hyperlink{ref-schustack:1981}{Schustack \& Sternberg (1981)} & 43, 58, 40 & UG & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-shaklee:1988}{Shaklee \& Elek (1988)} & 151 & P, S, UG & FC & 2 & Dichotomous\\
+\addlinespace
+\protect\hyperlink{ref-shaklee:1989}{Shaklee \& Goldston (1989)} & 149 & P, S, UG & FC & 2 & Dichotomous\\
+\protect\hyperlink{ref-shaklee:1981}{Shaklee \& Mims (1981)} & 103 & P, S, UG & FC & 2 & Dichotomous\\
+\protect\hyperlink{ref-shaklee:1983}{Shaklee \& Paszek (1983)} & 72 & P & I & 2 & Dichotomous\\
+\protect\hyperlink{ref-shaklee:1980}{Shaklee \& Tucker (1980)} & 80 & S, UG & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-shultz:1975}{Shultz \& Mendelson (1975)} & 36 & P & FC & 2 & Dichotomous\\
+\midrule
+\protect\hyperlink{ref-smedslund:1963}{Smedslund (1963)} & 67, 19 & UG, Adults & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-spellman:1996}{Spellman (1996)} & 120 & UG & FC & 2 & Dichotomous\\
+\protect\hyperlink{ref-strahan:1978}{Strahan \& Hansen (1978)} & 80 & UG & CR & 2 & Continuous\\
+\protect\hyperlink{ref-trolier:1986}{Trolier \& Hamilton (1986)} & 72 & UG & RS & 2 & Continuous\\
+\midrule
+\protect\hyperlink{ref-vallee-tourangeau:1998}{Vallée-Tourangeau et al. (1998)} & 20, 24 & UG & RS & 2 & Dichotomous\\
+\protect\hyperlink{ref-wasserman:1990}{Wasserman et al. (1990)} & 240 & UG & RS & 2 & Dichotomous\\
+\protect\hyperlink{ref-well:1988}{Well et al. (1988)} & 40 & UG & RS & 2 & Continuous\\
+\protect\hyperlink{ref-yates:1986}{Yates \& Curley (1986)} & 129 & \textit{Not reported} & Open ended & 2 & Dichotomous\\
+\protect\hyperlink{ref-yates:2000}{Yates et al. (2000)} & 42, 80 & UG & FC & 2 & Dichotomous\\[2em]
+\multicolumn{6}{c}{Studies from Science and Mathematics Education}\\[2em]
+\protect\hyperlink{ref-adi:1978}{Adi et al. (1978)} & 80 & S & I & 2 & Dichotomous\\
+\protect\hyperlink{ref-carlson:2001}{Carlson et al. (2001)} & 24 & UG & CR, I & 2 & Continuous\\
+\protect\hyperlink{ref-carlson:2002}{Carlson et al. (2002)} & 20 & UG & CR, I & 2 & Continuous\\
+\protect\hyperlink{ref-lawson:1982}{Lawson (1982)} & 122 & S, UG & CR & 2 & Both\\
+\midrule
+\protect\hyperlink{ref-lawson:1979}{Lawson et al. (1979)} & 507 & P, S, UG & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-lawson:1984}{Lawson \& Bealer (1984)} & 391 & P, S & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-mckenzie:1986}{McKenzie \& Padilla (1986)} & 377 & S & FC & 2 & Continuous\\
+\protect\hyperlink{ref-padilla:1986}{Padilla et al. (1986)} & 625 & S & FC & 2 & Continuous\\
+\midrule
+\protect\hyperlink{ref-robinson:1985}{Robinson et al. (1985)} & 35 & P, S, Adult & FC & 2 & Continuous\\
+\protect\hyperlink{ref-saldanha:1998}{Saldanha \& Thompson (1998)} & 1 & S & I & 2 & Continuous\\
+\protect\hyperlink{ref-wavering:1984}{Wavering (1984)} & 94 & S & I & 2 & Dichotomous\\
+\protect\hyperlink{ref-wavering:1989}{Wavering (1989)} & 150 & S & CR & 2 & Continuous\\[2em]
+\multicolumn{6}{c}{Studies from Statistics Education}\\[2em]
+\protect\hyperlink{ref-batanero:1996}{Batanero et al. (1996)} & 213 & Pre-UG & CR & 2 & Dichotomous\\
+\protect\hyperlink{ref-batanero:1997}{Batanero et al. (1997)} & 19 & Pre-UG & CR & 2 & Both\\
+\protect\hyperlink{ref-batanero:1998}{Batanero et al. (1998)} & 19, 36 & UG & CR & 2 & Both\\
+\protect\hyperlink{ref-cobb:2003a}{Cobb, McClain, et al. (2003)} & 11 & S & DE &  & \\
+\protect\hyperlink{ref-estepa:2001}{Estepa \& Sánchez Cobo (2001)} & 193 & UG & FC & 2 & Continuous\\
+\midrule
+\protect\hyperlink{ref-moritz:2004}{Moritz (2004)} & 167 & P, S & CR & 2 & Continuous\\
+\protect\hyperlink{ref-morris:1997}{Morris (1997)} & 50 & UG & CR & 2 & Continuous\\
+\protect\hyperlink{ref-stockburger:1982}{Stockburger (1982)} & 54 & UG & CR & 2 & Continuous\\
+\protect\hyperlink{ref-truran:1997}{Truran (1997)} & 360 & UG & CR & 2 & Continuous\\*
+\end{longtable}
+\endgroup
+\end{landscape}
+
+
+
+
+
+
+
+
+
+

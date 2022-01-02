@@ -1,0 +1,375 @@
+# (APPENDIX) Appendix {-}
+
+# Instruments {#appendix-a}
+
+\setstretch{1}
+
+## Bivariate Reasoning Assessment (BRA)  {-}
+
+1. Sam is interested in bird nest construction, and finds a correlation of .82 between the depth of a bird nest (in inches) and the width of the bird nest (in inches) at its widest point. Sue, a classmate of Sam, is also interested in looking at bird nest construction, and measures the same variables on the same bird nests that Sam does, except she does her measurements in centimeters, instead of inches. What should her correlation be?
+    a. Sue's correlation should be 1, because it will match Sam's exactly.
+    b. Sue's correlation would be $1.64(.82) = 1.3448$, because you need to change the units from inches to centimeters and 1 inch = 1.64 centimeters.
+    c. Sue's correlation would be about .82, the same as Sam's.
+
+2. A student was studying the relationship between how much money students spend on food and on entertainment per week. Based on a sample size of 270, he calculated a correlation coefficient ($r$) of .013 for these two variables. Which of the following is an appropriate interpretation?
+    a. This low correlation of .013 indicates there is no relationship.
+    b. There is no linear relationship but there may be a nonlinear relationship.
+    c. This correlation indicates there is some type of linear relationship.
+  
+3. A random sample of 25 Real Estate listings for houses in the Northeast section of a large city was selected from the city newspaper. A correlation coefficient of $-.80$ was found between the age of a house and its list price. Which of the following statements is the best interpretation of this correlation?
+    a. Older houses tend to cost more money than newer houses.
+    b. Newer houses tend to cost more money than older houses.
+    c. Older houses are worth more because they were built with higher quality materials and labor.
+    d. New houses cost more because supplies and labor are more expensive today.
+
+\noindent For Items 4 and 5, select the scatterplot that shows:
+
+```{r fig-bra-scatterplots, echo=FALSE, out.width='80%', fig.pos="H"}
+knitr::include_graphics("figure/bra-scatterplots.png")
+```
+
+4. A correlation of about .60? 
+    a. a
+    b. b 
+    c. c 
+    d. d 
+    e. e
+
+5. The strongest relationship between the $X$ and $Y$ variables?  
+    a. a
+    b. b
+    c. a and b
+    d. a and d
+    e. a, b, and d
+
+\noindent Dr. Jones gave students in her class a pretest about statistical concepts. After teaching about hypotheses tests, she then gave them a posttest about statistical concepts. Dr. Jones is interested in determining if there is a relationship between pretest and posttest scores, so she constructed the following scatterplot and calculated the correlation coefficient.
+
+```{r fig-dr-jones-scatterplots, echo=FALSE, out.width='60%', fig.pos="H"}
+knitr::include_graphics("figure/dr-jones-scatterplot.png")
+```
+
+6. Locate the point that shows a pretest score of 107. This point, which represents John's scores, is actually incorrect. If John's scores are removed from the data set, how would the correlation coefficient be affected?
+    a. The value of the correlation would decrease.
+    b. The value of the correlation would increase.
+    c. The value of the correlation would stay the same.
+
+7. It turns out that John's pretest score was actually 5, and his posttest score was 100. If this correction is made to the data file and a new correlation coefficient is calculated, how would you expect this correlation to compare to the original correlation?
+    a. The absolute value of the new correlation would be smaller than the absolute value of the original correlation.
+    b. The absolute value of the new correlation would be larger than the absolute value of the original correlation.
+    c. The absolute value of the new correlation would be the same as the absolute value of the original correlation.
+    d. It is impossible to predict how the correlation would change.
+
+8. A statistics instructor wants to use the number of hours studied to predict exam scores in his class. He wants to use a linear regression model. Data from previous years shows that the average number of hours studying for a final exam in statistics is 8.5, with a standard deviation of 1.5, and the average exam score is 75, with a standard deviation of 15. The correlation is .76. Should the instructor use linear regression to predict exam scores from hours studied?
+    a. Yes, there is a high correlation, so it is alright to use linear regression.
+    b. Yes, because linear regression is the statistical method used to make predictions when you have bivariate quantitative data.
+    c. Linear regression could be appropriate if the scatterplot shows a clear linear relationship.
+    d. No, because there is no way to prove that more hours of study causes higher exam scores.
+
+
+
+## Distributional Reasoning Scale (DRS) {-}
+
+Items 1 and 2 refer to the four histograms displayed below. For each item, match the description to the appropriate histogram.
+
+```{r fig-drs-1, echo=FALSE, out.width='80%', fig.pos="H"}
+knitr::include_graphics("figure/drs-01.png")
+```
+
+1. A distribution for a set of quiz scores where the quiz was very easy is represented by:
+    a. Histogram I
+    b. Histogram II
+    c. Histogram III
+    d. Histogram IV
+
+2. A distribution for the last digit of phone numbers sampled from a phone book (i.e., for the phone number 968-9667, the last digit, 7, would be selected) is represented by:
+    a. Histogram I
+    b. Histogram II
+    c. Histogram III
+    d. Histogram IV
+
+3. A baseball fan likes to keep track of statistics for the local high school baseball team. One of the statistics she recorded is the proportion of hits obtained by each player based on the number of times at bat as shown in the table below. Which of the following graphs gives the best display of the distribution of proportion of hits in that it allows the baseball fan to describe the shape, center and spread of the data?
+
+
+```{r tab-app2-1, echo=FALSE}
+data.frame(
+  player1 = c("BH", "HA", "JS", "TC", "MM", "GV", "RC"),
+  prop1 = c(0.305, 0.229, 0.281, 0.097, 0.167, 0.333, 0.085),
+  player2 = c("SU", "DH", "TO", "RL", "JB", "WG", "MH"),
+  prop2 = c(0.270, 0.136, 0.218, 0.267, 0.270, 0.054, 0.108),
+  player3 = c("BC", "AA", "HK", "RS", "CR", "MD", ""),
+  prop3 = c(0.301, 0.143, 0.341, 0.261, 0.115, 0.125, NA)
+) %>%
+  kable(
+    format = "latex",
+    col.names = c("Player", "Prop", "Player", "Prop", "Player", "Prop"),
+    align = "c",
+    booktabs = TRUE,
+    escape = FALSE,
+    label = "tab-app2-1"
+  ) %>%
+  kable_styling(
+    font_size = 10,
+    latex_options = c("HOLD_position"),
+    full_width = TRUE
+    ) %>%
+  row_spec(0, align = "c")
+```
+
+
+
+```{r fig-baseball, echo=FALSE, fig.width=8, fig.height=6, out.width='60%', fig.pos="H", fig.show='hold'}
+players = c("BH", "HA", "JS", "TC", "MM", "GV", "RC", "SU", "DH", "TO", 
+            "RL", "JB", "WG", "MH", "BC", "AA", "HK", "RS", "CR", "MD")
+d = data.frame(
+  player_a = factor(players, levels = players),
+  player_b = factor(players, levels = c("WG", "TC", "CR", "DH", "MM", "HA", "RS", "JB",
+                                        "JS", "BH", "HK", "GV", "BC", "SU", "RL", "TO", 
+                                        "AA", "MD", "MH", "RC")),
+  player_d = factor(players, levels = c("WG", "RC", "TC", "MH", "CR", "MD", "DH", "AA",
+                                        "MM", "TO", "HA", "RS", "RL",  "SU","JB", "JS", 
+                                        "BC", "BH", "GV", "HK")),
+  prop = c(0.305, 0.229, 0.281, 0.097, 0.167, 0.333, 0.085, 0.270, 0.136, 0.218, 0.267, 0.270, 
+            0.054, 0.108, 0.301, 0.143, 0.341, 0.261, 0.115, 0.125)
+)
+
+ggplot(data = d, aes(x = player_a, y = prop)) +
+  geom_bar(stat = "identity", color = "black", fill = "lightgrey") +
+  xlab("") +
+  scale_y_continuous(name = "", breaks = seq(from = 0, to = 0.35, by = 0.05)) +
+  ggtitle("Plot A")
+
+ggplot(data = d, aes(x = player_b, y = prop)) +
+  geom_bar(stat = "identity", color = "black", fill = "lightgrey") +
+  xlab("") +
+  scale_y_continuous(name = "", breaks = seq(from = 0, to = 0.35, by = 0.05)) +
+  ggtitle("Plot B")
+
+ggplot(data = d, aes(x = prop)) +
+  geom_histogram(binwidth = .025, color = "black", fill = "lightgrey") +
+  scale_x_continuous(name = "", breaks = seq(from = 0, to = 0.55, by = 0.05)) +
+  scale_y_continuous(name = "") +
+  ggtitle("Plot C")
+
+ggplot(data = d, aes(x = player_d, y = prop)) +
+  geom_bar(stat = "identity", color = "black", fill = "lightgrey") +
+  xlab("") +
+  scale_y_continuous(name = "", breaks = seq(from = 0, to = 0.35, by = 0.05)) +
+  ggtitle("Plot D")
+
+```
+
+
+\noindent A drug company developed a new formula for their headache medication. To test the effectiveness of this new formula, they gave it to 100 people with headaches and timed how many minutes it took for the patient to no longer have a headache. They compared the result from this test to previous results from 150 patients using the old formula under the exact same conditions. The results from both of these clinical trials are shown below.
+
+```{r fig-drs-headache, echo=FALSE, out.width='80%', fig.pos="H"}
+knitr::include_graphics("figure/drs-04.png")
+```
+
+\noindent Items 4, 5, and 6 present statements made by three different statistics students. For each statement, indicate whether you think the student’s conclusion is valid.
+
+4. The old formula works better. Two people who took the old formula felt relief in less than 20 minutes, compared to none who took the new formula. Also, the worst result---near 120 minutes---was with the new formula.
+    a. Valid 
+    b. Invalid
+
+
+5. The average time for the new formula is lower than the average time for the old formula. I’d conclude that people taking the new formula will tend to feel relief about 20 minutes sooner than those taking the old formula.
+    a. Valid 
+    b. Invalid
+
+6. I wouldn't conclude anything from these data. The number of patients in the two groups is not the same so there is no fair way to compare the two formulas.
+    a. Valid 
+    b. Invalid
+
+
+
+\noindent Item 7 refers to the two boxplots presented below. The boxplots display final exam scores for all students in two different sections of the same course.
+
+```{r fig-drs-final-exam, echo=FALSE, out.width='80%', fig.pos="H"}
+knitr::include_graphics("figure/drs-07.png")
+```
+
+7. Which section would you expect to have a greater standard deviation in exam scores?
+    a. Section A
+    b. Section B
+    c. Both Sections are about equal
+    d. It is impossible to tell
+
+8. Jean lives about 10 miles from the college where she plans to attend a 10-week summer class. There are two main routes she can take to the school, one through the city and one through the countryside. The city route is shorter in miles, but has more stoplights. The country route is longer in miles, but has only a few stop signs and stoplights. Jean sets up a randomized experiment where each day she tosses a coin to decide which route to take that day. She records the following times in minutes for 5 days of travel on each route.
+
+    - Country Route: 17, 15, 17, 16, 18 
+    - City Route: 18, 13, 20, 10, 16
+
+It is important to Jean to arrive on time for her class, but she does not want to arrive too early because that would increase parking fees. Based on the data gathered, which route would you advise her to choose?
+
+  a. The Country Route, because the times are consistently between 15 and 18 minutes.
+  b. The City Route, because she can get there in 10 minutes on a good day and the average time is less than for the Country Route.
+  c. Because times on the two routes have so much overlap, neither route is better than the other. She might as well flip a coin.
+
+
+\noindent Items 9 and 10 refer to the five histograms presented below. Each histogram displays test scores on a scale of 0 to 10 for one of five different statistics classes.
+
+```{r fig-drs-hist, echo=FALSE, out.width='80%', fig.pos="H"}
+knitr::include_graphics("figure/drs-09.png")
+```
+
+9. Which of the classes would you expect to have the lowest standard deviation, and why?
+    a. Class A, because it has the most values close to the mean.
+    b. Class B, because it has the smallest number of distinct scores.
+    c. Class C, because there is no change in scores.
+    d. Class A and Class D, because they both have the smallest range.
+    e. Class E, because it looks the most normal.
+
+10. Which of the classes would you expect to have the highest standard deviation, and why?
+    a. Class A, because it has the largest difference between the heights of the bars.
+    b. Class B, because more of its scores are far from the mean.
+    c. Class C, because it has the largest number of different scores.
+    d. Class D, because the distribution is very bumpy and irregular.
+    e. Class E, because it has a large range and looks normal.
+
+
+
+## Algebra Test (TIMSS Study) {-}
+
+1. The cost C, of printing greeting cards consists of a fixed charge of 100 cents and a charge of 6 cents for each card printed. Which of these equations can be used to determine the cost of printing *n* cards?
+    a. $C = (100 + 6n)$ cents
+    b. $C = (106 + n)$ cents
+    c. $C = (6 + 100n)$ cents
+    d. $C = (106n)$ cents
+    e. $C = (600n)$ cents
+ 
+    
+2. The table shows a relationship between *x* and *y*. Write an equation that expresses this relationship.
+
+*x* | *y*
+--- | ---
+2   | 7
+3   | 10
+4   | 13
+5   | 16
+
+\hspace{2in}Answer: y = \underline{\hspace{3cm}}
+
+\pagebreak
+
+3. The table shows a relationship between *x* and *y*. What is the missing number in the table?
+  a. 9
+  b. 10
+  c. 11
+  d. 12
+  e. 13
+
+*x* | *y*
+--- | ---
+2   | 5
+3   | 7
+4   | ?
+7   | 15
+
+4. Find the value of *x* if: $12x - 10 = 6x + 32$.
+
+5. If 4 times a number is 48, what is $\frac{1}{3}$ of the number?
+    a. 4
+    b. 8
+    c. 12
+    d. 16
+
+6. If $x=3$, what is the value of $\frac{5x + 3}{4x - 3}$?
+  
+7. Which point on the graph could have coordinates $(7,~16)$?
+    a. Point P
+    b. Point Q
+    c. Point R
+    d. Point S
+
+```{r fig-algtest-07, echo=FALSE, out.width='60%', fig.pos="H", fig.show='hold'}
+d = data.frame(
+  x = c(7, 16, 16, 7),
+  y = c(7, 7, 16, 16),
+  pt = c("P", "Q", "R", "S")
+)
+
+ggplot(data = d, aes(x = x, y = y)) +
+  geom_point() +
+  scale_x_continuous(name = "", breaks = seq(from = 0, to = 20, by = 5), limits = c(0, 20)) +
+  scale_y_continuous(name = "", breaks = seq(from = 0, to = 20, by = 5), limits = c(0, 20)) +
+  geom_text(aes(label = pt), nudge_x = 1)
+
+```
+
+8. A club has 86 members, and there are 14 more girls than boys. How many boys and how many girls are members of the club? *Show your work.*
+
+9. The table shows some values of *x* and *y*, where *x* is proportional to *y*. What are the values of *P* and *Q*?
+    a. $P=40$ and $Q=13$ 
+    b. $P=18$ and $Q=17$ 
+    c. $P=20$ and $Q=18$ 
+    d. $P=40$ and $Q=18$ 
+    e. $P=18$ and $Q=20$
+
+*x* | *y*
+--- | ---
+4   | 9
+8   | *P*
+*Q* | 45
+
+10. Solve the equation for *x*. Show your work.
+
+$$
+x^2 - 11x + 10 = 0
+$$
+
+
+## Mathematics Background Questionnaire (NAEP Items) {-}
+
+Which courses have you taken during high school or college? **Check one or box on each line.** INCLUDE courses taken in summer school, but DO NOT INCLUDE topics that were only taught as part of a longer course (such as trigonometry taught in drafting class or computer programming taught in Algebra II). If you have taken **more than one course at a particular level** (e.g., you took two statistics courses in college) please indicate how many you have taken along with the check mark.
+
+\begingroup\fontsize{10}{12}\selectfont
+\setlength{\LTleft}{0pt}
+\begin{longtable}[t]{|>{\raggedright\arraybackslash}p{2in}|>{\centering\arraybackslash}p{0.75in}|>{\centering\arraybackslash}p{0.75in}|>{\centering\arraybackslash}p{0.75in}|>{\centering\arraybackslash}p{0.75in}|}
+\toprule
+\thead{} & \thead{Never} & \thead{High school} & \thead{College} & \thead{Both}\\
+\midrule
+\endfirsthead
+
+\toprule
+\thead{} & \thead{I have never\\ taken this\\ course.} & \thead{I took this\\ course in high\\ school.} & \thead{I took this\\ course in\\ college.} & \thead{I took this\\ course in both\\ high school\\ and college.}\\
+\midrule
+\endhead
+\bottomrule
+
+\endfoot
+\bottomrule
+\endlastfoot
+Basic or general mathematics course &  &  &  & \\
+\midrule
+Tech-prep mathematics course &  &  &  & \\
+\midrule
+Pre-algebra course &  &  &  & \\
+\midrule
+Algebra I course &  &  &  & \\
+\midrule
+Geometry course &  &  &  & \\
+\midrule
+Algebra II course, with trigonometry &  &  &  & \\
+\midrule
+Algebra II course, w/o trigonometry &  &  &  & \\
+\midrule
+Trigonometry (as a separate course) &  &  &  & \\
+\midrule
+Pre-calculus course &  &  &  & \\
+\midrule
+Integrated mathematics course &  &  &  & \\
+\midrule
+Probability or statistics course &  &  &  & \\
+\midrule
+Calculus course &  &  &  & \\
+\midrule
+Discrete mathematics course &  &  &  & \\
+\midrule
+Other mathematics course &  &  &  & \\
+\midrule
+Computer programming course (such as C++, Pascal, Visual Basic, etc.) &  &  &  & \\*
+\end{longtable}
+\endgroup{}
+
+
+

@@ -1,0 +1,58 @@
+# Introduction {#intro}
+
+
+Covariational reasoning is at the heart of several fundamental human behaviors. It
+has been shown to play a prominent role in behaviors such as learning [@hilgard:1975], categorization [@smith:1981], and determining causation [@cheng:1997; @cheng:1990; @cheng:1992; @einhorn:1986]. In fact, McKenzie and Mikkelsen [-@mckenzie:inpress], noted cognitive psychologists, have expressed the opinion that covariational reasoning is one of the most important cognitive activities that humans perform.
+
+The education community has also deemed covariation reasoning to be important. Topics related to reasoning about bivariate data are in the K--12 mathematics curriculum recommendations for elementary and secondary schools [see @nctm:2000]. The statistics education community has also identified covariational reasoning as an important outcome for students who take an introductory statistics course [e.g., @asa:2005]. This, coupled with recent changes and calls for reform in the introductory statistics course, has created a need for studies to examine students' reasoning within introductory statistics courses.
+
+## Recent Changes in Introductory Statistics Courses
+
+More and more students continue to enroll in introductory statistics courses at the High School and college level [e.g., @cobb:2005; @college-board:2003]. In fact, according to a report by the Conference Board of the Mathematical Sciences the enrollment in elementary statistics courses at two- and four-year colleges and universities has increased at an almost exponential rate over the last three decades [@lutzer:2000]. These changes in the numbers of introductory statistics students have also been paralleled by changes in the backgrounds, interests and motivations of those students. As George Cobb [-@cobb:2005] wrote in the forward to *Innovations in Teaching Statistics*,
+
+> A teacher of today’s beginning statistics courses works with a very different group of students. Most take statistics much earlier in their lives, increasingly often in high school; few are drawn to statistics by immediate practical need; and there is a great variety in their levels of quantitative sophistication. As a result, today’s teachers face challenges of motivation and exposition far greater than those of a half-century ago (p. vii).
+
+Along with the changes in numbers and types of students who take introductory statistics, there have been calls for reform in the curriculum [e.g., @cobb:2000; @garfield:1995]. Recently, the American Statistical Association (ASA) has endorsed a set of *Guidelines for the Assessment and Instruction in Statistics Education* [@asa:2005a]. These guidelines include suggestions such as using real data and active learning, as well as the need to focus instruction and assessment on the important concepts that underlie statistical reasoning.
+
+
+## Importance of Statistical Reasoning
+
+As statistics educators adapt their courses to implement these recommendations, their curriculum and assessments change in important ways, emphasizing conceptual understanding and reasoning rather than computations and procedures. Many of these recommended changes in curriculum and assessment are focused on developing students’ statistical reasoning. Statistical reasoning has been defined as, "the way people reason with statistical ideas and make sense of statistical information" [@ben-zvi:2004, p. 7]. Within the introductory statistics curriculum, many types of reasoning have been identified as important for students to develop. These include, for example, reasoning about samples, or reasoning about data [e.g., @garfield:2002].
+
+One type of reasoning that has been deemed important for students to develop is reasoning about association [e.g., @garfield:2003]. Also referred to as covariational reasoning, or reasoning about bivariate data, this type of reasoning plays an important role in an introductory statistics course. Reasoning about bivariate data involves knowing how to judge and interpret a relationship between two variables and "commonly involves translation processes among raw numerical data, graphical representations, and verbal statements about statistical covariation and causal association" [@moritz:2004, p.228]. Concepts related to bivariate data, both categorical and quantitative, are found throughout most introductory statistics courses and include scatterplots, contingency tables, correlation, regression, and chi-square among others.
+
+Along with the development of curriculum for the promotion of student reasoning in the introductory statistics must come the assessment of that reasoning. With the goals of many introductory statistics courses now encompassing the development of students’ ability to reason statistically, there is a need to assess student reasoning. This assessment of student reasoning is important not only for student outcome measures such as grades, but also for the evaluation of whether course goals are being met, and whether the implemented curriculum is helping produce that desired course outcome.
+
+A major educational goal in almost every classroom regardless of content area, is to develop students' reasoning and understanding as they progress through a course. @davis:1964 summed it up well when he wrote, "[t]he primary object of teaching is to produce learning (that is, change), and the amount and kind of learning that occur can be ascertained only by comparing an individual's or a group's status before the learning period with what it is after the learning period" (p. 234). This idea of measuring "change" is even more salient in the current era of educational research. It is important enough that the idea of measuring "growth" even appears in the *No Child Left Behind Act of 2001* [@usdoe:2005].
+
+While recent research on covariational reasoning from statistics education has begun to focus on bivariate data that are quantitative, much of the previous research literature has examined categorical bivariate data. The research on covariational reasoning, especially from the field of statistics education, has primarily been conducted with pre-college students. Moreover, the research on covariational reasoning from all fields has primarily been cross-sectional. Missing from the literature is an idea of the development of students' reasoning about bivariate data within an introductory statistics course. Also missing from the research literature is an examination of factors that might explain that reasoning, such as the sequencing of topics within an introductory statistics course, or the development of students' reasoning about topics introduced prior to covariation, such as univariate distribution.
+
+
+## Description of the Study
+
+The study described in this dissertation is primarily concerned with the development of students' reasoning about quantitative bivariate data. Thus, one objective of this study is to describe or characterize the pattern of students' development of reasoning about bivariate data. A second objective is to examine whether some of the factors that the research literature has suggested may explain or influence that development actually does or not. For instance, in the statistics education literature, the sequencing of the unit on bivariate data within an introductory statistics course has been debated [@chance:2001]. Does the sequencing of a course influence the development of students' reasoning about bivariate data? Other literature from the field of statistics education has suggested that students' reasoning about bivariate data may be tied to their reasoning about other concepts in an introductory statistics course, such as the ability to reason about univariate distribution [e.g., @gravemeijer:2000]. This study seeks to identify if these factors are important in contributing to the development of students' reasoning about bivariate data. In particular there are three research questions that directly reflect the objectives of this study:
+
+1. What is the nature, or pattern of change in students' development in reasoning about bivariate data?
+2. Is the sequencing of bivariate data within a course associated with changes in the pattern of change in students' reasoning about bivariate data?
+3. Are changes in students' reasoning about the foundational concepts of distribution associated with changes in the development of students' reasoning about bivariate data?
+
+## The Structure of the Dissertation
+
+[Chapter 2](#litreview) provides a theoretical basis for the study described in this dissertation. It includes a description of the previous research on covariational reasoning undertaken in many different academic fields. This chapter also examines the literature surrounding the specific factors from Research Questions 2 and 3 (instructional sequence and students' reasoning about univariate distribution).
+
+[Chapter 3](#methods) provides the methodology used to gather the data for the study. This chapter provides the details about the subjects, instruments and procedures that were at the heart of the study. It also describes the methodology, namely linear mixed-effects models (LMMs), used to analyze the data. [Chapter 4](#results) includes the results of the individual analyses. It is in this chapter that each of the research questions is answered. Finally, a summary of the results is offered in [Chapter 5](#discussion), as well as implications for teaching and recommendations for future research.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

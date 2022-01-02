@@ -1,0 +1,65 @@
+﻿author,N,grade_level,method,num,var_type
+\textcite{anderson:2005},,,,,
+\textcite{arkes:1983},"80, 65, 66, 47, 38, 48",UG,"CR, RS",2,Dichotomous
+\textcite{bettman:1986},104,UG,CR,4,Continuous
+\textcite{beyth-marom:1982},273,,CR,4,Dichotomous
+\textcite{bobko:1979},89,Adults,CR,2,Continuous
+\textcite{cleveland:1982},"74, 109",Not Reported,RS,2,Continuous
+\textcite{crocker:1982},60,UG,FC,2,Dichotomous
+\textcite{curtis:1986},"108, 31, 16","UG, G, Adults",CR,2,Continuous
+\textcite{haslam:1994},256,UG,CR,2,Dichotomous
+\textcite{inhelder:1958},,Not Reported,I,2,Dichotomous
+\textcite{kao:1993},"90, 200",UG,RS,2,Dichotomous
+\textcite{konarski:2005},"41, 31",UG,RS,2,Continuous
+\textcite{kuhn:1977},80,"P, Undergraduates",I,4,Dichotomous
+\textcite{kuhn:1977a},100,"P, S, Undergraduates",I,4,Both
+\textcite{lane:1985},"39, 40",UG,RS,2,Continuous
+\textcite{lawson:2003},138,UG,CR,2,Dichotomous
+\textcite{lewandowsky:1989},42,"UG, G, Adults",FC,2,Continuous
+\textcite{lovell:1961},68,"P, S",I,2,Dichotomous
+\textcite{mcgahan:2000},576,UG,FC,2,Dichotomous
+\textcite{mcgarty:1993},"83, 112",UG,CR,2,Dichotomous
+\textcite{mckenzie:inpress},"160, 306",UG,RS,2,Dichotomous
+\textcite{meyer:1997},"43, 36, 82",UG,CR,2,Dichotomous
+\textcite{murphy:1994},"79, 149",UG,RS,2,Dichotomous
+\textcite{neimark:1975},66,P*,CR,2,Dichotomous
+\textcite{pryor:2000},55,UG,RS,2,Dichotomous
+\textcite{ross:1993},"100, 278","P, S, OAC**",CR,3,Both
+\textcite{ross:1981},1680,S,FC,2,Continuous
+\textcite{schustack:1981},36,P,FC,2,Dichotomous
+\textcite{shultz:1975},"43, 58, 40",UG,CR,2,Dichotomous
+\textcite{shaklee:1988},151,"P, S, Undergraduates",FC,2,Dichotomous
+\textcite{shaklee:1989},149,"P, S, Undergraduates",FC,2,Dichotomous
+\textcite{shaklee:1981},103,"P, S, UG",FC,2,Dichotomous
+\textcite{shaklee:1983},72,P,I,2,Dichotomous
+\textcite{shaklee:1980},80,"S, UG",CR,2,Dichotomous
+\textcite{smedslund:1963},"67, 19","UG, Adults",CR,2,Dichotomous
+\textcite{spellman:1996},120,UG,FC,2,Dichotomous
+\textcite{strahan:1978},80,UG,CR,2,Continuous
+\textcite{trolier:1986},72,UG,RS,2,Continuous
+\textcite{vallee-tourangeau:1998},"20, 24",UG,RS,2,Dichotomous
+\textcite{wasserman:1990},240,UG,RS,2,Dichotomous
+\textcite{well:1988},40,UG,RS,2,Continuous
+\textcite{yates:1986},129,Not Reported,CR,2,Dichotomous
+\textcite{yates:2000},"42, 80",UG,FC,2,Dichotomous
+\textcite{adi:1978},80,S,I,2,Dichotomous
+\textcite{carlson:2002},20,UG,"CR, I",2,Continuous
+\textcite{carlson:2001},24,UG,"CR, I",2,Continuous
+\textcite{lawson:1982},122,"S, UG",CR,2,Both
+\textcite{lawson:1979},507,"P, S, UG",CR,2,Dichotomous
+\textcite{lawson:1984},391,"P, S",CR,2,Dichotomous
+\textcite{mckenzie:1986},377,S,FC,2,Continuous
+\textcite{padilla:1986},625,S,FC,2,Continuous
+\textcite{robinson:1985},35,"P, S, Adults",FC,2,Continuous
+\textcite{saldanha:1998},1,S,I,2,Continuous
+\textcite{wavering:1984},94,S,I,2,Dichotomous
+\textcite{wavering:1989},150,S,CR,2,Continuous
+\textcite{batanero:1997},19,Pre-UG,CR,2,Both
+\textcite{batanero:1996},213,Pre-UG,CR,2,Dichotomous
+\textcite{batanero:1998},"19, 36",UG,CR,2,Both
+\textcite{cobb:2003a},11,S,DE,,
+\textcite{estepa:2001},193,UG,FC,2,Continuous
+\textcite{morris:1997},50,UG,CR,2,Continuous
+\textcite{moritz:2004},167,"P, S",CR,2,Continuous
+\textcite{stockburger:1982},54,UG,CR,2,Continuous
+\textcite{truran:1997},360,UG,CR,2,Continuous

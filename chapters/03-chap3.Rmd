@@ -1,0 +1,258 @@
+# Methods {#methods}
+
+The review of literature in the previous chapter outlines several issues pertinent to statistics students' development of covariational reasoning. This study examines the development of students' reasoning about bivariate data within the context of an introductory statistics course and also looks at some factors that might explain that development. This chapter discusses the procedures for gathering and analyzing the data used in the study. The first section provides an overview of the study, providing a more general description of the research design as well as a rationale for why methodological components were chosen. The second section describes the subjects involved in the study, as well as the setting in which the data were collected. The third section describes both the instruments that were used in the study, as well as the timeline for administration of those instruments. The fourth section outlines the methodology that will be used to analyze the data, as well as laying out the organization and presentation of the results from the study. Finally, the fifth section in this chapter explains the linear mixed-effects model (LMM) methodology in more detail and also details the specific hypotheses to be tested during the analyses.
+
+
+## Overview of the Study
+
+This study took place during the Fall semester of the 2005/2006 school year. It involved four sections of a one-semester, non-calculus based introductory statistics course taught in the College of Education. Two different instructors taught these four sections. All four sections met in a computer lab two times a week for an hour and fifteen minutes each time. Each of these sections had an enrollment of about 30 students.
+
+There were three research questions of interest: (1) What is the nature, or pattern of change in students' development in reasoning about bivariate data?; (2) Is the sequencing of bivariate data within a course associated with changes in the development of students' reasoning about bivariate data?; and (3) Are changes in students' reasoning about the foundational concepts of distribution associated with changes in the development of students' reasoning about bivariate data?
+
+This study utilizes linear mixed-effects models (LMM) to examine change in students' development of reasoning about bivariate data. Because the modeling of change required individuals to be measured on the same concept in temporal sequence, a repeated-measures, or longitudinal design was employed. Students enrolled in a collegiate level introductory statistics course were assessed on their reasoning about bivariate data four times during the course of a semester. Examining the change in students' reasoning about bivariate data over these four time points allows the first research question to be answered.
+
+To examine the association between course sequencing and the patterns of change in students' reasoning about bivariate data, the two instructors of the course used in the study were used as blocks to randomly assign each section of the course to one of two different course sequences (see \@ref(fig:fig-3-1)). These two sequences both started with the topics of sampling and exploratory data analysis (EDA). Then the first sequence continued with the topic of bivariate data followed by sampling distributions, probability and inference. The second sequence followed EDA with sampling distributions, probability, inference, and ended the course with the topic of bivariate data.
+
+```{r fig-3-1, echo=FALSE, out.width='100%', fig.cap="The two sequences taught during Fall semester 2005. The unit on bivariate data is highlighted.", fig.pos="H"}
+knitr::include_graphics("figure/fig-03-01.pdf")
+```
+
+To examine if changes in students' reasoning about the foundational concepts of distribution were associated with changes in the development of students' reasoning about bivariate data, students were also assessed on their distributional reasoning four times during the course of the semester. Students were also measured on several other factors (prior algebra and statistical knowledge, and general knowledge). These measures were examined as potential covariates to help explain the pattern in students' development of reasoning about bivariate data.
+
+
+## Subjects/Setting
+
+The study participants consisted of $n=113$ undergraduate students, each enrolled in one of four sections of a non-calculus based, introductory statistics course in the Educational Psychology department at the University of Minnesota during Fall Semester 2005. These students were typically female social science majors (84\% females and 16\% males) who were enrolled in the course to complete part of their major requirements. The students enrolled in the course during the study seemed representative of the students who typically take the course. These students belong to the larger population of undergraduate social science majors who take an introductory statistics course in an Educational Psychology department.
+
+This particular introductory statistics course was designed so that it was aligned with recent *Guidelines for the Assessment and Instruction in Statistics Education* endorsed by the American Statistical Association [@asa:2005a]. These guidelines consist of the following six recommendations [@asa:2005]:
+
+1. Emphasize statistical literacy and develop statistical thinking.
+2. Use real data.
+3. Stress conceptual understanding rather than mere knowledge of procedures.
+4. Foster active learning in the classroom.
+5. Use technology for developing concepts and analyzing data.
+6. Use assessments to improve and evaluate student learning.
+
+In addition, the course materials were based on what has been learned from research literature on teaching and learning statistics. The research guided both the structure of the course (i.e., scope and sequence) and the instructional methods (i.e., activities, technologies, and discussions) used within the course. The course includes collecting and analyzing real data sets, software programs to illustrate abstract concepts, and many active learning techniques. Lesson plans for every instructional session were created during the initial design phase of the course in the summer of 2004, which included class goals, discussion questions and a sequence of activities. These lesson plans provide more consistency across multiple sections of the course taught by different instructors. These materials were used, evaluated and revised during two semesters before the beginning of the current study in Fall Semester 2005.
+
+There were four sections of the course taught by two different instructors who followed identical lesson plans throughout the duration of the course and met regularly to help ensure consistency between the sections. Both of the instructors had helped develop the course materials and had taught the course multiple times prior to the time of this study. Both instructors were experienced teachers, having both high school and college teaching experience, and were doctoral students in the Quantitative Methods in Education (QME) program with a concentration in Statistics Education, so they were familiar with the current guidelines and relevant research.
+
+
+## Instruments
+
+To help determine what covariates might be important in explaining the pattern of students' development of reasoning about bivariate data, students were assessed on several factors in addition to their reasoning about both univariate distribution and bivariate data. These included prior mathematical and statistical knowledge, as well as prior coursework in mathematics, statistics and computer science. Several different instruments were used. Each of these instruments is described in this section, and included in [Appendix A](#appendix-a).
+
+The instruments that were used in this study will be described in two groups. The first group contains instruments that provided measures of students’ statistical reasoning. Measures were needed to assess both reasoning about bivariate data and univariate distributions (see [Section 3.3.1](#assess-statreason)). The instruments used, the Bivariate Reasoning Assessment (BRA), the Comprehensive Assessment of Outcomes in a First Statistics course (CAOS), and the Distributional Reasoning Scale (DRS), were developed by the NSF-Funded ARTIST project. The authors of these instruments, Garfield and Chance [-@garfield:2000], defined statistical reasoning, as:
+
+> "the way people reason with statistical ideas and make sense of statistical information. This involves making interpretations based on sets of data, representations of data, or statistical summaries of data. Students need to be able to combine ideas about data and chance, which leads to making inferences and interpreting statistical results. Underlying this reasoning is a conceptual understanding of important ideas, such as distribution, center, spread, association, uncertainty, randomness, and sampling" (p. 101).
+
+The second group of instruments measured student covariates that might explain the pattern of change in students' reasoning about bivariate data, and also serve as controls when comparing the four sections of the course. This group of instruments includes an Algebra Test, a Mathematics Background Questionnaire, the ACT, and a student survey. These instruments are described in [Section 3.3.2](#assess-covar). Lastly, a reliability analysis for the sample scores and responses used in this study is provided in [Section 3.3.3](#reliability).
+
+
+### Group 1: Assessments of Statistical Reasoning {#assess-statreason}
+
+**Bivariate Reasoning Assessment (BRA).** To measure change in students' reasoning about bivariate data, the quantitative bivariate data scale from the *Assessment Resource Tools for Improving Statistical Thinking* [ARTIST\; @garfield:nd] was administered four times during the semester. This scale consists of eight multiple-choice items designed to assess reasoning about concepts that typically appear in a unit on bivariate data in an introductory statistics course, such as correlation and regression. Content validity of the scale was determined by expert raters who all agreed the items measured the essential concepts in bivariate quantitative reasoning [@delmas:2006]. Using Cronbach's Alpha, the internal consistency reliability coefficient was 0.70 based on a class test of 550 students [@delmas:2006].
+
+**Comprehensive Assessment of Outcomes in a First Statistics Course (CAOS).** This instrument was used both to measure students' prior statistical knowledge, as well as to measure change in students' reasoning about univariate distribution. The *Comprehensive Assessment of Outcomes in a First Statistics Course* (CAOS) is a forty-item test that was designed as part of the NSF-funded ARTIST project to evaluate student attainment of desired outcomes in an introductory statistics course. The 40 multiple-choice items focus on the big ideas and "the types of reasoning, thinking and literacy skills deemed important for all students across first courses in statistics" [@garfield:nd]. The CAOS test has gone through an extensive development, revision, and validation process including class testing and reliability analyses. In a class testing of over 1000 students an Alpha Coefficient was calculated to be 0.77. Eighteen expert raters provided evidence of content validity by their unanimous agreement that CAOS measures basic outcomes in statistical literacy and reasoning that are appropriate for a first course in statistics [@delmas:2006].
+
+To measure students' prior statistical knowledge, the entire CAOS test was administered to students during the first instructional session of the semester. Ten of the CAOS items were also administered three additional times during the semester. These ten items that had been identified by experts to focus on reasoning about univariate distribution, were used to measure change in students’ reasoning about univariate distribution. These ten items will be referred to as the *Distributional Reasoning Scale* (DRS).
+
+
+### Group 2: Assessments used as Controls and Covariates {#assess-covar}
+
+**Algebra Test.** To measure students' prior algebra knowledge, 10 released items from the *2003 Trends in International Mathematics and Science Study* (TIMSS) grade-8 mathematics test were administered to students during the first instructional session of the semester. The content domain of each of these 10 items was identified on the TIMSS test blueprint as Algebra. The cognitive domain of these items varied for each item, but included domains such as "using concepts" and "knowing facts and procedures" [@iaeea:2005]. Each of the TIMSS items and exams go through an extensive validation and piloting process that has been reported in the literature [@neidorf:2004].
+
+**Mathematics Background Questionnaire.** To measure students' mathematical background, 15 survey items were given to students during the first instructional session of the semester. These 15 items were part of the 2005 questionnaire used to examine students' mathematical backgrounds on the grade-12 *National Assessment of Educational Progress* (NAEP). The validation and testing of these items has been reported in the literature [@nagb:2003]. The response options were adapted to be more suited to university students rather than high school students. This included changing the response categories from the six originally used on the NAEP questionnaire:
+
+- "I have never taken this course",
+- "I took this course in or before Grade 8",
+- "I took this course in Grade 9",
+- "I took this course in Grade 10",
+- "I took this course in Grade 11", and
+- "I took this course in Grade 12"
+
+to the following four response categories:
+
+- "I have never taken this course",
+- "I took this course in High School",
+- "I took this course in College", and
+- "I took this course in both High School and College."
+
+These four responses were coded 0, 1, 2, and 3.
+
+**ACT Test.** Students' ACT composite scores were obtained after the completion of the semester (See [Section 3.4](#timeline)), and used as a measure of their general knowledge. The ACT is designed to assess students' general educational development and their ability to complete college-level work. The ACT consists of four tests: English, Mathematics, Reading, and Science. The score range for each of the four tests is 1--36. The composite score, as reported by ACT, is the average of the four test scores earned during a single test administration, rounded to the nearest whole number. Validity and reliability evidence are reported in the technical manual [@act:1997].
+
+**Student Survey.** Students were asked to self-report certain demographic information on a survey that was administered during the second session of the semester. This data was not intended to be used as predictors in the analysis, but rather to examine the treatments for group differences. The original student survey consisted of 26 items designed to collect student data to be examined and analyzed in the course. Four of the items from that survey were used in this study. These items were:
+
+- What is your age in years?
+- How many credits are you registered for this semester?
+- How many college credits have you completed?
+- What is your cumulative GPA?
+
+While the use of students' self reports can be a risky endeavor, there has been evidence in the research literature that students' self-reported data can correlate quite highly with actual records [e.g., @cassady:2001]. Since the survey was anonymous, students were not linked to their responses on these queries. This was also thought to increase the level of honesty in responses.
+
+
+### Reliability Analysis of Research Instruments {#reliability}
+
+A reliability analysis was conducted for the scores and responses on some of the instruments described in the previous three sections. Coefficient alpha [@cronbach:1951] was used as a measure of reliability. Cronbach's alpha coefficient for each of the sample scores for both the BRA and DRS at all four time points are reported in \@ref(tab:tab-3-1). In addition, because of the heterogeneity in observed variance, especially in the first wave, the original computed alphas were adjusted in such a way that score variance for each of the four waves would be equalized, based on the median score variance [@gulliksen:1987]. Hereafter, this value is referred to as the adjusted coefficient alpha. The equation for adjusted coefficient alpha is given in \@ref(tab:tab-3-1), and the values for this adjustment at each wave are also reported in \autoref{eq:rel-adj}.
+
+
+\begin{equation}\label{eq:rel-adj}
+r_{\mathrm{adj}} = 1 - \frac{S_x^2(1-r_{xx})}{S^2_{\mathrm{Med}}}
+\end{equation}
+
+
+where $S_x^2$ is the original score variance, $r_{xx}$ is the original computed reliability, and $S^2_{\mathrm{Med}}$ is the median score variance for all the waves. Coefficient alpha was also computed for the sample scores on the CAOS and the algebra test. These are also reported in \@ref(tab:tab-3-1).
+
+```{r tab-3-1, echo=FALSE}
+data.frame(
+  assessment = c("Coefficient alpha", "Adjusted coefficient alpha", "N", "Coefficient alpha", "Adjusted coefficient alpha", "N", "Coefficient alpha", "N", "Coefficient alpha", "N"),
+  wave_1 = c("0.67", "0.83", "111", "0.53", "0.71", "111", "0.81", "110", "0.64", "110"),
+  wave_2 = c("0.73", "0.73", "108", "0.71", "0.67", "108", "---", "---", "---", "---"),
+  wave_3 = c("0.74", "0.73", "98", "0.66", "0.68", "98", "---", "---", "---", "---"),
+  wave_4 = c("0.72", "0.72", "98", "0.76", "0.74", "98", "---", "---", "---", "---")
+) %>%
+  kable(
+    format = "latex",
+    col.names = c("Assessment", "Wave 1", "Wave 2", "Wave 3", "Wave 4"),
+    align = c("l", rep("c", 4)),
+    booktabs = TRUE,
+    escape = FALSE,
+    label = "tab-3-1",
+    caption = "Coefficient alpha for the sample scores and responses used in the study. Adjusted coefficient alpha is also displayed for the repeated measures."
+  ) %>%
+  kable_styling(
+    font_size = 10,
+    latex_options = c("HOLD_position"),
+    full_width = TRUE
+    ) %>%
+  row_spec(0, align = "c") %>%
+  column_spec(1, width = "1.75in") %>%
+  # column_spec(2, width = "0.5in") %>%
+  # column_spec(3, width = "0.5in") %>%
+  # column_spec(4, width = "0.5in") %>%
+  # column_spec(5, width = "0.5in") %>%
+  pack_rows("BRA", 1, 3) %>%
+  pack_rows("DRS", 4, 6) %>%
+  pack_rows("CAOS", 7, 8) %>%
+  pack_rows("Algebra test", 9, 10)
+```
+
+
+## Timeline for Instrument Administration {#timeline}
+
+Each of the instruments from the previous section (except ACT and the student survey) was administered on the first day of class (Session 1) to obtain baseline measures. The BRA and DRS were also administered during three other class periods (Session 14, Session 25 and Session 29). The assessment was administered Session 14 and Session 25 because those were the two classroom sessions that immediately preceded instruction of bivariate data for each of the two course sequences listed in \@ref(fig:fig-3-1). The assessment was also given during the last classroom session of the semester (Session 29). These instruments were all administered during class time to ensure test security and integrity. (See \@ref(tab:tab-3-2) for the administration schedule for all the instruments.)
+
+```{r tab-3-2, echo=FALSE}
+data.frame(
+  wave_1 = c("BRA", "DRS", "CAOS", "Algebra Test", "Mathematics Background Questionnaire", "Student Survey"),
+  wave_2 = c("BRA", "DRS", "", "", "", ""),
+  wave_3 = c("BRA", "DRS", "", "", "", ""),
+  wave_4 = c("BRA", "DRS", "", "", "", "")
+) %>%
+  kable(
+    format = "latex",
+    col.names = c("Wave 1 (Session 1)", "Wave 2 (Session 14)", "Wave 3 (Session 25)", "Wave 4 (Session 29)"),
+    align = c(rep("l", 4)),
+    booktabs = TRUE,
+    escape = FALSE,
+    label = "tab-3-2",
+    caption = "Assessments dministered at each of the four waves."
+  ) %>%
+  kable_styling(
+    font_size = 10,
+    latex_options = c("HOLD_position"),
+    full_width = TRUE
+    ) %>%
+  row_spec(0, align = "c")
+```
+
+The items from the BRA and DRS were combined into one comprehensive instrument to ease the actual administration. The items were randomized for each of the four administrations. Because of the difficulty associated with assessing students multiple times without feedback, students were offered extra credit to participate in the study (see [Appendix B](#appendix-b)).
+
+Student ACT scores were obtained from the Institute of Research and Reporting after the semester had been completed. To meet Institutional Review Board stipulations, students were required to fill out a separate consent form (see [Appendix B](#appendix-b)), and return it to the researcher after grades for the course had been posted. Because of this process, it was felt that students might not be inclined to complete the consent form, which would have resulted in a fair amount of missing data. Social exchange theory was utilized in an attempt to increase the number of forms that would be completed and returned by students. Social exchange is a theory from human behavior that is used to explain the development and continuation of peoples' interactions. The theory suggests that the actions of people are motivated by the return these actions are expected to bring, and in fact usually do bring from others [e.g., @blau:1964]. Research has generally shown that token "incentives given along with requests to fill out a questionnaire, a form of social exchange, consistently improve response rates" [@dillman:2000, p.14]. Using this strategy, all students were given a small amount of extra credit before the completion of the semester in exchange for filling out and returning the consent form to release their ACT score. This prompted 79 of the 113 students (70\%) to return the consent form.
+
+
+## Analysis of Data
+
+The analyses and results (see [Chapter 4](#results)) are split into two major parts. The first of these, the descriptive analysis, involves initially examining the data in an exploratory manner including an examination of the sample data and an assessment of the equivalence between the two instructional sequences on the different covariates that were measured (e.g., gender, mathematics background). This part of the analysis will also be used in order to help facilitate a more parsimonious model during the linear mixed-effects model (LMM) analyses.
+
+The second part of the analysis will use LMM analyses to test hypotheses related to the three research questions. Statistical models will be fitted to the data to explore the patterns of change in students' development of reasoning about bivariate data and also to formally test which covariates (e.g. course sequence) are important in explaining those patterns. During these analyses, covariates such as course sequence change in reasoning about distribution, and other pertinent covariates found during the descriptive analyses will be introduced into our change model to help determine if they explain differences in the patterns of change. Estimates and hypothesis tests for the level-2 fixed effects will be examined to help answer the research questions. The last section in this chapter describes the LMM methodology and details more of the LMM analyses that are specific to this study.
+
+
+## Linear Mixed-Effects Models
+
+Researchers interested in studying change are generally interested in answering two types of questions about change [@boyle:2001]. The first of these questions of interest is how to "characterize each person's pattern of change over time", and the second asks about "the association between predictors and the patterns of change" [@singer:2003, p. 8]. While the idea of measuring change has been of interest to educational researchers for years, the methodology to accommodate this type of analysis was not readily available until the 1980s [@singer:2003]. It was then that a class of appropriate statistical models was developed to help examine change. These models go by a variety of names---random coefficients models, mixed-effects models, hierarchical linear models (HLM), or multilevel models are just a few. These models provide a statistical methodology that allows researchers to answer both types of questions about change.
+
+Linear mixed-effects models (LMMs) have many advantages over traditional statistical methods such as RM-MANOVA. First, LMMs can accommodate missing data. A participant need only have one observation to be included in the analysis, under the assumption that the missing data mechanism is missing at random (MAR) [e.g., @collins:2001]. A second advantage of LMMs is that they allow the number and/or timing of observations to differ for subjects. A third advantage is that LMMs allow for time-varying predictors---covariates that also change over time. Finally, a fourth advantage of the LMM is that they don't require an omnibus model that is saturated. This flexibility in model specification allows for more parsimonious models, which can lead to greater power and efficiency in estimation [@verbeke:2000].
+
+The LMM used for this study is a multi-level regression model that incorporates two components: a level-1 linear model that describes intra-individual (within subjects) change, and a level-2 conditional model that describes systematic inter-individual (between subjects) differences in change. In the level-1 model, time is used as the independent variable for predicting individual students' baselines (starting points) and trajectories (shape or pattern of the curve) in their reasoning about bivariate data. The level-2 models allow us to determine the extent that those baselines and trajectories vary as a function of one or more covariates (i.e., other measured variables, such as ACT score, that are used to differentiate individuals). The statistical model for a LMM assuming quadratic growth is specified in \autoref{eq:lmm-level-1} and \autoref{eq:lmm-level-2} then described in more detail.
+
+\begin{equation}\label{eq:lmm-level-1}
+Y_{ij} = \pi_{0i} + \pi_{1i}(\mathrm{Time}_{ij}) + \pi_{2i}(\mathrm{Time}_{ij}^2) + \epsilon_{ij}
+\end{equation}
+
+\begin{equation}\label{eq:lmm-level-2}
+\begin{split}
+\pi_{0i} &= \gamma_{00} + \gamma_{01}(\mathrm{Covariate}_i) + \zeta_{0i}\\[1ex]
+\pi_{1i} &= \gamma_{10} + \gamma_{11}(\mathrm{Covariate}_i) + \zeta_{1i}\\[1ex]
+\pi_{2i} &= \gamma_{20} + \gamma_{21}(\mathrm{Covariate}_i) + \zeta_{2i}
+\end{split}
+\end{equation}
+
+**Level-1: Modeling Within-Subject Change.** The level-1 part of the model is specified in \autoref{eq:lmm-level-1}. In this equation, $Y_ij$ is the *i*th subject's response score on the BRA at the *j*th time-point. $\mathrm{Time}_{ij}$ and $\mathrm{Time}_{ij}^2$ are the linear and quadratic time metrics, respectively. In this study all of the subjects were measured during the same classroom sessions, so these are identical for all subjects. This, however, is not a requirement for the LMM methodology. $\pi_{0i}$ is the *i*th subject's intercept, or baseline level of reasoning about bivariate data. $\pi_{1i}$ is the *i*th subject's linear rate of change in reasoning about bivariate data, and $\pi_{2i}$ is the *i*th subject's quadratic rate of change. Finally, $\epsilon_{ij}$ is the *i*th subject's residual (level-1 residual) at the *j*th time-point.
+
+**Level-2: Modeling Between-Subject Change.** The level-2 parts of the LMM are specified in \autoref{eq:lmm-level-2}. Each of these equations describes how either a students' baseline $\pi_{0i}$ or change trajectories ($\pi_{1i}$ and $\pi_{2i}$) vary as a function of one or more individual predictors or covariates. These equations all utilize only one individual predictor ($\mathrm{Covariate}_i$). These equations could also be extended to include many more predictors. Since the parameters from each of the level-2 equations have similar interpretations, only the first will be examined here.
+
+$\gamma_{00}$ is the intercept in the first level-2 equation, and would indicate the predicted value of students' baseline reasoning ($\pi_{0i}$) when all of the individual predictors in the model are equal to zero. $\gamma_{01}$ represents the strength of association between $\mathrm{Covariate}_i$ (e.g., an individual's ACT score) and their baseline level of reasoning about bivariate data ($\pi_{0i}$). If, for example, $\gamma_{01}$ is positive, then higher scores or levels on the covariate tend to be associated with higher levels of reasoning about bivariate data. Lastly, $\zeta_{0i}$ is the level-2 error term, which indicates the deviation of the *i*th subject from the group.
+
+The composite LMM is the single equation obtained by substituting the level-2 parameters into the level-1 model. The composite LMM based on \autoref{eq:lmm-level-1} and \autoref{eq:lmm-level-2} is specified in \autoref{eq:lmm-composite}.
+
+\begin{equation}\label{eq:lmm-composite}
+\begin{split}
+Y_{ij} = &\bigg[\gamma_{00} + \gamma_{01}(\mathrm{Covariate}_i) + \zeta_{0i}\bigg] + \bigg[\gamma_{10} + \gamma_{11}(\mathrm{Covariate}_i) +\\
+&\zeta_{1i}\bigg](\mathrm{Time}_{ij}) + \bigg[\gamma_{20} + \gamma_{21}(\mathrm{Covariate}_i) + \zeta_{2i}\bigg](\mathrm{Time}_{ij}^2) + \epsilon_{ij}
+\end{split}
+\end{equation}
+
+The LMM essentially boils down to one big regression equation, where individuals' intercepts, linear rates of change, and quadratic rates of change are a function of their level or score on a covariate. The residual term in \autoref{eq:lmm-composite} indexes the deviation (or variation) from the fixed-effects (i.e., deviation from the mean change curve). This variation can be partitioned into two components: Random-effects (represented by the $\zeta_i$ terms), and measurement error (represented by $\epsilon_{ij}$).
+
+
+### Hypothesis Tests for Research Question 1
+
+In the level-1 model, the fixed-effects determine the baseline and shape of the change trajectories for individuals. We are interested in finding out what that pattern looks like. To determine what that change looks like, hypothesis tests will be run on the fixed-effects. The null hypotheses for the level-1 coefficients are:
+
+$$
+H_0: \begin{bmatrix}\pi_{0i} \\ \pi_{1i} \\ \pi_{2i}\end{bmatrix} = \mathbf{0}
+$$
+
+Using Full Maximum Likelihood (ML) estimation, the fixed-effects can also be tested by performing a likelihood-ratio to compare nested models. For each model a deviance statistic is computed, where $\mathrm{Deviance}=-2\ln(\mathrm{Likelihood})$, and then the difference of the two deviances is compared to a chi-square distribution with degrees of freedom equal to the difference in the number of estimated parameters between the two models. Rejecting the null-hypothesis provides evidence that the more "complex" model should be retained. The null-hypothesis associated with these tests is that the reduced model fits equally well as the full, or more complex, model.
+
+To decide whether level-1 coefficients should be specified as fixed, random or non-randomly varying, the variance components for the $\pi_i$s will be examined and tested. To ask whether random variation exists, we test the null hypotheses:
+
+$$
+H_0: \sigma^2(\pi_{qi}) = 0
+$$
+If the hypothesis is rejected, the coefficient will be retained as randomly varying in the model.
+
+While the tests for random variation may provide insight into the specification of the model, the tests for random variation tend to be valid only for large sample sizes. Because of the smaller sample size used in this study, the likelihood-ratio test will again be used to help specify the model, but this time employing Restricted Maximum Likelihood (REML) estimation. This procedure will also be used to test competing covariance structures for the residuals.
+
+
+### Hypothesis Tests for Research Questions 2 and 3
+
+To examine whether or not sequence and reasoning about distribution explain the pattern of change in students' reasoning about bivariate data the $\gamma$s from the level-2 equations will be tested. The omnibus null-hypothesis that will be tested is that there is no covariate (sequence or reasoning about distribution) interaction with the intercept, linear rate of change, or quadratic rate of change. In other words, that there are no effects due to the covariate of any type. This null hypothesis for the level-2 fixed effects can be stated as:
+
+$$
+H_0: \gamma_{01} = \gamma_{11} = \gamma_{21} = 0
+$$
+
+If the omnibus null hypothesis is rejected, then specific hypothesis tests for each of the fixed effects will be conducted. Each of the hypotheses in this study will be tested at the $\alpha=.05$ level. These analyses should provide answers for the research questions under study. The results for these analyses are described in the next chapter.
+
+
+
+
+
+
+
+
+
+

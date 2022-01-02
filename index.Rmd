@@ -1,0 +1,108 @@
+---
+#
+# --------------- Required Information -----------------------------------------
+#
+title: "A Longitudinal Investigation of the Development of College Students' Reasoning About Bivariate Data During an Introductory Statistics Course"
+author: "Andrew Stefan Zieffler"  # Student's full legal name
+month: "June"                    # The month and year that degree requirements were met 
+year: "2006"
+advisor: "Joan Garfield"
+# coadvisor: "James Halpert"         # Remains commented; no co-advisor
+#
+# ----------------- Degree -----------------------------------------------------
+#
+phd: true         # phd: true since this is a PhD thesis
+plan_b: false     # plan_b: false since this is a PhD thesis
+#
+# ----------------- Rendering Options ------------------------------------------
+#
+knit: "bookdown::render_book"
+output: 
+  gopherdown::thesis_pdf:
+    latex-engine: xelatex
+#
+# ----------------- Fonts ------------------------------------
+#
+mainfont: "Times New Roman"
+sansfont: "Arial"
+monofont: "Courier"
+#
+# ----------------- Link Highlighting ------------------------------------
+#
+link-citations: true # make citations clickable
+colored-not-bordered-links: true # I want colored links;
+# All links are set to a nice blue color.
+# If printing a physical version of your thesis, you'll want to comment out all of these.
+urlcolor-hex: "2C6DAC"     # web addresses
+citecolor-hex: "2C6DAC"    # citations
+linkcolor-hex: "2C6DAC"    # links to sections in your thesis
+#
+# ----------------- Bibliography/References ------------------------------------
+#
+bibliography: ["bib/lit-references.bib", "bib/methods-references.bib"]
+csl: "csl/apa.csl"
+#citation_package: "biblatex"
+# biblatexoptions: [backend=biber]
+# biblio-style: "apa6"
+# Here are a bunch of citations that I want in the ref list that I didn't cite directly
+# Most are to get Table 2.1 to work properly
+nocite: |
+  @anderson:2005, @bettman:1986, @arkes:1983, @batanero:1996, @estepa:2001, @kuhn:1977, @kuhn:1977a,
+  @lawson:1979, @lawson:1982, lawson:1984, @lawson:2003, @lewandowsky:1989, @mckenzie:1986, 
+  @murphy:1994, @padilla:1986, @pryor:2000, @robinson:1985, @ross:1981, @shaklee:1988, @shaklee:1989, 
+  @shultz:1975, @spellman:1996, @strahan:1978, @vallee-tourangeau:1998, @wavering:1984, @well:1988, 
+  @yates:1986
+#
+# ----------------- Create List of tables and Figures --------------------------
+#
+lot: true
+lof: true
+#
+# ----------------- Optional Frontmatter --------------------------------------
+#
+acknowledgements: >
+  `r if(knitr:::is_latex_output()) gopherdown::inc("pre/00-acknowledgements.Rmd")`
+# No dedication so this is commented out
+# dedication: >
+#   `r if(knitr:::is_latex_output()) gopherdown::inc("pre/00-dedication.Rmd")`
+abstract: >
+  `r if(knitr:::is_latex_output()) gopherdown::inc("pre/00-abstract.Rmd")`
+---
+
+
+<!-- Here I call all the packages I use -->
+
+
+```{r setup, echo=FALSE, cache=FALSE, message=FALSE}
+## Load libraries
+library(formatR)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(patchwork)
+
+## Set global options
+options(
+  max.print = "60",   #Printing width
+  scipen = 5,         #Penalty for scientific notation
+  knitr.kable.na = '' #Leave a blank space instead of printing NA in kable() tables
+  )
+
+## Set default knitr chunk options
+opts_chunk$set(
+  prompt = FALSE, 
+  comment = NA, 
+  message = FALSE, 
+  warning = FALSE, 
+  tidy = "formatR",
+  tidy.opts = list(width.cutoff = 60),
+  fig.width = 6, 
+  fig.height = 6,
+  fig.align = 'center', 
+  out.width = '40%'
+  )
+```
+
+
+
+

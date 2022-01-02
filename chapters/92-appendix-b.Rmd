@@ -1,0 +1,76 @@
+# Consent Form {#appendix-b}
+
+*The Effectiveness of Multiple Learning Tools and Activities in Helping Students Learn Statistics*
+
+\noindent You are invited to be in a research study on the effectiveness of different learning tools and activities to help students learn statistics. You were selected as a possible participant because you are enrolled in EPSY 3264. We ask that you read this form and ask any questions you may have before agreeing to be in the study.
+
+\noindent This study is being conducted by: Andrew Zieffler, Educational Psychology, EPSY 3264 Instructor
+
+\noindent \textbf{Background Information:} The purpose of this study is: to study the effectiveness of different learning tools and activities to help students learn statistics. The specific research question to be answered is: What learning tools and activities seem to help students learn statistics best?
+
+\noindent \textbf{Procedures:} If you agree to be in this study, we would ask you to do the following things:
+
+(1) Take a 20 question test two times during the semester. These two test scores will not be used to determine your grade. They are extra credit opportunities only. Each test will take approximately 20--25 minutes to complete
+(2) Provide consent to the University of Minnesota to release your overall ACT score once the semester has been completed. The ACT score will be added to the data file (being used by the researcher) by the Office of Institutional Research and Reporting. Once the ACT score has been added to the data file, all personal identification (names and ID numbers) will be erased and the file will be randomly sorted so the researcher will not know the identity of the student.
+
+\noindent \textit{Note:} If you don't want your ACT score released, but still want to participate in the study by taking the tests, that is all right.
+
+\noindent \textbf{Risks and Benefits of being in the Study:} The study has minimal risks. There are no benefits to being involved in the study.
+
+\noindent \textbf{Compensation:}} You will receive payment: You will receive class points equivalent to one quiz for each of the optional tests you complete. For instance, if you take both optional tests then you will receive class points equivalent to replace two of your quiz scores.
+
+\noindent \textbf{Confidentiality:} The records of this study will be kept private. In any sort of report we might publish, we will not include any information that will make it possible to identify a subject. Research records will be stored securely and only researchers will have access to the records.
+
+\noindent \textbf{Voluntary Nature of the Study:} Participation in this study is voluntary. Your decision whether or not to participate will not affect your current or future relations with the University of Minnesota. If you decide to participate, you are free to not answer any question or withdraw at any time with out affecting those relationships.
+
+\noindent \textbf{Contacts and Questions:} The researcher conducting this study is: Andrew Zieffler. You may ask any questions you have now. If you have questions later, you are encouraged to contact him at 325 Burton Hall, 763-498-4392, zief0002@umn.edu. (You can also contact Joan Garfield, 204 Burton Hall, 612-625-0337, jbg@umn.edu)
+
+\noindent If you have any questions or concerns regarding this study and would like to talk to someone other than the researcher(s), you are encouraged to contact the Research Subjects' Advocate Line, D528 Mayo, 420 Delaware St. Southeast, Minneapolis, Minnesota 55455; (612) 625-1650.
+
+\noindent You will be given a copy of this information to keep for your records.
+
+\noindent \textbf{Statement of Consent:}
+
+\noindent I have read the above information. I have asked questions and have received answers. I consent to participate in the study.
+
+
+\noindent Signature: \underline{\hspace{3in}} Date: \underline{\hspace{1in}}
+
+\noindent Signature of Investigator: \underline{\hspace{3in}} Date: \underline{\hspace{1in}}
+
+\newpage
+
+## ACT Score Release Form {-}
+
+As a part of the research study on the effectiveness of different learning tools and activities to help students learn statistics that you have agreed to be a participant in, we are asking that you consider providing the University of Minnesota consent to release your ACT score. We ask that you read this form and ask any questions you may have before agreeing to provide consent to release your ACT score.
+
+\noindent If you agree to provide consent, you will be allowing the University of Minnesota to release your overall ACT score once the semester has been completed. The ACT score will be added to the data file (being used by the researcher) by the Office of Institutional Research and Reporting. Once the ACT score has been added to the data file, all personal identification (names and ID numbers) will be erased and the file will be randomly sorted so the researcher will not know the identity of the student.
+
+\noindent We ask that if you agree to provide consent to the University of Minnesota to release your ACT score, that you do the following:
+
+(1) Sign and date this form.
+(2) Mail this form to the address below, or drop this form off in Burton Hall 206 after grades
+have been submitted
+
+<!-- \vspace{-3ex} -->
+
+\noindent \hspace*{2in}
+\begin{minipage}{.8\textwidth}
+Andrew Zieffler \newline
+Educational Psychology Room 107 BuH\newline
+3171\newline
+178 Pillsbury Dr. SE\newline
+Minneapolis, MN 55455\newline
+\end{minipage}
+
+\noindent The records of this study will be kept private. In any sort of report we might publish, we will not include any information that will make it possible to identify a subject. Research records will be stored securely and only researchers will have access to the records.
+
+\noindent The researcher conducting this study is: Andrew Zieffler. You may ask any questions you have now. If you have questions later, you are encouraged to contact him at 325 Burton Hall, 763-498-4392, zief0002@umn.edu. (You can also contact Joan Garfield, 204 Burton Hall, 612-625-0337, jbg@umn.edu).
+
+\noindent By signing this consent form, I am agreeing to allow the University of Minnesota to release my overall ACT score.
+
+\noindent Signature: \underline{\hspace{3in}} Date: \underline{\hspace{1in}}
+
+\noindent ID Number: \underline{\hspace{3in}}
+
+

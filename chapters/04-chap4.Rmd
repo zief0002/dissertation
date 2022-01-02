@@ -1,0 +1,767 @@
+# Results {#results}
+
+This chapter will present the quantitative results of the study. The data analysis contains three major sections. The first is a descriptive analysis which will be used to help describe the students who were enrolled in the course and also to examine differences between the two instructional sequences. This part of the data analysis will also lend guidance in choosing relevant predictors that might help explain the patterns of change in students' reasoning about bivariate data. The second part of the analysis uses a repeated-measures multivariate analysis of variance (RM-MANOVA) to examine students' change in reasoning about univariate distribution, and then uses the results of that analysis to help define student summary predictors for use in the third part of the analysis. Finally, this third part of the analysis examines both the patterns of change in students' reasoning about bivariate data and the covariates that explain that change using linear mixed-effects models (LMM).
+
+```{r theme-set, echo=FALSE}
+theme_set(
+    theme_light(base_size = 14)
+)
+```
+
+
+## Examining the Instructional Sequences
+
+The two sequences (treatments) of the course need to be examined to determine if they are similar in terms of student makeup. This examination will show how successful the randomization process was, as well as help identify any predictors that might be necessary to include in later analyses. Students self reported demographic information on the first day of the course. \@ref(tab:compare-seq-demo) suggests that the students in the two sequences of the course are similar on these demographic characteristics. 
+
+
+```{r tab-compare-seq-demo, echo=FALSE}
+data.frame(
+  measure = c("$M$", "$SD$", "$N$", "$M$", "$SD$", "$N$", "$M$", "$SD$", "$N$", "$M$", "$SD$", "$N$"),
+  bivariate_data = c(21.87, 4.62, 54, 15.26, 3.21, 54, 80.93, 46.61, 53, 3.24, 0.47, 53),
+  inference = c(21.93, 4.43, 59, 15.54, 2.25, 59, 70.88, 30.57, 52, 3.13, 0.37, 57),
+  t_info = c("", "$t(111)=-0.07,~p=0.94$", "", "", "$t(94.10)=-0.54,~p=0.59$", "", "", "$t(89.98)=1.31,~p=0.19$", "", "", "$t(108)=1.12,~p=0.26$", "")
+) %>%
+  kable(
+    format = "latex",
+    col.names = c("Factor", "Bivariate data", "Inference", ""),
+    align = c("l", rep("c", 4)),
+    booktabs = TRUE,
+    escape = FALSE,
+    label = "compare-seq-demo",
+    caption = "Means, standard deviations, and sample sizes for demographic factors for the two instructional sequences. The sequence labeled 'Bivariate data' is the first sequence shown in Figure 3.1 and the sequence labeled 'Inference' is the second sequence in that figure. Independent samples $t$-tests are also presented."
+  ) %>%
+  kable_styling(
+    font_size = 10,
+    latex_options = c("HOLD_position"),
+    full_width = TRUE
+    ) %>%
+  row_spec(0, align = "c") %>%
+  column_spec(1, width = "1in") %>%
+  pack_rows("Age", 1, 3) %>%
+  pack_rows("Enrolled credits (Fall 2005)", 4, 6) %>%
+  pack_rows("Cumulative earned credits", 7, 9) %>%
+  pack_rows("Cumulative GPA (4-pt scale)", 10, 12) 
+```
+
+Summary information on these variables for all 113 students used in the study appear in \@ref(tab:summary-demo-cov). The students seem to be of a similar age and collegiate status, namely juniors (accumulated 61 to 90 credits) and full-time students (enrolled with 13 or more credits). The grade point averages (GPA) also seem comparable between the two treatments. Significance testing was also utilized for a more comprehensive comparison of the two treatments on these factors.
+
+
+An *F*-test to compare variances was performed on each of the demographic characteristics in \@ref(tab:compare-seq-demo) to test the assumption of homogeneity of variance between the two sequences. The results of these tests (not presented) suggested that the variances were not equal between sequences for the number of semester credits students were taking and the number of cumulative credits that students had already taken. Because of the unequal variances on these two factors, *t*-tests using Welch's modification to the degrees of freedom were performed to test whether these student demographics were significantly different. The two sequences were also examined for differences in average age and cumulative grade point average of the students, albeit with a traditional two-sample *t*-test. The results of these tests are also presented in \@ref(tab:compare-seq-demo). These results suggest that the students in the two sequences were similar in age, were taking a similar number of credits during fall semester 2005, had a similar number of cumulative credits, and also had a similar cumulative grade point average.
+
+The two treatments were also examined for differences in numbers of males and females. Chi-square analyses were run to examine differences between sequences. Due to the low number of males in each section, a simulated *p*-value was computed for a Monte Carlo test of $10,000$ replicates for each analysis. This analysis suggested that the two sequences were composed of similar numbers of males and females, $\chi^2(1) = 3.44,~ p = 0.07$. The two sequences were also examined for
+differences in the number of prior mathematics, statistics and computer programming courses students had taken in both high-school and college. These were self-reported on the mathematics survey that was given to the first day of class. Chi-squares were run for each item on the survey to examine differences between the sections. 
+
+\begin{landscape}
+\begingroup\fontsize{10}{12}\selectfont
+\begin{table}[ht]
+\caption{\label{tab:summary-demo-cov}Means (standard deviations), sample sizes, and correlations for each of the demographic factors and potential covariates. Pairwise deletion was used to compute all correlations. Spearman Correlations are given in parentheses.}
+\centering
+\fontsize{10}{12}\selectfont
+\begin{tabular}{p{1.5in}P{0.4in}P{0.4in}P{0.4in}P{1in}P{1in}P{1in}P{1in}}
+\toprule
+& & & & \multicolumn{4}{c}{\textbf{Correlations}} \\[1ex] \cline{4-7}
+\thead{Demographic Factor} & \thead{\textit{N}} & \thead{\textit{M}} & \thead{\textit{SD}} & \thead{1.} & \thead{2.} & \thead{3.} & \thead{4.}\\
+\midrule
+1. Age & 113 & 21.90 & 4.50 & --- & & & \\[1ex]
+2. Credits (F2005) & 113 & 15.41 & 2.74 & $-0.54~(-0.24)$ & --- & & \\[1ex]
+3. Cumulative credits & 105 & 75.96 & 39.61 & $0.67~(0.77)$ & $-0.47~(-0.20)$ & --- & \\[1ex]
+4. Cumulative GPA & 108 & 3.16 & 0.45 & $-0.14~(-0.30)$ & $-0.03~(0.04)$ & $0.04~(-0.08)$ & --- \\[1ex]
+5. Gender & \multicolumn{7}{l}{Females: 95, Males: 18} \\[1ex]
+\midrule
+\addlinespace[1em]
+& & & & \multicolumn{4}{c}{\textbf{Correlations}} \\[1ex] \cline{4-7}
+\thead{Potential Covariate} & \thead{\textit{N}} & \thead{\textit{M}} & \thead{\textit{SD}} & \thead{6.} & \thead{7.} & \thead{8.} & \\
+\midrule
+6. CAOS & 111 & 5.74 & 3.62 & --- & & & \\[1ex]
+7. Algebra test & 110 & 7.88 & 2.50 & $0.07~(0.09)$ & --- & & \\[1ex]
+8. ACT & 70 & 23.99 & 2.84 & $0.05~(0.01)$ & $0.42~(0.37)$ & --- & \\[1ex]
+\bottomrule
+\end{tabular}
+\end{table}
+\endgroup
+\end{landscape}
+
+
+\noindent Due to the low counts in some cells, a simulated *p*-value was computed for a Monte Carlo test of $10,000$ replicates for each analysis. Because of the high number of comparisons being made at the same significance level, a Bonferroni adjustment was used to adjust the significance level to $p = 0.003$. The results of these analyses are reported in \@ref(tab:chi-sq). These analyses suggest that the two sequences were composed of students with similar backgrounds in mathematics, statistics and computer science.
+
+```{r tab-chi-sq, echo=FALSE, eval=FALSE}
+data.frame(
+  demo = c("Basic or general mathematics course", "Tech-prep mathematics course", "Pre-algebra course", "Algebra I course",
+           "Geometry course", "Algebra II course, with trigonometry", "Algebra II course, w/o trigonometry", 
+           "Trigonometry (as a separate course)", "Pre-calculus course", "Integrated mathematics course", 
+           "Probability or statistics course", "Calculus course", "Discrete mathematics course", "Other mathematics course",
+           "Computer programming course"),
+  x_2 = c(2.00, 1.62, 1.62, 2.72, 0.04, 1.23, 3.54, 1.89, 2.60, 2.09, 3.43, 0.54, 1.66, 0.59, 1.72),
+  df = c(2, 3, 3, 3, 1, 3, 3, 3, 3, 2, 3, 3, 2, 2, 2),
+  p = c(0.37, 0.81, 0.68, 0.44, 1.00, 0.97, 0.32, 0.96, 0.47, 0.47, 0.37, 0.92, 0.41, 0.81, 0.41),
+  n = c(112, 110, 111, 112, 112, 111, 109, 112, 113, 112, 113, 112, 111, 109, 113)
+) %>%
+  kable(
+    format = "latex",
+    col.names = c("Factor", "$\\chi^2$", "*df*", "*p*", "N"),
+    align = c("l", rep("c", 4)),
+    digits = 2,
+    booktabs = TRUE,
+    longtable = TRUE,
+    escape = FALSE,
+    label = "chi-sq",
+    caption = "Chi-square tests to examine differences between sequences in mathematics, statistics and computer science backgrounds. The *p*-values are simulated based on a Monte Carlo test with $10,000$ replicates."
+  ) %>%
+  kable_styling(
+    font_size = 10,
+    latex_options = c("HOLD_position", "repeat_header"),
+    full_width = TRUE
+    ) %>%
+  row_spec(0, align = "c") %>%
+  column_spec(1, width = "1in")
+```
+
+
+\begingroup\fontsize{10}{12}\selectfont
+\setlength{\LTleft}{0pt}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{3in}>{\centering\arraybackslash}p{0.5in}>{\centering\arraybackslash}p{0.5in}>{\centering\arraybackslash}p{0.5in}>{\centering\arraybackslash}p{0.5in}}
+\caption{\label{tab:chi-sq}Chi-square tests to examine differences between sequences in mathematics, statistics and computer science backgrounds. The $p$-values are simulated based on a Monte Carlo test with $10,000$ replicates.}\\
+\toprule
+\thead{Factor} & \thead{$\chi^2$} & \thead{$df$} & \thead{$p$} & \thead{N}\\
+\midrule
+\endfirsthead
+\caption[]{Chi-square tests to examine differences between sequences in mathematics, statistics and computer science backgrounds. The $p$-values are simulated based on a Monte Carlo test with $10,000$ replicates. \textit{(continued)}}\\
+\toprule
+\thead{Factor} & \thead{$\chi^2$} & \thead{$df$} & \thead{$p$} & \thead{N}\\
+\midrule
+\endhead
+\bottomrule
+\multicolumn{5}{r}{\textit{(Table continues on next page)}}
+\endfoot
+\bottomrule
+\endlastfoot
+Basic or general mathematics course & 2.00 & 2 & 0.37 & 112\\
+Tech-prep mathematics course & 1.62 & 3 & 0.81 & 110\\
+Pre-algebra course & 1.62 & 3 & 0.68 & 111\\
+Algebra I course & 2.72 & 3 & 0.44 & 112\\
+Geometry course & 0.04 & 1 & 1.00 & 112\\
+\midrule
+Algebra II course, with trigonometry & 1.23 & 3 & 0.97 & 111\\
+Algebra II course, w/o trigonometry & 3.54 & 3 & 0.32 & 109\\
+Trigonometry (as a separate course) & 1.89 & 3 & 0.96 & 112\\
+Pre-calculus course & 2.60 & 3 & 0.47 & 113\\
+Integrated mathematics course & 2.09 & 2 & 0.47 & 112\\
+\midrule
+Probability or statistics course & 3.43 & 3 & 0.37 & 113\\
+Calculus course & 0.54 & 3 & 0.92 & 112\\
+Discrete mathematics course & 1.66 & 2 & 0.41 & 111\\
+Other mathematics course & 0.59 & 2 & 0.81 & 109\\
+Computer programming course & 1.72 & 2 & 0.41 & 113\\*
+\end{longtable}
+\endgroup{}
+
+Measures for students were also obtained on their prior algebra (Algebra Test), and statistical knowledge (CAOS), as well as their general knowledge (ACT). Means and standard deviations of these measures for the two sequences are reported in \@ref(tab:compare-seq-cov). Because the Bartlett tests suggested that the variances for each of the predictors were homogenous, a traditional two-sample *t*-test was run on each measure to determine if there were differences between the sections. The results of these tests are also reported in \@ref(tab:compare-seq-cov). The non-significance of these tests suggest that the sequences seem to be composed of similar students in terms of general knowledge and both prior algebraic and statistical knowledge.
+
+
+```{r tab-compare-seq-cov, echo=FALSE}
+data.frame(
+  measure = c("$M$", "$SD$", "$N$", "$M$", "$SD$", "$N$", "$M$", "$SD$", "$N$"),
+  bivariate_data = c(5.72, 3.57, 53, 7.40, 2.38, 53, 23.93, 3.08, 30),
+  inference = c(5.62, 3.32, 57, 8.35, 2.54, 57, 24.03, 2.68, 39),
+  t_info = c("", "$t(108)=0.70,~p=0.49$", "", "", "$t(107)=-1.91,~p=0.06$", "", "", "$t(67)=-0.13,~p=0.89$", "")
+) %>%
+  kable(
+    format = "latex",
+    col.names = c("Measure", "Bivariate data", "Inference", ""),
+    align = c("l", rep("c", 4)),
+    booktabs = TRUE,
+    escape = FALSE,
+    label = "compare-seq-cov",
+    caption = "Means, standard deviations, and sample sizes for each of three possible covariates by sequence. Independent samples $t$-tests to compare the two sequences (assuming equal variances) are also presented."
+  ) %>%
+  kable_styling(
+    font_size = 10,
+    latex_options = c("HOLD_position"),
+    full_width = TRUE
+    ) %>%
+  row_spec(0, align = "c") %>%
+  column_spec(1, width = "1in") %>%
+  pack_rows("CAOS", 1, 3) %>%
+  pack_rows("Algebra test", 4, 6) %>%
+  pack_rows("ACT", 7, 9)
+```
+
+
+## Research Question 1: Nature of Students' Reasoning over Time
+
+To explore students' change in development in reasoning about bivariate data, a LMM was fitted to the data to help describe the pattern of change exhibited in the data. As explained in [Chapter 3](#methods), linear mixed-effects models provide a powerful tool for analyzing grouped data. An important piece of the mixed-effects model methodology is the correct specification of the model including both the fixed and random effects, as well as the within-group covariance structure. This is done by first using graphs and sample statistics to help provide guidance, and then more formally by computing and comparing model estimates and fit statistics to help determine the appropriate structure of the level-1 model. Before we can fit a LMM to the data, however, it is important to check the assumption that any missing data are, at worst, *missing at random* [@little:1995].
+
+```{r tab-bra-by-wave, echo=FALSE}
+data.frame(
+  wave = c("1. Wave 1", "2. Wave 2", "3. Wave 3", "4. Wave 4"),
+  N = c(111, 108, 98, 98),
+  one = c("\\textbf{0.89 (1.13)}", "$-.02$ ($-.01$)", ".07 (.07)", "$-.08$ ($-.06$)"),
+  two = c("", "\\textbf{3.97 (1.57)}", ".38 (.39)", ".37 (.32)"),
+  three = c("", "", "\\textbf{4.84 (1.58)}", ".59 (.58)"),
+  four = c("", "", "", "\\textbf{4.80 (1.57)}")
+) %>%
+  kable(
+    format = "latex",
+    col.names = c("Wave", "N", "1.", "2.", "3.", "4."),
+    align = c("l", rep("c", 5)),
+    booktabs = TRUE,
+    escape = FALSE,
+    label = "bra-by-wave",
+    caption = "Sample sizes, and correlations on the bivariate reasoning assessment across the four waves for all cases. Spearman Correlations are given in parentheses. Means (standard deviations) are presented in bold along the diagonal."
+  ) %>%
+  kable_styling(
+    font_size = 10,
+    latex_options = c("HOLD_position"),
+    full_width = TRUE
+    ) %>%
+  row_spec(0, align = "c") %>%
+  column_spec(1, width = "1in")
+```
+
+### Missing Data Patterns
+
+Because there are students who do not have complete data (i.e., they are missing at least one wave of data; see sample sizes in \@ref(tab:bra-by-wave)) it is important to examine the pattern of the missingness. When a LMM is fit to the data, it is implicitly assumed that each student's observed records are a random sample of data from their underlying true growth trajectory [@singer:2003]. When students have missing data on one or more measurement occasions, the observed data may not meet that assumption, and thus the parameter estimates would be biased. However, because missingness was largely due to student absenteeism, the missing at random assumption was tenable in this study.
+
+
+### Specifying a Functional Form
+
+As in all data analysis, it is advisable, to examine the data as a way of informing the model building process. A spaghetti plot is often a first step in examining the mean structure of longitudinal data. A spaghetti plot of a random sample of 25 students' scores on the bivariate reasoning assessment (BRA) is shown in \@ref(fig:spaghetti-plot). The bend in the plot suggests that a model that incorporates both a linear and quadratic term might be included in our initial model. Examining the mean BRA scores across the four waves in Table 4.7 further substantiates this model. This seems to suggest a quick increase in the means followed by a leveling off, or maybe even some loss. This pattern is consistent with learning and forgetting curves reported in the research literature [e.g., @min:2000; @murre:2006;@wozniak:1990].
+
+
+```{r spaghetti-plot, echo=FALSE, fig.height=6, fig.width=8, out.width="80%", fig.cap="Spaghetti plot of BRA scores for 25 students over time. The loess smoother is also displayed", fig.pos="H"}
+# SET RANDOM SEED
+set.seed(200)
+
+# SIMULATE DATA
+d = data.frame(
+  x = rep(c(1, 14, 25, 29), times = 25),
+  student = unlist(lapply(1:25, rep, 4))
+) %>%
+  arrange(x, student) %>%
+  mutate(
+    y = c(rnorm(25, mean = 0.89, sd = 1.13), 
+          rnorm(25, mean = 3.97, sd = 1.57), 
+          rnorm(25, mean = 4.84, sd = 1.58), 
+          rnorm(25, mean = 4.80, sd = 1.57)),
+    y2 = ifelse(ceiling(y)<0, 0, ceiling(y))
+  )
+
+# PLOT
+ggplot(data = d, aes(x = x, y = y2)) +
+  geom_line(aes(group = student), linetype = "dotted") +
+  geom_smooth(method = "loess", se = FALSE, lwd = 2) +
+  scale_x_continuous(name = "Session", breaks = seq(from = 0, to = 30, by = 5)) +
+  ylab("Score on BRA")
+```
+
+After settling on a functional form, the next step in the model building process is determining which parameters in the model, if any, should have random effects to help account for between-group variation. The plot in \@ref(fig:spaghetti-plot) also indicates that there seems to be minor variability in the intercepts, and more variability in both the linear slopes and quadratic change between individual students. This is also seen in the standard deviations in \@ref(tab:bra-by-wave), with students exhibiting less variability in their BRA scores at the first measurement occasion then at any other measurement occasion. A linear regression of the BRA score on both day (linear) and day-squared (quadratic) was fit to the sample data, and 95-percent confidence intervals for the regression coefficients were examined to further identify the random-effects structure. These are shown in \@ref(fig:ci-param). The overlap of those intervals further substantiated that there may be no need to account for subject-to-subject variability, especially in the intercept. This will be tested more formally later in the analysis.
+
+```{r ci-param, echo=FALSE, fig.height=6, fig.width=10, out.width="100%", fig.cap="Ninety-five percent confidence intervals for the intercept, linear slope, and quadratic parameters for the 25 randomly selected students.", fig.pos="H"}
+
+# Regression by group / compute CIs
+d2 = d %>%
+  group_by(student) %>%
+  do(broom::tidy(lm(y2 ~ 1 + x + I(x^2), data = .))) %>%
+  ungroup() %>%
+  mutate(
+    LL = estimate - qt(.975, df = 3)*std.error,
+    UL = estimate + qt(.975, df = 3)*std.error
+  )
+
+# PLOT
+ggplot(data = d2, aes(x = student, y = estimate)) +
+  geom_errorbar(aes(ymin = LL, ymax = UL)) +
+  ylab("Estimate") +
+  scale_x_continuous(name = "Subject", breaks = 1:25) +
+  coord_flip() +
+  facet_wrap(~term, scales = "free_x", nrow = 1)
+```
+
+### Fitting the Unconditional Model
+
+Applied researchers in education are generally interested in growth, or mean change across time. The unconditional model can be used to model that mean change. In an unconditional model, no predictor variables are specified [@raudenbush:2002]. Since this is an exploratory analysis, the goal is to find a model with both a good statistical fit to the data, and, more importantly, one that makes sense theoretically. \@ref(fig:spaghetti-plot) and \@ref(tab:bra-by-wave) both point to a model that incorporates an intercept, linear term, and quadratic term to describe the mean change in students' reasoning about bivariate data. The standard deviations in \@ref(tab:bra-by-wave) and the confidence intervals in \@ref(fig:ci-param) suggest that random effects might only be necessary for the linear and quadratic terms.
+
+While the exploratory analyses have suggested a model that seems like a good fit to the data, in the tradition of mixed-effects models analysis, it is typical to initially fit a full mixed-effects model, with all terms having random effects at the student level. Then, competing models can be fit to the data and compared using statistical criteria. In mixed-effects model analysis three common criteria for comparing model fit are: (1) the *deviance* ($\mathrm{Deviance}=-2\ln(\mathrm{Lik.}$), (2) the *Akaike Information Criterion* [AIC\; @akaike:1974], and (3) the *Bayesian Information Criterion* [BIC\; @schwarz:1978]. The deviance is used to compare nested models. The difference between the deviance for a full and reduced model is called the *deviance statistic*, and is asymptotically distributed as $\chi^2$ with degrees of freedom equal to the difference in the number of model parameters between the two models. Non-significance is evidence that the reduced, or more parsimonious model fits the data equally well.
+
+AIC and BIC can also be used to compare the relative fit of two models. These two criteria, like the deviance statistic, are based on the log-likelihood, but penalize (i.e. decrease) the log-likelihood according to differing criteria. The AIC penalizes according to the number of model parameters, while the BIC penalizes according to both the number of model parameters and the sample size. The AIC and BIC can be compared for any pair of models and do not require these models to be nested, with the caveat that the models are fit to an identical set of data. Because of the parameterization of these fit statistics, smaller values of AIC and BIC indicate better model fit.
+
+To substantiate that a quadratic model is necessary to model the mean change in students' reasoning about bivariate data, three competing full mixed-effects models were fit to the data. These included a model for no change, or an intercept only model (Model A), a model for linear change (Model B), and a model for quadratic change (Model C). Each of these unconditional models was fitted using maximum likelihood (ML). All of the statistical analyses were conducted using the `{lme4}` [@bates:2005] and `{nlme}` [@pinheiro:2005] libraries in the software package R version 2.2.1 [@r-dev:2005]. The results of these analyses are reported in \@ref(tab:taxonomy-uncond). (*Note:* A cubic model for change, or saturated model, was also fit to the data, but was not reported due to problems with convergence.)
+
+```{r tab-taxonomy-uncond, echo=FALSE, eval=FALSE}
+data.frame(
+  effects = c("Intercept", "Linear term", "Quadratic term", "Level-1: Within student",
+              "Level-2: Between student", "  Intercept", "  Linear term", 
+              " Quadratic term"),
+  param = c("$\\gamma_{00}$", "$\\gamma_{10}$", "$\\gamma_{20}$",
+            "\\sigma^2_{\\epsilon}", "", "\\sigma^2_{0}", "\\sigma^2_{1}",
+            "\\sigma^2_{2}"),
+  model_a = c("3.55$^{***}$", "", "", "4.84", "", "2.42E-9", "", ""),
+  model_b = c("3.55$^{***}$", "", "", "4.84", "", "2.42E-9", "", ""),
+  model_c = c("3.55$^{***}$", "", "", "4.84", "", "2.42E-9", "", "")
+) %>%
+  kable(
+    format = "latex",
+    col.names = c("Effects", "Parameter", "Model A", "Model B", "Model C"),
+    align = c("l", rep("c", 4)),
+    digits = 2,
+    booktabs = TRUE,
+    escape = FALSE,
+    label = "taxonomy-uncond",
+    caption = "Taxonomy of models fitted to compare potential change trajectories for the BRA ($n=113$)."
+  ) %>%
+  kable_styling(
+    font_size = 10,
+    latex_options = c("HOLD_position"),
+    full_width = TRUE
+    ) %>%
+  row_spec(0, align = "c") %>%
+  column_spec(1, width = "1in")
+```
+
+\begingroup\fontsize{10}{12}\selectfont
+\begin{table}[ht]
+\caption{\label{tab:taxonomy-uncond}Taxonomy of models fitted to compare potential change trajectories for the BRA ($n=113$).}
+\centering
+\fontsize{10}{12}\selectfont
+\begin{tabular}{p{2in}P{0.75in}P{0.75in}P{0.75in}P{0.75in}}
+\toprule
+\thead{Effects} & \thead{Parameter} & \thead{Model A} & \thead{Model B} & \thead{Model C}\\
+\midrule
+\multicolumn{5}{l}{\textbf{Fixed effects}} \\[1ex]
+Intercept & $\gamma_{00}$ & 3.55$^{***}$ & 1.32$^{***}$ & 0.90$^{***}$\\[1ex]
+Session & $\gamma_{10}$ &  & 0.15$^{***}$ & 0.32$^{***}$\\[1ex]
+Session$^2$ & $\gamma_{20}$ &  &  &$-0.01^{***}$ \\[1ex]
+\addlinespace[0.3em]
+\multicolumn{5}{l}{\textbf{Variance components}} \\[1ex]
+Level-1: Within student & $\sigma^2_{\epsilon}$ & 4.84 & 1.74 & 1.22\\[1ex]
+Level-2: Between student &  &  &  & \\[1ex]
+\hspace{1em}Var(Intercept) & $\sigma^2_{0}$ & 0.00 & 0.01 & 0.04\\[1ex]
+\hspace{1em}Var(Linear term) & $\sigma^2_{1}$ &  & 0.00 & 0.01\\[1ex]
+\hspace{1em}Var(Quadratic term) & $\sigma^2_{2}$ &  &  & 0.00\\[1ex]
+\hspace{1em}Cov(Intercept, Linear) & $\sigma_{01}$ &  & 0.00 & 0.00\\[1ex]
+\hspace{1em}Cov(Intercept, Quadratic) & $\sigma_{02}$ &  &  & 0.00\\[1ex]
+\hspace{1em}Cov(Linear, Quadratic) & $\sigma_{12}$ &  & & 0.00\\[1ex]
+\addlinespace[0.3em]
+\multicolumn{5}{l}{\textbf{Goodness-of-fit}} \\[1ex]
+Deviance & & 1813.8 & 1492.1 & 1408.4\\[1ex]
+AIC & & 1819.8 & 1504.1 & 1428.4\\[1ex]
+BIC & & 1831.8 & 1528.2 & 1468.6 \\[1ex]
+\bottomrule
+\multicolumn{5}{l}{\textit{Note.} Variance components with values less than 0.01 are reported as `0.00'.}\\
+\multicolumn{5}{l}{$^{\sim}p<0.10,~^{*}p<0.05,~^{**}p<0.01,~^{***}p<0.001$}\\
+\end{tabular}
+\end{table}
+\endgroup
+
+As we consider the fixed-effects that should be included, we first examine the unconditional means model (Model A) more closely. In the unconditional means model, variation in students' reasoning about bivariate data is partitioned across students without regard to time. The results from this model will allow an exploration of whether there is systematic variation in students' reasoning that is worth exploring, and also where that variation resides (within or between students). This model will also provide baseline information to evaluate subsequent models against.
+
+
+#### Model A: The Unconditional Means Model {-}
+
+The unconditional means model doesn't describe change, but rather describes and partitions the variation in students' reasoning about bivariate data. This model lacks predictors at both level-1 and level-2:
+
+\begin{equation}\label{eq:model-a}
+\begin{split}
+Y_{ij} &= \pi_{0i}  + \epsilon_{ij}\\[2ex]
+\pi_{0i} &= \gamma_{00} + \zeta_{0i}\\[1ex]
+\end{split}
+\end{equation}
+
+where it is assumed that:
+
+$$
+\epsilon_{ij} \sim \mathcal{N}(0,\sigma^2_{\epsilon})~\mathrm{and}~\zeta_{0i} \sim \mathcal{N}(0,\sigma^2_{0})
+$$
+
+This model lacks a slope parameter and is therefore completely flat sitting at elevation $\pi_{0i}$ for person *i*. While these flat trajectories may differ in elevation for different students, the average elevation is $\gamma_{00}$. This model postulates that the observed level of reasoning for student *i* on measurement occasion *j* is composed of deviations about the two means just described, namely the overall average mean and the student-specific mean.
+
+Model A in \@ref(tab:taxonomy-uncond) presents the results of fitting the unconditional means model to the bivariate reasoning data. The one fixed effect in this model ($\hat\gamma_{00}=3.55$) estimates the average score on the BRA for all students across all measurement occasions. Rejection of its associated null-hypothesis ($p<0.001$) confirms that the average score on the BRA throughout an entire introductory statistics course is non-zero.
+
+Examining the random-effects, we see that the estimated within-student variance
+($\hat\sigma^2_{\epsilon}$) is 4.832. The estimated between-student variance ($\hat\sigma^2_{0}$) is $1.96 \times 10^{-17}$. The hypothesis test for the within-student variance is significant ($p < 0.001$) and suggests that the average student's BRA score varies over time. The small between-student variance might suggest that students do not vary much in their reasoning about bivariate data from each other. Because the within-student variance component is significantly different from zero, there is a need to link that variation to other predictors.
+
+The unconditional means model will be used as a baseline for the evaluation of models with more complex functional forms using the criteria set out earlier in this section. The smaller AIC and BIC values as well as the significant linear and quadratic fixed-effects all suggest that the quadratic model (Model C) should be adopted. Since the linear and quadratic coefficients were added in successive models after initially constraining them to zero in Model A, likelihood ratio tests can be used to compare the model fit of each lower parameter model (reduced model) to the next higher parameter model (full model). In students' reasoning about bivariate data, both the linear model---$\chi^2(3)=321.65$, $p < 0.001$---and the quadratic model---$\chi^2(4)=83.74$, $p < 0.001$---were significant. All of these results indicate that the quadratic model should be adopted. It is this model that is described next.
+
+
+#### Model C: The Unconditional Quadratic Change Model {-}
+
+Based on the exploratory analysis and the likelihood ratio tests to compare nested models, a quadratic change model was adopted (Model C). This model will partition the variation in students BRA scores across both students and time. This model is described in \autoref{eq:model-c}:
+
+\begin{equation}\label{eq:model-c}
+\begin{split}
+Y_{ij} &= \pi_{0i} + \pi_{1i}(\mathrm{Session}_{ij}) + \pi_{2i}(\mathrm{Session}_{ij}^2) + \epsilon_{ij}\\[2ex]
+\pi_{0i} &= \gamma_{00} + \zeta_{0i}\\[1ex]
+\pi_{1i} &= \gamma_{10} + \zeta_{1i}\\[1ex]
+\pi_{2i} &= \gamma_{20} + \zeta_{2i}\\[1ex]
+\end{split}
+\end{equation}
+
+where we assume that:
+
+$$
+\epsilon_{ij} \sim \mathcal{N}(0,\sigma^2_{\epsilon})~\mathrm{and}~\begin{bmatrix}\zeta_{0i} \\ \zeta_{1i} \\ \zeta_{2i}\end{bmatrix} \sim \mathcal{N}\bigg(\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix},\begin{bmatrix}\sigma^2_{0} & \sigma_{01} & \sigma_{02} \\ \sigma_{10} & \sigma^2_{1} & \sigma_{12} \\ \sigma_{20} & \sigma_{21} & \sigma^2_{2}\end{bmatrix}\bigg)
+$$
+
+Because the only predictors in this model are associated with time ($\mathrm{Session}_{ij}$ and $\mathrm{Session}_{ij}^2$), it is referred to as the *unconditional quadratic change model*. Since we have altered the level-1 specification, this changes the meaning of both the residuals and the variance components. Now the level-1 residual indicates the deviation from that student's quadratic change trajectory. Likewise, the residual variance ($\hat\sigma^2_{\epsilon}$) now summarizes the scatter of each student's data around that trajectory. The level-2 residuals now summarize between-student variability in initial status, linear, and quadratic rates of change, respectively.
+
+Model C, presented in \@ref(tab:taxonomy-uncond), shows the results of fitting an unconditional growth model to the bivariate reasoning data. The fixed-effects, $\hat\gamma_{00}$, $\hat\gamma_{10}$, and $\hat\gamma_{20}$, estimate the average initial score, average linear rate of change, and average quadratic rate of change on the BRA. The null hypothesis is rejected ($p<0.001$) for each of these parameters, estimating that the average change in students reasoning about bivariate data as depicted by the BRA has a non-zero starting score of 0.90, a non-zero linear change of 0.33 per instructional session, and a non-zero quadratic change of $-0.006$. This trajectory is plotted in \@ref(fig:fitted-model-c). This suggests that on average, students begin the course with very little ability to reason about bivariate data. The linear and quadratic rates of change suggest that on average this ability increases throughout an introductory statistics course, and might either plateau or drop very slightly especially in later sessions.
+
+
+```{r fitted-model-c, echo=FALSE, fig.height=6, fig.width=8, out.width="80%", fig.cap="Fitted curve for Model C showing the average predicted change in bivariate reasoning across class session.", fig.pos="H"}
+# EQUATION
+mod_c = expression(hat(BRA) == 0.90 + 0.33(Session[ij]) - 0.005(Session[ij]^2))
+
+
+# PLOT
+ggplot(data = d, aes(x = x, y = y2)) +
+  geom_point(alpha = 0) +
+  geom_function(
+    fun = function(x) {0.89856 + 0.32046 * x - 0.0064827 * x^2},
+    color = "#2C6DAC", lwd = 2
+  ) +
+  scale_x_continuous(name = "Session", breaks = seq(from = 0, to = 30, by = 5)) +
+  scale_y_continuous(name = "Predicted score on BRA", limits = c(0, 8)) +
+  annotate(geom = "text", x = 15, y = 6, label = mod_c, color = "#2C6DAC", size = 5)
+```
+
+The level-1 residual variance summarizes the average scatter of an individual student's observed BRA scores around his/her change trajectory. This estimated within-student variance ($\hat\sigma^2_{\epsilon}=1.197$) shows major reduction from the within-student variance from both Model A and Model B. Because the null hypothesis associated with this variance component was rejected ($p<0.001$), this suggests there is still within-student variation to account for so it may be profitable to introduce substantive predictors into future models.
+
+The level-2 variance components quantify the amount of unpredicted variation in the individual growth parameters. The non-significance of the variance components associated with both the intercept and quadratic change parameters suggests that students may not vary in either their initial ability to reason about bivariate data or in their quadratic rate of change. The variance component for the linear rate of change is also non significant. The tests associated with these components, however, are conservative with small sample sizes. For this reason other model comparison criteria needs to be consulted before removing any random effects. Before the random-effects can be examined, it is prudent to examine the covariance structure of the residuals for proper fit.
+
+
+### Specifying a Covariance Structure for the Residuals
+
+Efficient estimation of mean change is dependent on the adoption of an appropriate variance-covariance structure for the residuals [@diggle:1988]. This structure can be determined initially by using traditional multiple regression to fit the most complex model being examined (quadratic model for change; \autoref{eq:model-c}) and examining the residuals. The residuals suggest homogeneity of variance over time indicating that the variance-covariance structures that need to be examined should include a constant variance structure. Three alternative error covariance structures that have been identified as common in longitudinal analyses [@singer:2003] were fitted to the data: unstructured, compound symmetric, and continuous autoregressive. Each of these models was fitted using *restricted maximum likelihood* (REML). Because the models have identical fixed-effects, ML or REML could be used to compare the models. However, REML produces goodness-of-fit statistics that only reflect the fit of the models stochastic portion, which is the focus of this part of the investigation. Likelihood tests, as well as both AIC and BIC comparisons were used to select an appropriate structure for the residuals. Based on these results (see \@ref(tab:error-struc)), a random-effects structure with unstructured residuals was adopted for all models to further test the random-effects.
+
+```{r tab-error-struc, echo=FALSE}
+data.frame(
+  var_struc = c("Unstructured", "Compound Symmetry", "Continous Autoregressive"),
+  df = c(10, 11, 11),
+  dev = c(1432.37, 1432.37, 1430.17),
+  aic = c(1452.38, 1454.37, 1452.17),
+  bic = c(1492.49, 1498.49, 1496.29),
+  lr = c("", "$\\chi^2(1)=0.01,~p=0.94$", "$\\chi^2(1)=2.21,~p=0.14$")
+) %>%
+  kable(
+    format = "latex",
+    col.names = c("Variance Structure", "$df$", "Deviance", "AIC", "BIC", "LRT"),
+    align = c("l", rep("c", 5)),
+    booktabs = TRUE,
+    escape = FALSE,
+    label = "error-struc",
+    caption = "Selection of alternative error variance-covariance structures for use with the quadratic model for change in reasoning about bivariate data. The results of the likelihood ratio tests (LRT) are from comparison with the model that used an unstructured error variance-covariance structure."
+  ) %>%
+  kable_styling(
+    font_size = 10,
+    latex_options = c("HOLD_position"),
+    full_width = TRUE
+    ) %>%
+  row_spec(0, align = "c") %>%
+  column_spec(1, width = "1.75in") %>%
+  column_spec(2, width = "0.25in") %>%
+  column_spec(3, width = "0.5in") %>%
+  column_spec(4, width = "0.5in") %>%
+  column_spec(5, width = "0.5in") %>%
+  column_spec(6, width = "1.5in")
+
+```
+
+
+### Testing the Random-Effects
+
+After having specified the covariance structure of the residuals, we can now examine the random-effects to see which should be included in the model. While some programs (e.g., SAS) output *p*-values for the random-effects, these are based on a *z*-test and with the small sample size in this study, the results are hazy at best. However as @bates:2005a writes,
+
+> "(i)t is possible to do a likelihood ratio test on two fitted \ldots models with different specifications of the random effects. The *p*-value for such a test is calculated using the chi-squared distribution from the asymptotic theory, which does not apply in most such comparisons because the parameter for the null hypothesis is on the boundary of the parameter region. The *p*-value shown will be conservative (that is, it is an upper bound on the true *p*-value)."
+
+The earlier analyses suggested that a model that didn't include random-effects on the intercept might be a good fit to the data. This model was fitted using REML and compared using a likelihood ratio test to the full unconditional model (Model C). The results of that comparison---$\chi^2(3)=0.539,~p=0.91$---indicated that the more parsimonious model (no random-effects associated with the intercept term) should be retained. Further testing showed that both the linear and quadratic terms needed random-effects. (These results are not presented.) The output for this model (Model D) is shown in \@ref(tab:model-d).
+
+\begingroup\fontsize{10}{12}\selectfont
+\begin{table}[ht]
+\caption{\label{tab:model-d}Final unconditional model used to describe students' change in reasoning about bivariate data.}
+\centering
+\fontsize{10}{12}\selectfont
+\begin{tabular}{p{3in}P{1in}P{1.5in}}
+\toprule
+\thead{Effects} & \thead{Parameter} & \thead{Model D}\\
+\midrule
+\multicolumn{3}{l}{\textbf{Fixed effects}} \\[1ex]
+Intercept & $\gamma_{00}$ & 0.90$^{***}$\\[1ex]
+Session & $\gamma_{10}$ & 0.32$^{***}$\\[1ex]
+Session$^2$ & $\gamma_{20}$ &$-0.01^{***}$ \\[1ex]
+\addlinespace[0.3em]
+\multicolumn{3}{l}{\textbf{Variance components}} \\[1ex]
+Level-1: Within student & $\sigma^2_{\epsilon}$ & $1.23^{***}$\\[1ex]
+Level-2: Between student & \\[1ex]
+\hspace{1em}Var(Intercept) & $\sigma^2_{0}$ & ---\\[1ex]
+\hspace{1em}Var(Linear term) & $\sigma^2_{1}$ &  $0.01^{**}$\\[1ex]
+\hspace{1em}Var(Quadratic term) & $\sigma^2_{2}$ &  $0.00001^{\sim}$\\[1ex]
+\hspace{1em}Cov(Intercept, Linear) & $\sigma_{01}$ &---\\[1ex]
+\hspace{1em}Cov(Intercept, Quadratic) & $\sigma_{02}$ & ---\\[1ex]
+\hspace{1em}Cov(Linear, Quadratic) & $\sigma_{12}$ & $-0.0004^{\sim}$\\[1ex]
+\addlinespace[0.3em]
+\multicolumn{3}{l}{\textbf{Goodness-of-fit}} \\[1ex]
+Deviance & & 1432.9\\[1ex]
+AIC & & 1446.9\\[1ex]
+BIC & & 1475.0 \\[1ex]
+\bottomrule
+\multicolumn{3}{l}{$^{\sim}p<0.10~^{*}p<0.05,~^{**}p<0.01,~^{***}p<0.001$}\\
+\end{tabular}
+\end{table}
+\endgroup
+
+Model D still maintains the same fixed-effects as Model C, but has different random-effects based on an examination of the variance components and tests of model comparison for a series of models that are not shown. Model D is shown in \autoref{eq:model-d}:
+
+\begin{equation}\label{eq:model-d}
+\begin{split}
+Y_{ij} &= \pi_{0i} + \pi_{1i}(\mathrm{Session}_{ij}) + \pi_{2i}(\mathrm{Session}_{ij}^2) + \epsilon_{ij}\\[2ex]
+\pi_{0i} &= \gamma_{00} + \zeta_{0i}\\[1ex]
+\pi_{1i} &= \gamma_{10} + \zeta_{1i}\\[1ex]
+\pi_{2i} &= \gamma_{20} + \zeta_{2i}\\[1ex]
+\end{split}
+\end{equation}
+
+where it is assumed that:
+
+$$
+\epsilon_{ij} \sim \mathcal{N}(0,\sigma^2_{\epsilon})~\mathrm{and}~\begin{bmatrix}\zeta_{1i} \\ \zeta_{2i}\end{bmatrix} \sim \mathcal{N}\bigg(\begin{bmatrix}0 \\ 0\end{bmatrix},\begin{bmatrix}\sigma^2_{1} & \sigma_{12} \\ \sigma_{21} & \sigma^2_{2}\end{bmatrix}\bigg)
+$$
+
+The estimated fixed-effects have changed very little from Model C to Model D,
+and all three remain significant ($p<0.001$). The within-student variance component has increased slightly, but also remains significant ($p<0.001$). While the estimated variance components for the linear rate of change and the quadratic rate of change have not changed much, by not allowing the intercept to vary between students, the test associated with the variance component for the linear rate of change is now non-zero ($p<.05$). And, while the significance test for the variance component for the quadratic rate of change is marginally significant ($p<0.10$) the likelihood ratio test suggested that this random-effect needed to be retained in the model. The covariance, which is also marginally significant ($p<0.10$), informs us of the relationship between linear rate of change and quadratic rate of change. Interpretation can be easier if the covariance is re-expressed as a correlation coefficient. This can be done by dividing the covariance by the square root of the product of its associated variance components:
+
+\begin{equation}\label{eq:corr}
+\hat\rho_{\pi_1,\pi_2} = \frac{\hat\sigma_{01}}{\sqrt{\hat\sigma_0^2\hat\sigma_1^2}} = -0.936
+\end{equation}
+
+We conclude that the relationship between the average linear rate of change and quadratic rate of change in students' ability to reason about bivariate data is both negative, strong and, since the hypothesis test is significant, is likely non-zero. This indicates that students who have higher linear rates of change also tend to have lower quadratic rates of change.
+
+Model D suggests that students, on average, have some ability to reason about bivariate data before any instruction in an introductory statistics course as indicated by the significance of the intercept fixed-effect term. There also seems to be very little variability in students' baseline reasoning about bivariate data. In other words, they all seem to be starting at the same place. The significance of the positive linear fixed-effect term suggests that students, on average, are increasing their level of reasoning about bivariate data throughout an introductory statistics course, but this growth does not persist due to the negative quadratic fixed-effect term. Eventually, due to numeric reasons alone, the quadratic term will remove more than the linear term will add, causing the trajectory to peak and then decline. For an average student, this peak occurs around instructional session 24 in this data. Both of these rates of change vary from student-to-student. An average students' growth curve throughout an introductory statistics course (29 sessions) is depicted in \@ref(fig:fitted-model-c).
+
+It is required that the random effects are normally distributed with a zero mean and covariance matrix $\boldsymbol\Phi=\begin{bmatrix}\sigma^2_{1} & \sigma_{12} \\ \sigma_{21} & \sigma^2_{2}\end{bmatrix}$, and that they are independent for different groups. Furthermore, it is also assumed that the within-group errors ($\sigma^2_{\epsilon}$) have a zero mean and constant variance, and are independent of the random effects. Exploratory analysis on the residuals of the fitted models (not presented) revealed that the above assumptions were adequately met, according to the inspection criteria described by Pinheiro and Bates [-@pinheiro:2000].
+
+
+## Research Question 2: Importance of Instructional Sequence
+
+To answer the second research question (Is the sequencing of bivariate data within a course associated with changes in the pattern of development of students' reasoning about bivariate data?), a conditional LMM will be used to help provide an answer for this research question. A conditional model, unlike the unconditional model described earlier, allows for predictors other than just time. To answer this research question, the predictor of instructional sequence will be introduced into the quadratic model for change that was adopted in the previous section (Model D). The two sequences shown in \@ref(fig:fitted-model-c) will be coded $-1$ (Bivariate data first) and $+1$ (Inference first), respectively. The specification of the level-1 and level-2 models is presented in \autoref{eq:model-e}:
+
+\begin{equation}\label{eq:model-e}
+\begin{split}
+Y_{ij} &= \pi_{0i} + \pi_{1i}(\mathrm{Session}_{ij}) + \pi_{2i}(\mathrm{Session}_{ij}^2) + \epsilon_{ij}\\[2ex]
+\pi_{0i} &= \gamma_{00} + \gamma_{01}(\mathrm{Sequence}_{j}) + \zeta_{0i}\\[1ex]
+\pi_{1i} &= \gamma_{10} + \gamma_{11}(\mathrm{Sequence}_{j}) + \zeta_{1i}\\[1ex]
+\pi_{2i} &= \gamma_{20} + \gamma_{21}(\mathrm{Sequence}_{j}) + \zeta_{2i}\\[1ex]
+\end{split}
+\end{equation}
+
+\@ref(tab:model-e) shows the results from fitting a model to the bivariate reasoning data that includes instructional sequence as a predictor of initial status, linear rate of change, and quadratic rate of change (Model E).
+
+\begingroup\fontsize{10}{12}\selectfont
+\begin{table}[ht]
+\caption{\label{tab:model-e}Final unconditional model used to describe students' change in reasoning about bivariate data.}
+\centering
+\fontsize{10}{12}\selectfont
+\begin{tabular}{p{3in}P{1in}P{1.5in}}
+\toprule
+\thead{Effects} & \thead{Parameter} & \thead{Model E}\\
+\midrule
+\multicolumn{3}{l}{\textbf{Fixed effects}} \\[1ex]
+Intercept & $\gamma_{00}$ & 0.90$^{***}$\\[1ex]
+Instructional Sequence & $\gamma_{01}$ & $-0.07$\\[1ex]
+Session & $\gamma_{10}$ & 0.32$^{***}$\\[1ex]
+Instructional Sequence $\times$ Session & $\gamma_{11}$ & $-0.00004$\\[1ex]
+Session$^2$ & $\gamma_{20}$ &$-0.01^{***}$ \\[1ex]
+Instructional Sequence $\times$ Session$^2$ & $\gamma_{21}$ & 0.0002\\[1ex]
+\addlinespace[0.3em]
+\multicolumn{3}{l}{\textbf{Variance components}} \\[1ex]
+Level-1: Within student & $\sigma^2_{\epsilon}$ & $1.24^{***}$\\[1ex]
+Level-2: Between student & \\[1ex]
+\hspace{1em}Var(Linear term) & $\sigma^2_{1}$ &  $0.01^{**}$\\[1ex]
+\hspace{1em}Var(Quadratic term) & $\sigma^2_{2}$ &  $0.00001^{\sim}$\\[1ex]
+\hspace{1em}Cov(Linear, Quadratic) & $\sigma_{12}$ & $-0.0004^{\sim}$\\[1ex]
+\addlinespace[0.3em]
+\multicolumn{3}{l}{\textbf{Goodness-of-fit}} \\[1ex]
+Deviance & & 1451.7\\[1ex]
+AIC & & 1471.7\\[1ex]
+BIC & & 1511.9 \\[1ex]
+\bottomrule
+\multicolumn{3}{l}{$^{\sim}p<0.10~^{*}p<0.05,~^{**}p<0.01,~^{***}p<0.001$}\\
+\end{tabular}
+\end{table}
+\endgroup
+
+
+#### Model E: The Uncontrolled Effects of Instructional Sequence {-}
+
+Model E includes instructional sequence as a predictor of initial status, as well as both linear and quadratic change. Interpretation of its six fixed-effects is straightforward: (1) the estimated score on the BRA for all students at the beginning of an introductory statistics course is on average 0.90 ($p<0.001$); (2) for students enrolled in courses that taught the second instructional sequence, the baseline score is $0.07$ points lower, on average ($p=0.49$); (3) the estimated average linear rate of change in BRA score for all students is 0.32 ($p<0.001$); (4) for students enrolled in courses that taught the second instructional sequence, the linear rate of change is 0.00004 lower, on average ($p=0.999$); (5) the estimated average quadratic rate of change for all students is $-0.01$ ($p<0.001$); (6) and lastly, for students enrolled in courses that taught the second instructional sequence, the quadratic rate of change is 0.0002 higher, on average ($p=0.78$). These results suggest that on average, students in both sequences have similar development in their reasoning about bivariate data throughout an introductory statistics course. In other words, the initial differences in average BRA scores between students taking a course that utilized the first instructional sequence and students taking a course that utilized the second instructional sequence are statistically indistinguishable from zero. Likewise, the differences in average linear rate of change and average quadratic rate of change are also not distinguishable from zero.
+
+The significant within-student variance component in Model E is virtually identical to that from Model D. This is expected since there were no level-1 predictors that were added to this model. Both of the level-2 variance components are also essentially unchanged. These conditional variances quantify the inter-individual differences in linear and quadratic change, respectively, that remain unexplained by the predictor.
+
+Because sequence of instruction did not seem to explain any of more variation in either linear or quadratic change, it can most likely be removed from the model as an important predictor, but since instructional sequence is a focal predictor in answering our research questions, this temptation will be resisted until future models are explored.
+
+
+## Research Question 3: Importance of Foundational Concepts of Distribution
+
+To answer the third research question (Are changes in students’ reasoning about the foundational concepts of distribution associated with changes in the pattern of development of students’ reasoning about bivariate data?), the change in students' reasoning about distribution needs to be examined and summarized. This analysis employed RM-ANOVA to examine the average within-subjects differences in students' reasoning about distribution. It will help define which time-points will be most useful in forming individual summary predictors (e.g., difference between the scores at the 1st and 4th time-point vs. mean score) for use in a conditional LMM analysis. That analysis will then be used to test hypotheses about whether changes in students' reasoning about univariate distribution explains changes in their reasoning about bivariate data.
+
+
+### Examining Students' Reasoning About Distribution
+
+Students' reasoning scores using the *Distributional Reasoning Scale* (DRS) were analyzed in a multivariate analysis of variance with time of measurement (Session 1 vs. Session 14 vs. Session 25 vs. Session 29) as a within-subjects factor. The main effect for time of measurement was significant, Wilk's $\Lambda=0.059,~F(3,~80) = 425.367,~p<.001$.
+
+Post-hoc comparisons were performed using the Bonferroni adjustment for multiple comparisons. Students' reasoning about distribution tended to increase throughout the course. Distributional reasoning scores were increased from a mean of 0.72 ($SD=0.12$) at the first measurement occasion to a mean of 7.42 ($SD=0.18$, $p<.001$) immediately on the second measurement occasion. The improvement was maintained at both the third ($M=7.49,~SD=0.17,~p<.001$) and fourth ($M=7.53,~SD=0.18,~p<.001$) measurement occasions. There was no difference between the second measurement occasion mean and the third measurement occasion mean ($p=1.00$), nor between the mean score at the second measurement occasion and the fourth measurement occasion mean ($p=1.00$). There was also no significant difference between the third measurement occasion and the fourth ($p=1.00$) measurement occasion.
+
+
+### Examining and Interpreting the Conditional Model
+
+Because of the results of the analyses from the previous section, difference scores between the first and last measurement occasions were used as a proxy for describing the change in students' development in reasoning about distribution. These scores were then mean centered to facilitate interpretations. These measures are used in subsequent analyses to examine if changes in students' reasoning about distribution are important in explaining changes in students' reasoning about bivariate data. A conditional LMM using these centered difference scores was run on the bivariate reasoning data. The specification of the level-1 and level-2 models for this analysis is presented in \autoref{eq:model-f}:
+
+\begin{equation}\label{eq:model-f}
+\begin{split}
+Y_{ij} &= \pi_{0i} + \pi_{1i}(\mathrm{Session}_{ij}) + \pi_{2i}(\mathrm{Session}_{ij}^2) + \epsilon_{ij}\\[2ex]
+\pi_{0i} &= \gamma_{00} + \gamma_{01}(\mathrm{DRA}_{j}-\bar{\mathrm{DRA}}) + \zeta_{0i}\\[1ex]
+\pi_{1i} &= \gamma_{10} + \gamma_{11}(\mathrm{DRA}_{j}-\bar{\mathrm{DRA}}) + \zeta_{1i}\\[1ex]
+\pi_{2i} &= \gamma_{20} + \gamma_{21}(\mathrm{DRA}_{j}-\bar{\mathrm{DRA}}) + \zeta_{2i}\\[1ex]
+\end{split}
+\end{equation}
+
+\@ref(tab:model-f-g) shows the results from fitting a model to the bivariate reasoning data that includes change in reasoning about univariate distribution as a predictor of initial status, linear rate of change, and quadratic rate of change (Model F). A second, more parsimonious model (Model G), that was refined through a series of model comparisons, is also presented.
+
+\begingroup\fontsize{10}{12}\selectfont
+\begin{table}[ht]
+\caption{\label{tab:model-f-g}Final unconditional model used to describe students' change in reasoning about bivariate data.}
+\centering
+\fontsize{10}{12}\selectfont
+\begin{tabular}{p{2in}P{1in}P{1in}P{1in}}
+\toprule
+\thead{Effects} & \thead{Parameter} & \thead{Model F} & \thead{Model G}\\
+\midrule
+\multicolumn{4}{l}{\textbf{Fixed effects}} \\[1ex]
+Intercept & $\gamma_{00}$ & 0.86$^{***}$ & 0.86$^{***}$\\[1ex]
+DRA$-\bar{\mathrm{DRA}}$ & $\gamma_{01}$ & 0.11$^{*}$ & 0.13$^{**}$\\[1ex]
+Session & $\gamma_{10}$ & 0.32$^{***}$ & 0.32$^{***}$\\[1ex]
+DRA$-\bar{\mathrm{DRA}}$ $\times$ Session & $\gamma_{11}$ & $-0.003$ & ---\\[1ex]
+Session$^2$ & $\gamma_{20}$ & $-0.01^{***}$ & $-0.01^{***}$ \\[1ex]
+DRA$-\bar{\mathrm{DRA}}$ $\times$ Session$^2$ & $\gamma_{21}$ & 0.0002 & ---\\[1ex]
+\addlinespace[0.3em]
+\multicolumn{3}{l}{\textbf{Variance components}} \\[1ex]
+Level-1: Within student & $\sigma^2_{\epsilon}$ & $1.10^{***}$ & $1.10^{***}$\\[1ex]
+Level-2: Between student & \\[1ex]
+\hspace{1em}Var(Linear term) & $\sigma^2_{1}$ & $0.01^{**}$ & $0.01^{**}$\\[1ex]
+\hspace{1em}Var(Quadratic term) & $\sigma^2_{2}$ & $0.00001^{\sim}$ & $0.00001^{\sim}$\\[1ex]
+\hspace{1em}Cov(Linear, Quadratic) & $\sigma_{12}$ & $-0.0004^{\sim}$ & $-0.0004^{\sim}$\\[1ex]
+\addlinespace[0.3em]
+\multicolumn{4}{l}{\textbf{Goodness-of-fit}} \\[1ex]
+Deviance & & 1259.9 & 1237.2\\[1ex]
+AIC & & 1279.9 & 1253.2\\[1ex]
+BIC & & 1318.8 & 1284.3\\[1ex]
+\bottomrule
+\multicolumn{4}{l}{$^{\sim}p<0.10~^{*}p<0.05,~^{**}p<0.01,~^{***}p<0.001$}\\
+\end{tabular}
+\end{table}
+\endgroup
+
+
+#### Models F and G: The Uncontrolled Effects of Change in Reasoning About Univariate Distribution {-}
+
+Model F includes students' change in reasoning about univariate distribution as a predictor of initial status, as well as both linear and quadratic change. Interpretation of its six fixed-effects is as follows: (1) the estimated score on the BRA for a student who has exhibited average change in their reasoning about univariate distribution is on average 0.86 ($p<0.001$); (2) the estimated strength of association between initial BRA scores and the mean centered DRS scores is 0.11 ($p<0.05$) indicating a positive relationship between initial BRA scores and centered DRS scores; (3) the estimated average linear rate of change in BRA score for students who have an average change in their DRA score is 0.32 ($p<0.001$); (4) while the estimated strength of association between linear rates of change and centered DRS scores is $-0.003$ ($p=0.82$) indicating a negative relationship between linear rates of change in BRA scores and mean centered DRS scores; (5) the estimated average quadratic rate of change for those students who show average change in their DRS score is $-0.01$ ($p<0.001$); (6) and lastly the estimated strength of association between the level-1 quadratic terms and the mean centered DRA scores is 0.0002 ($p=0.64$) indicating a positive relationship between quadratic rates of change in BRA scores and centered DRS scores.
+
+The significant within-student variance component in Model F is smaller than that from Model D. This is due to the reduced number of students used in the model and not to the inclusion of any level-1 predictors that were added to this model. Both of the level- 2 variance components are also essentially unchanged. These conditional variances quantify the inter-individual differences in linear and quadratic change, respectively, that remain unexplained by the predictor. Because change in reasoning about univariate distribution did not seem to explain any of more variation in either linear or quadratic change, it can most likely be removed from the model as an important predictor. Model G is the more parsimonious result of examining and paring a sequence of models.
+
+The fixed-effects for Model G suggest that the only parameter that seems to be influenced by students' change in reasoning about univariate distribution is their initial status in reasoning about bivariate data. The estimated average initial score for students who show average change in their reasoning about univariate data is 0.86 ($p<0.001$). The estimated strength of association between initial BRA scores and centered DRS scores is 0.13 ($p<0.01$). This result suggests that on average, there is a positive relationship between initial BRA scores and centered DRS scores indicating that students who exhibit larger than average changes in their reasoning about univariate distribution also tend to have higher initial levels of reasoning about bivariate data. The linear and quadratic fixed-effect terms have similar interpretations to those in Model F. Differences in students' change in reasoning about univariate distribution on average tends not to be associated with either linear or quadratic rates of change in reasoning about bivariate data throughout an introductory statistics course. A visual depiction of Model G is shown in \@ref(fig:fitted-model-g).
+
+
+```{r fitted-model-g, echo=FALSE, fig.height=6, fig.width=8, out.width="80%", fig.cap="Fitted curve for Model G showing the average predicted change in bivariate reasoning across class session for students with below average (grey, dotted), average (blue, solid), and above average (reddish purple, dashed) change in their reasoning about distribution.", fig.pos="H"}
+# PLOT
+ggplot(data = d, aes(x = x, y = y2)) +
+  geom_point(alpha = 0) +
+  geom_function(
+    fun = function(x) {0.86 - 5*0.13 + 0.32046 * x - 0.0064827 * x^2},
+    color = "#777777", linetype = "dotted" 
+  ) +
+  geom_function(
+    fun = function(x) {0.86 + 0.32046 * x - 0.0064827 * x^2},
+    color = "#2C6DAC"
+  ) +
+  geom_function(
+    fun = function(x) {0.86 + 5*0.13 + 0.32046 * x - 0.0064827 * x^2},
+    color = "#CC79A7", linetype = "dashed"
+  ) +
+  scale_x_continuous(name = "Session", breaks = seq(from = 0, to = 30, by = 5)) +
+  scale_y_continuous(name = "Predicted score on BRA", limits = c(0, 8)) 
+```
+
+
+## Examining and Interpreting a Final Conditional Model
+
+Now that each of the main effect models for the important predictors has been examined and interpreted, a final model can be postulated. One variable that might need to be controlled for is teacher (coded $-1$ and $+1$). Initially, a model was fit using all three predictors (teacher, instructional sequence, and students' change in reasoning about distribution) at each level along with both two-way, and three-way interactions. The *F*-statistic to test the composite hypotheses for the three-way fixed effects was non-significant---$F(3,~134)=0.76,~p=0.52$---so those terms were dropped from the model. The two-way interaction fixed effects were tested in the same fashion and subsequently dropped from the model---$F(9,~189)=0.61,~p=0.79$. A series of more parsimonious models were then examined and compared. The resulting "final model" is presented in \@ref(tab:model-h).
+
+
+\begingroup\fontsize{10}{12}\selectfont
+\begin{table}[ht]
+\caption{\label{tab:model-h}Final conditional model to examine students' change in reasoning about bivariate data}
+\centering
+\fontsize{10}{12}\selectfont
+\begin{tabular}{p{3in}P{1in}P{1.5in}}
+\toprule
+\thead{Effects} & \thead{Parameter} & \thead{Model H}\\
+\midrule
+\multicolumn{3}{l}{\textbf{Fixed effects}} \\[1ex]
+Intercept & $\gamma_{00}$ & 0.84$^{***}$\\[1ex]
+DRA$-\bar{\mathrm{DRA}}$ & $\gamma_{01}$ & 0.07\\[1ex]
+Teacher & $\gamma_{02}$ & $-0.21^{\sim}$\\[1ex]
+Session & $\gamma_{10}$ & 0.32$^{***}$\\[1ex]
+Teacher $\times$ Session & $\gamma_{11}$ & 0.02$^{*}$\\[1ex]
+Session$^2$ & $\gamma_{20}$ &$-0.01^{***}$ \\[1ex]
+DRA$-\bar{\mathrm{DRA}}$ $\times$ Session$^2$ & $\gamma_{21}$ & 0.0002$^{\sim}$\\[1ex]
+\addlinespace[0.3em]
+\multicolumn{3}{l}{\textbf{Variance components}} \\[1ex]
+Level-1: Within student & $\sigma^2_{\epsilon}$ & $1.08^{***}$\\[1ex]
+Level-2: Between student & \\[1ex]
+\hspace{1em}Var(Linear term) & $\sigma^2_{1}$ &  $0.01^{**}$\\[1ex]
+\hspace{1em}Var(Quadratic term) & $\sigma^2_{2}$ &  $0.00001^{\sim}$\\[1ex]
+\hspace{1em}Cov(Linear, Quadratic) & $\sigma_{12}$ & $-0.0004^{\sim}$\\[1ex]
+\addlinespace[0.3em]
+\multicolumn{3}{l}{\textbf{Goodness-of-fit}} \\[1ex]
+Deviance & & 1451.7\\[1ex]
+AIC & & 1471.7\\[1ex]
+BIC & & 1511.9 \\[1ex]
+\bottomrule
+\multicolumn{3}{l}{$^{\sim}p<0.10~^{*}p<0.05,~^{**}p<0.01,~^{***}p<0.001$}\\
+\end{tabular}
+\end{table}
+\endgroup
+
+
+### Model H: The Final Conditional Model
+
+Model H includes both sequence and change in reasoning about univariate distribution as predictors, as well as controlling for the effects of different teachers. The fixed-effects suggest that a student who exhibits average change in his/her reasoning about univariate distribution has an initial BRA score of 0.84 ($p<0.001$) when controlling for teacher. The average initial BRA score also seems to be different for students who have different teachers. The BRA scores for students who had one teacher rather than another differ on average by 0.21 ($p<0.10$) when controlling for differences in centered DRS scores. There seems to be no association between the linear rates of change in BRA score and centered DRS score when controlling for teacher. However, there does seem to be a slight average difference in the linear rates of change of BRA scores between students who have different teachers. This average difference is small, but significantly larger than zero at 0.02 ($p<0.10$).
+
+The fixed-effects for the quadratic rate of change suggest that students on average have an estimated average quadratic rate of change of $-0.01$ ($p<0.001$). There is also a small positive association (0.0002, $p<0.10$) between students' quadratic rates of change and their centered DRS scores. This indicates that students with above average change in their DRS scores tend to have larger quadratic rate of change terms. The trajectories of growth by teacher moderated by centered DRS score are shown in \@ref(fig:fitted-model-h). The variance components remain largely unchanged from previous models.
+
+
+```{r fitted-model-h, echo=FALSE, fig.height=6, fig.width=8, out.width="80%", fig.cap="Fitted curve for Model H showing the average predicted change in bivariate reasoning across class session for students with  average change in their reasoning about distribution for the two teachers, Teacher A (blue, solid) and Teacher B (reddish purple, dashed).", fig.pos="H"}
+# PLOT
+ggplot(data = d, aes(x = x, y = y2)) +
+  geom_point(alpha = 0) +
+  # geom_function(
+  #   fun = function(x) {0.86 - 5*0.13 + 0.32046 * x - 0.0064827 * x^2},
+  #   color = "#777777", linetype = "dotted" 
+  # ) +
+  geom_function(
+    fun = function(x) {0.84 - .21 + 0.34046 * x - 0.0064827 * x^2},
+    color = "#2C6DAC"
+  ) +
+  geom_function(
+    fun = function(x) {0.84 + .21 + 0.30046 * x - 0.0064827 * x^2},
+    color = "#CC79A7", linetype = "dashed"
+  ) +
+  # geom_function(
+  #   fun = function(x) {0.86 + 5*0.13 + 0.32046 * x - 0.0064827 * x^2},
+  #   color = "#CC79A7", linetype = "dashed"
+  # ) +
+  scale_x_continuous(name = "Session", breaks = seq(from = 0, to = 30, by = 5)) +
+  scale_y_continuous(name = "Predicted score on BRA", limits = c(0, 8)) 
+```
+
+This chapter presented the results from the study. There were several models that were examined in describing both students' change in development of reasoning about bivariate data, as well as in attempting to account for those changes by introducing relevant predictors into the model. The next chapter will lay out and summarize the findings from this study, and also describe what they might mean for the field of statistics education.
+
